@@ -1,0 +1,8 @@
+asterisk
+0 active channels
+0 active calls
+22 calls processed
+asterisk-b
+0 active channels
+0 active calls
+1 call processed

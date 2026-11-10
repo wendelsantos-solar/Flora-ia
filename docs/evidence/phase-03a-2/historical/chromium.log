@@ -1,0 +1,271 @@
+
+Running 13 tests using 1 worker
+
+  ✘   1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (2.6m)
+  ✓   2 [chromium] › tests/homologacao.spec.ts:52:1 › revoking actual microphone permission warns, permission can be restored and input replaced (29.3s)
+  ✓   3 [chromium] › tests/homologacao.spec.ts:59:1 › microphone permission denied before dialing and answering, then granted without reload (11.0s)
+  ✓   4 [chromium] › tests/homologacao.spec.ts:67:1 › cancel while ringing and after the callee starts answering, without orphan sessions (5.5s)
+  ✓   5 [chromium] › tests/homologacao.spec.ts:74:1 › temporary real media interruption recovers after Asterisk pause and resume (10.4s)
+  ✓   6 [chromium] › tests/homologacao.spec.ts:83:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (43.0s)
+  ✘   7 [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation (2.5m)
+  ✘   8 [chromium] › tests/operations.spec.ts:178:1 › real hold, consultation rejection and cancellation, and attended REFER with media (1.5m)
+  ✘   9 [chromium] › tests/operations.spec.ts:221:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels (2.7s)
+  ✘  10 [chromium] › tests/operations.spec.ts:240:1 › department-to-department REFER, schedule and real internal contingency (3.3s)
+  ✘  11 [chromium] › tests/operations.spec.ts:317:1 › transfer edge cases: unavailable and rejecting target, ending, and origin disconnect (1.6s)
+  ✘  12 [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (56.0s)
+  ✘  13 [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation (2.8s)
+
+
+  1) [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+
+    Test timeout of 150000ms exceeded.
+
+    Error: browserContext.newPage: Test ended.
+
+      27 |
+      28 | test('three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup',async({browser},info)=>{
+    > 29 |  const ca=await browser.newContext({permissions:['microphone']});const cb=await browser.newContext({permissions:['microphone']});const a=await ca.newPage();const b=await cb.newPage();const measurements:unknown[]=[];
+         |                                                                                                                                                   ^
+      30 |  try{await login(a,'201');await login(b,'202');const prior=(await (await a.request.get('/api/v1/calls?limit=100')).json()).items.map((c:{id:string})=>c.id);
+      31 |  for(let i=0;i<3;i++){
+      32 |   const [caller,callee]=i%2?[b,a]:[a,b];await start(caller,callee);const before=await Promise.all([stats(caller),stats(callee)]);await caller.waitForTimeout(1300);const after=await Promise.all([stats(caller),stats(callee)]);
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/homologacao.spec.ts:29:147
+
+    Error Context: test-results/homologacao-three-consecut-53be8-one-replacement-and-cleanup-chromium/error-context.md
+
+  2) [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+
+    Test timeout of 150000ms exceeded.
+
+    Error: browserContext.close: Test ended.
+    Browser logs:
+
+    <launching> /ms-playwright/chromium-1254/chrome-linux-arm64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --use-fake-device-for-media-stream --autoplay-policy=no-user-gesture-required --user-data-dir=/tmp/playwright_chromiumdev_profile-L2BLOF --remote-debugging-pipe --no-startup-window
+    <launched> pid=1867
+    [pid=1867][err] [1867:1890:1109/135903.152552:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1890:1109/135903.166794:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1890:1109/135903.245012:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1890:1109/135903.245189:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1890:1109/135903.245225:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1890:1109/135903.245249:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1890:1109/135903.301262:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1894:1109/135903.340541:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1894:1109/135903.340867:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1894:1109/135903.340885:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1890:1109/135904.022766:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1867:1109/135904.588225:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1890:1109/135904.600551:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1867:1109/135904.618127:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1890:1109/135904.618416:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1867:1109/135904.780882:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1867:1109/135904.862595:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1867:1109/135904.865879:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1890:1109/135904.866535:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1890:1109/135904.871429:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1890:1109/135904.871509:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1867][err] [1867:1867:1109/135904.881484:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1890:1109/135904.882588:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1867:1109/135904.891985:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+    [pid=1867][err] [1867:1867:1109/135904.991517:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] [1867:1890:1109/135904.992485:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1867][err] [1867:1867:1109/135904.993467:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/135931.183420:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/135931.193664:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/135941.867853:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/135941.868838:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/140007.319247:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/140007.326945:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1867][err] [1910:1949:1109/140012.177618:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+    [pid=1867][err] [1910:1949:1109/140012.337075:ERROR:gpu/command_buffer/service/shared_image/shared_image_manager.cc:401] SharedImageManager::ProduceMemory: Trying to Produce a Memory representation from a non-existent mailbox.
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/140306.875627:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1867][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1867][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1867][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1867][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1867][err] [2333:2333:1109/140306.880282:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1867] <gracefully close start>
+
+      151 |   writeEvidence('02a-queue',{result:'PASS',strategy:'rrmemory',mediaSource:'native Chromium synthetic input via real SIP/WebRTC',measured,beforeRestart,afterRestart,activeChannels:channels()});
+      152 |  }finally{
+    > 153 |   await c1.close();await c2.close();await c3.close();
+          |                                     ^
+      154 |   await change(request,'DELETE','queues/'+n,'201');
+      155 |   await change(request,'DELETE','departments/'+key,'201');
+      156 |  }
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/operations.spec.ts:153:37
+
+    Error Context: test-results/operations-real-queue-dist-4fd04--and-restart-reconciliation-chromium/error-context.md
+
+  3) [chromium] › tests/operations.spec.ts:178:1 › real hold, consultation rejection and cancellation, and attended REFER with media 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Colocar em espera' })
+    Expected: visible
+    Timeout: 5000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Colocar em espera' }) with timeout 5000ms
+      - waiting for getByRole('button', { name: 'Colocar em espera' })
+
+
+      195 |   const consult=b.getByRole('button',{name:'Consultar ramal'});
+      196 |   await consult.click();await expect(c.getByRole('button',{name:'Rejeitar'})).toBeVisible();await c.getByRole('button',{name:'Rejeitar'}).click();
+    > 197 |   await expect(b.getByRole('button',{name:'Colocar em espera'})).toBeVisible();await media(a,b);
+          |                                                                  ^
+      198 |   await consult.click();await answer(c);await media(b,c);
+      199 |   await b.getByRole('button',{name:'Cancelar consulta'}).click();await ready(c);
+      200 |   await expect(b.getByRole('button',{name:'Colocar em espera'})).toBeVisible();await media(a,b);
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/operations.spec.ts:197:66
+
+    Error Context: test-results/operations-real-hold-consu-ed93a-d-attended-REFER-with-media-chromium/error-context.md
+
+  4) [chromium] › tests/operations.spec.ts:221:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 2
+
+      224 |  const prior=new Set<string>((await (await request.get('/api/v1/calls?limit=100',{headers:headers('201')})).json()).items.map((x:{id:string})=>x.id));
+      225 |  try{
+    > 226 |   expect(channels()).toBe(0);
+          |                      ^
+      227 |   await connect(a,'203');await connect(b,'201');await connect(c,'202');
+      228 |   await dial(a,'201');await answer(b);await inCall(a);await media(a,b);
+      229 |   await target(b,'202');
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/operations.spec.ts:226:22
+
+    Error Context: test-results/operations-real-blind-REFE-7021e-ler-and-closes-all-channels-chromium/error-context.md
+
+  5) [chromium] › tests/operations.spec.ts:240:1 › department-to-department REFER, schedule and real internal contingency 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 2
+
+      250 |  expect(today).toBeGreaterThanOrEqual(0);
+      251 |  try{
+    > 252 |   expect(channels()).toBe(0);
+          |                      ^
+      253 |   expect(await change(request,'PUT','departments/'+first,'201',{name:'Origem da homologação'})).toBe(204);
+      254 |   expect(await change(request,'PUT','departments/'+second,'201',{name:'Destino da homologação'})).toBe(204);
+      255 |   expect(await change(request,'PUT','departments/'+first+'/supervisors/203','201')).toBe(202);
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/operations.spec.ts:252:22
+
+    Error Context: test-results/operations-department-to-d-199ff-d-real-internal-contingency-chromium/error-context.md
+
+  6) [chromium] › tests/operations.spec.ts:317:1 › transfer edge cases: unavailable and rejecting target, ending, and origin disconnect 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 2
+
+      321 |  const original=async()=>{await dial(a,'201');await answer(b);await inCall(a);await media(a,b);};
+      322 |  try{
+    > 323 |   expect(channels()).toBe(0);
+          |                      ^
+      324 |   await connect(a,'203');await connect(b,'201');
+      325 |   await expect.poll(async()=>{
+      326 |    const r=await request.get('/api/v1/extensions',{headers:headers('201')});
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/operations.spec.ts:323:22
+
+    Error Context: test-results/operations-transfer-edge-c-82cf9-nding-and-origin-disconnect-chromium/error-context.md
+
+  7) [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 
+
+    Error: ENOENT: no such file or directory, open '/tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/.local/sip-signals.json'
+
+      48 |  await a.getByRole('button',{name:'Sair',exact:true}).click();await expect(a.getByRole('heading',{name:'Conectar seu ramal'})).toBeVisible();await expect(a.getByRole('table')).toHaveCount(0);await a.waitForTimeout(500);await expect(a.getByRole('table')).toHaveCount(0);evidence.logout='history cleared after logout';await a.screenshot({path:path.join(evidenceDir,'logout-mobile.png'),fullPage:true});
+      49 |  evidence.result='PASS';fs.writeFileSync(path.join(evidenceDir,'sip-signals.json'),JSON.stringify(signals,null,2));fs.writeFileSync(path.join(evidenceDir,'webrtc.json'),JSON.stringify(evidence,null,2));
+    > 50 |  }finally{fs.writeFileSync(path.join(root,".local/sip-signals.json"),JSON.stringify(signals,null,2));fs.writeFileSync(path.join(root,".local/browser-errors.json"),JSON.stringify(browserErrors,null,2));await contextA.close();await contextB.close();}
+         |              ^
+      51 | });
+      52 |
+      53 | test('REST authorization, input limits, tenant boundary, WebSocket origin and event isolation',async({request,browser})=>{
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/telephony.spec.ts:50:14
+
+    Error Context: test-results/telephony-real-WebRTC-call-3fc19-rse-direction-SIP-reconnect-chromium/error-context.md
+
+  8) [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation 
+
+    Error: page.evaluate: Error: WebSocket failed
+        at ws.onerror (eval at evaluate (:370:30), <anonymous>:5:33)
+        at ws.onerror (eval at evaluate (:370:30), <anonymous>:5:33)
+        at /tmp/flora-regressions-a2490b9606b14083bbd5b633674a3ff9/web/tests/telephony.spec.ts:69:28
+
+    Error Context: test-results/telephony-REST-authorizati-ba173--origin-and-event-isolation-chromium/error-context.md
+
+  8 failed
+    [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+    [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+    [chromium] › tests/operations.spec.ts:178:1 › real hold, consultation rejection and cancellation, and attended REFER with media 
+    [chromium] › tests/operations.spec.ts:221:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels 
+    [chromium] › tests/operations.spec.ts:240:1 › department-to-department REFER, schedule and real internal contingency 
+    [chromium] › tests/operations.spec.ts:317:1 › transfer edge cases: unavailable and rejecting target, ending, and origin disconnect 
+    [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 
+    [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation 
+  5 passed (10.7m)

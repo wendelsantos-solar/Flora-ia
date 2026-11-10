@@ -1,0 +1,301 @@
+{
+  "at": "2026-11-09T04:02:11.539Z",
+  "engine": "firefox",
+  "version": "159.0",
+  "human_audio": "PENDING",
+  "native_safari": "NOT TESTED — Playwright WebKit is not native Safari",
+  "registration": "PASS",
+  "capabilities": {
+    "secureContext": true,
+    "getUserMedia": true,
+    "peerConnection": true,
+    "deviceChange": true,
+    "outputSelection": true
+  },
+  "initial": [
+    {
+      "stats": [
+        {
+          "id": "844cbb9",
+          "timestamp": 1794196934294,
+          "type": "outbound-rtp",
+          "codecId": "39f34cb4",
+          "kind": "audio",
+          "mediaType": "audio",
+          "ssrc": 433133496,
+          "transportId": "9a50cf97",
+          "bytesSent": 0,
+          "packetsSent": 0,
+          "headerBytesSent": 0,
+          "mid": "0",
+          "nackCount": 0,
+          "retransmittedBytesSent": 0,
+          "retransmittedPacketsSent": 0
+        },
+        {
+          "id": "2b4e0bac",
+          "timestamp": 1794196934293,
+          "type": "candidate-pair",
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "currentRoundTripTime": 0,
+          "lastPacketReceivedTimestamp": 0,
+          "lastPacketSentTimestamp": 0,
+          "localCandidateId": "62dda442",
+          "nominated": false,
+          "packetsReceived": 0,
+          "packetsSent": 0,
+          "priority": 9115005270299247000,
+          "readable": false,
+          "remoteCandidateId": "652c587c",
+          "responsesReceived": 0,
+          "selected": false,
+          "state": "in-progress",
+          "totalRoundTripTime": 0,
+          "transportId": "9a50cf97",
+          "writable": false
+        },
+        {
+          "id": "39f34cb4",
+          "timestamp": 1794196934293,
+          "type": "codec",
+          "channels": 1,
+          "clockRate": 8000,
+          "codecType": "encode",
+          "mimeType": "audio/PCMU",
+          "payloadType": 0,
+          "transportId": "9a50cf97"
+        }
+      ],
+      "state": {
+        "session": "Established",
+        "connectionState": "connecting",
+        "iceConnectionState": "checking",
+        "localTracks": [
+          {
+            "id": "{c53e8eca-6bd9-4e32-a04d-da971391103d}",
+            "enabled": true,
+            "readyState": "live",
+            "muted": false
+          }
+        ],
+        "remoteTracks": [],
+        "health": {
+          "sip": "registered",
+          "media": "connecting",
+          "microphone": "active",
+          "playbackBlocked": false,
+          "levelsAvailable": false,
+          "inputLevel": 0,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": null,
+        "lastInputReplacement": null
+      }
+    },
+    {
+      "stats": [
+        {
+          "id": "281b8a4b",
+          "timestamp": 1794196934297,
+          "type": "outbound-rtp",
+          "codecId": "bb91fe49",
+          "kind": "audio",
+          "mediaType": "audio",
+          "ssrc": 427407602,
+          "transportId": "1d95fe9f",
+          "bytesSent": 0,
+          "packetsSent": 0,
+          "headerBytesSent": 0,
+          "mid": "audio-0",
+          "nackCount": 0,
+          "retransmittedBytesSent": 0,
+          "retransmittedPacketsSent": 0
+        },
+        {
+          "id": "e41623e3",
+          "timestamp": 1794196934297,
+          "type": "candidate-pair",
+          "bytesReceived": 0,
+          "bytesSent": 0,
+          "currentRoundTripTime": 0,
+          "lastPacketReceivedTimestamp": 0,
+          "lastPacketSentTimestamp": 0,
+          "localCandidateId": "cd541b87",
+          "nominated": false,
+          "packetsReceived": 0,
+          "packetsSent": 0,
+          "priority": 9115005270299247000,
+          "readable": false,
+          "remoteCandidateId": "3739ceab",
+          "responsesReceived": 0,
+          "selected": false,
+          "state": "in-progress",
+          "totalRoundTripTime": 0,
+          "transportId": "1d95fe9f",
+          "writable": false
+        },
+        {
+          "id": "bb91fe49",
+          "timestamp": 1794196934297,
+          "type": "codec",
+          "channels": 1,
+          "clockRate": 8000,
+          "mimeType": "audio/PCMU",
+          "payloadType": 0,
+          "transportId": "1d95fe9f"
+        }
+      ],
+      "state": {
+        "session": "Established",
+        "connectionState": "connecting",
+        "iceConnectionState": "checking",
+        "localTracks": [
+          {
+            "id": "{33ca0121-b837-495b-8a1d-56ab5135ac6a}",
+            "enabled": true,
+            "readyState": "live",
+            "muted": false
+          }
+        ],
+        "remoteTracks": [
+          {
+            "id": "{b5169a9e-6c9a-474d-b218-f20df96d2245}",
+            "enabled": true,
+            "readyState": "live",
+            "muted": true
+          }
+        ],
+        "health": {
+          "sip": "registered",
+          "media": "connecting",
+          "microphone": "active",
+          "playbackBlocked": false,
+          "levelsAvailable": true,
+          "inputLevel": 0.07125268139393023,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": null,
+        "lastInputReplacement": null
+      }
+    }
+  ],
+  "candidates": [
+    [
+      {
+        "local": [
+          {
+            "type": "host",
+            "transport": "UDP",
+            "addressClass": "mdns"
+          },
+          {
+            "type": "host",
+            "transport": "TCP",
+            "addressClass": "mdns"
+          },
+          {
+            "type": "host",
+            "transport": "UDP",
+            "addressClass": "mdns"
+          },
+          {
+            "type": "host",
+            "transport": "TCP",
+            "addressClass": "mdns"
+          }
+        ],
+        "remote": [
+          {
+            "type": "host",
+            "transport": "UDP",
+            "addressClass": "ipv4"
+          }
+        ]
+      }
+    ],
+    [
+      {
+        "local": [
+          {
+            "type": "host",
+            "transport": "UDP",
+            "addressClass": "mdns"
+          },
+          {
+            "type": "host",
+            "transport": "TCP",
+            "addressClass": "mdns"
+          }
+        ],
+        "remote": [
+          {
+            "type": "host",
+            "transport": "UDP",
+            "addressClass": "ipv4"
+          }
+        ]
+      }
+    ]
+  ],
+  "result": "FAIL",
+  "diagnostics": [
+    {
+      "stats": null,
+      "state": {
+        "session": null,
+        "connectionState": null,
+        "iceConnectionState": null,
+        "localTracks": [],
+        "remoteTracks": [],
+        "health": {
+          "sip": "registered",
+          "media": "idle",
+          "microphone": "idle",
+          "playbackBlocked": false,
+          "levelsAvailable": false,
+          "inputLevel": 0,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": {
+          "tracksEnded": true,
+          "connectionClosed": true
+        },
+        "lastInputReplacement": null
+      }
+    },
+    {
+      "stats": null,
+      "state": {
+        "session": null,
+        "connectionState": null,
+        "iceConnectionState": null,
+        "localTracks": [],
+        "remoteTracks": [],
+        "health": {
+          "sip": "registered",
+          "media": "idle",
+          "microphone": "idle",
+          "playbackBlocked": false,
+          "levelsAvailable": false,
+          "inputLevel": 0,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": {
+          "tracksEnded": true,
+          "connectionClosed": true
+        },
+        "lastInputReplacement": null
+      }
+    }
+  ],
+  "failure": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBeGreaterThan\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m\n\nExpected: > \u001b[32m5\u001b[39m\nReceived:   \u001b[31m0\u001b[39m"
+}

@@ -1,0 +1,45 @@
+
+Running 13 tests using 1 worker
+
+Consecutive call 1 starting
+Consecutive call 2 starting
+Consecutive call 3 starting
+  ✓   1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (20.9s)
+  ✓   2 [chromium] › tests/homologacao.spec.ts:67:1 › revoking actual microphone permission warns, permission can be restored and input replaced (3.3s)
+  ✓   3 [chromium] › tests/homologacao.spec.ts:74:1 › microphone permission denied before dialing and answering, then granted without reload (3.2s)
+  ✓   4 [chromium] › tests/homologacao.spec.ts:82:1 › cancel while ringing and after the callee starts answering, without orphan sessions (6.0s)
+  ✓   5 [chromium] › tests/homologacao.spec.ts:89:1 › temporary real media interruption recovers after Asterisk pause and resume (12.7s)
+  ✓   6 [chromium] › tests/homologacao.spec.ts:98:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (40.1s)
+  ✘   7 [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation (7.1s)
+  ✓   8 [chromium] › tests/operations.spec.ts:180:1 › real hold, consultation rejection and cancellation, and attended REFER with media (40.9s)
+  ✓   9 [chromium] › tests/operations.spec.ts:223:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels (43.4s)
+  ✓  10 [chromium] › tests/operations.spec.ts:242:1 › department-to-department REFER, schedule and real internal contingency (1.2m)
+  ✓  11 [chromium] › tests/operations.spec.ts:319:1 › transfer edge cases: unavailable and rejecting target, ending, and origin disconnect (1.5m)
+  ✓  12 [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (44.1s)
+  ✓  13 [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation (1.7s)
+
+
+  1) [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: undefined
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      77 |   expect(await change(request,'PUT',`queues/${n}/members/202`,'201')).toBe(202);
+      78 |   expect((await ops(request,'OTHER')).catalog).toEqual({departments:[],queues:[],members:[],schedules:[]});
+    > 79 |   await expect.poll(waiting).toBe(0);
+         |                              ^
+      80 |   expect((await request.get('/api/v1/operations/metrics',{headers:headers('202')})).status()).toBe(403);
+      81 |   expect((await request.get('/api/v1/operations/metrics',{headers:headers('OTHER')})).status()).toBe(403);
+      82 |   expect(await change(request,'PUT','departments/'+key,'203',{name:'Proibido'})).toBe(403);
+        at /tmp/flora-regressions-ccd1517c99ba49f9b2a9501ed47edd7a/web/tests/operations.spec.ts:79:30
+
+    Error Context: test-results/operations-real-queue-dist-4fd04--and-restart-reconciliation-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+  12 passed (6.6m)

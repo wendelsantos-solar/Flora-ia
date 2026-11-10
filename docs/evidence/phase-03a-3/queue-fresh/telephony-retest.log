@@ -1,0 +1,29 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation (7.1s)
+
+
+  1) [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+
+    Error: locator.click: Error: strict mode violation: locator('details').filter({ has: getByText('Departamentos', { exact: true }) }).getByRole('button', { name: 'Editar Homologação de recepção', exact: true }) resolved to 2 elements:
+        1) <button class="text-button">Editar Homologação de recepção</button> aka getByRole('button', { name: 'Editar Homologação de recepção' }).first()
+        2) <button class="text-button">Editar Homologação de recepção</button> aka getByRole('button', { name: 'Editar Homologação de recepção' }).nth(1)
+
+    Call log:
+      - waiting for locator('details').filter({ has: getByText('Departamentos', { exact: true }) }).getByRole('button', { name: 'Editar Homologação de recepção', exact: true })
+
+
+      90 |   await a.getByRole('button',{name:'Administração',exact:true}).click();
+      91 |   const admin=a.locator('details').filter({has:a.getByText('Departamentos',{exact:true})});
+    > 92 |   await admin.getByRole('button',{name:'Editar Homologação de recepção',exact:true}).click();
+         |                                                                                      ^
+      93 |   await admin.getByLabel('Nome do departamento').fill('Homologação de recepção');
+      94 |   await admin.getByRole('button',{name:'Salvar departamento'}).click();
+      95 |   await expect(admin.getByLabel('Nome do departamento')).toHaveValue('');
+        at /tmp/flora-regressions-59fcdf619f7c44e5a9c72867de165c4e/web/tests/operations.spec.ts:92:86
+
+    Error Context: test-results/operations-real-queue-dist-4fd04--and-restart-reconciliation-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 

@@ -1,0 +1,56 @@
+
+Running 2 tests using 1 worker
+
+(node:93874) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 web/tests/operations.spec.ts:123:1 › real hold, consultation rejection and cancellation, and attended REFER with media (25.8s)
+(node:93978) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  2 web/tests/operations.spec.ts:159:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels (31.2s)
+
+
+  1) web/tests/operations.spec.ts:123:1 › real hold, consultation rejection and cancellation, and attended REFER with media 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+    Call Log:
+    - Timeout 12000ms exceeded while waiting on the predicate
+
+      152 |   await expect.poll(channels).toBe(0);
+      153 |   const records=()=>transferEvents(request,'203','201',prior,'call.transfer.attended');
+    > 154 |   await expect.poll(async()=>(await records()).length,{timeout:12000}).toBe(1);
+          |                                                                        ^
+      155 |   writeEvidence('02b-attended',{result:'PASS',hold:{before,after,resumed},consulted,transferred,history:await records(),activeChannels:channels()});
+      156 |  }finally{await Promise.all(contexts.map(x=>x.close()));}
+      157 | });
+        at /Users/wendelpaco/works/flora-ia/web/tests/operations.spec.ts:154:72
+
+    Error Context: .local/phase-02/playwright/operations-real-hold-consu-ed93a-d-attended-REFER-with-media/error-context.md
+
+  2) web/tests/operations.spec.ts:159:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 1
+    Received: 0
+
+    Call Log:
+    - Timeout 12000ms exceeded while waiting on the predicate
+
+      171 |   await end(c);await ready(a);await expect.poll(channels).toBe(0);
+      172 |   const records=()=>transferEvents(request,'203','201',prior,'call.transfer.blind');
+    > 173 |   await expect.poll(async()=>(await records()).length,{timeout:12000}).toBe(1);
+          |                                                                        ^
+      174 |   writeEvidence('02b-blind',{result:'PASS',transferred,history:await records(),activeChannels:channels()});
+      175 |  }finally{await Promise.all(contexts.map(x=>x.close()));}
+      176 | });
+        at /Users/wendelpaco/works/flora-ia/web/tests/operations.spec.ts:173:72
+
+    Error Context: .local/phase-02/playwright/operations-real-blind-REFE-7021e-ler-and-closes-all-channels/error-context.md
+
+  2 failed
+    web/tests/operations.spec.ts:123:1 › real hold, consultation rejection and cancellation, and attended REFER with media 
+    web/tests/operations.spec.ts:159:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels 

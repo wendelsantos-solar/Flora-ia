@@ -1,0 +1,7 @@
+FROM mcr.microsoft.com/playwright:v1.65.0-noble
+RUN apt-get update && apt-get install -y --no-install-recommends wireguard-tools iproute2 libnss3-tools curl && rm -rf /var/lib/apt/lists/*
+WORKDIR /app
+RUN npm install --no-audit --no-fund playwright@1.65.0
+COPY client.sh /client.sh
+COPY verify.cjs browser-server.cjs /app/
+ENTRYPOINT ["/bin/sh", "/client.sh"]

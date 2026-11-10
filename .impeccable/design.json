@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-08T21:50:39.748938+00:00",
+  "title": "Design System: Central de telefonia",
+  "extensions": {
+    "colorMeta": {
+      "green": {
+        "role": "primary",
+        "displayName": "Verde de ação",
+        "canonical": "#175d43",
+        "tonalRamp": [
+          "oklch(15% 0.0810 163.80)",
+          "oklch(26% 0.0810 163.80)",
+          "oklch(38% 0.0810 163.80)",
+          "oklch(49% 0.0810 163.80)",
+          "oklch(61% 0.0810 163.80)",
+          "oklch(72% 0.0810 163.80)",
+          "oklch(84% 0.0810 163.80)",
+          "oklch(95% 0.0810 163.80)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Papel",
+        "canonical": "#f4f5f1",
+        "tonalRamp": [
+          "oklch(15% 0.0054 117.92)",
+          "oklch(26% 0.0054 117.92)",
+          "oklch(38% 0.0054 117.92)",
+          "oklch(49% 0.0054 117.92)",
+          "oklch(61% 0.0054 117.92)",
+          "oklch(72% 0.0054 117.92)",
+          "oklch(84% 0.0054 117.92)",
+          "oklch(95% 0.0054 117.92)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Superfície branca",
+        "canonical": "#ffffff",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Tinta verde escura",
+        "canonical": "#202f29",
+        "tonalRamp": [
+          "oklch(15% 0.0229 168.11)",
+          "oklch(26% 0.0229 168.11)",
+          "oklch(38% 0.0229 168.11)",
+          "oklch(49% 0.0229 168.11)",
+          "oklch(61% 0.0229 168.11)",
+          "oklch(72% 0.0229 168.11)",
+          "oklch(84% 0.0229 168.11)",
+          "oklch(95% 0.0229 168.11)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Texto de apoio",
+        "canonical": "#617168",
+        "tonalRamp": [
+          "oklch(15% 0.0237 160.88)",
+          "oklch(26% 0.0237 160.88)",
+          "oklch(38% 0.0237 160.88)",
+          "oklch(49% 0.0237 160.88)",
+          "oklch(61% 0.0237 160.88)",
+          "oklch(72% 0.0237 160.88)",
+          "oklch(84% 0.0237 160.88)",
+          "oklch(95% 0.0237 160.88)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Divisória",
+        "canonical": "#dce2db",
+        "tonalRamp": [
+          "oklch(15% 0.0114 141.26)",
+          "oklch(26% 0.0114 141.26)",
+          "oklch(38% 0.0114 141.26)",
+          "oklch(49% 0.0114 141.26)",
+          "oklch(61% 0.0114 141.26)",
+          "oklch(72% 0.0114 141.26)",
+          "oklch(84% 0.0114 141.26)",
+          "oklch(95% 0.0114 141.26)"
+        ]
+      },
+      "red": {
+        "role": "error",
+        "displayName": "Vermelho de erro",
+        "canonical": "#a32b35",
+        "tonalRamp": [
+          "oklch(15% 0.1556 20.96)",
+          "oklch(26% 0.1556 20.96)",
+          "oklch(38% 0.1556 20.96)",
+          "oklch(49% 0.1556 20.96)",
+          "oklch(61% 0.1556 20.96)",
+          "oklch(72% 0.1556 20.96)",
+          "oklch(84% 0.1556 20.96)",
+          "oklch(95% 0.1556 20.96)"
+        ]
+      },
+      "danger-surface": {
+        "role": "error",
+        "displayName": "Fundo de encerramento",
+        "canonical": "#f8e9e9",
+        "tonalRamp": [
+          "oklch(15% 0.0163 17.45)",
+          "oklch(26% 0.0163 17.45)",
+          "oklch(38% 0.0163 17.45)",
+          "oklch(49% 0.0163 17.45)",
+          "oklch(61% 0.0163 17.45)",
+          "oklch(72% 0.0163 17.45)",
+          "oklch(84% 0.0163 17.45)",
+          "oklch(95% 0.0163 17.45)"
+        ]
+      },
+      "input-line": {
+        "role": "neutral",
+        "displayName": "Borda de campo",
+        "canonical": "#bcc9be",
+        "tonalRamp": [
+          "oklch(15% 0.0208 150.04)",
+          "oklch(26% 0.0208 150.04)",
+          "oklch(38% 0.0208 150.04)",
+          "oklch(49% 0.0208 150.04)",
+          "oklch(61% 0.0208 150.04)",
+          "oklch(72% 0.0208 150.04)",
+          "oklch(84% 0.0208 150.04)",
+          "oklch(95% 0.0208 150.04)"
+        ]
+      },
+      "extension-surface": {
+        "role": "neutral",
+        "displayName": "Fundo do ramal",
+        "canonical": "#e4e9df",
+        "tonalRamp": [
+          "oklch(15% 0.0144 128.63)",
+          "oklch(26% 0.0144 128.63)",
+          "oklch(38% 0.0144 128.63)",
+          "oklch(49% 0.0144 128.63)",
+          "oklch(61% 0.0144 128.63)",
+          "oklch(72% 0.0144 128.63)",
+          "oklch(84% 0.0144 128.63)",
+          "oklch(95% 0.0144 128.63)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "headline": {
+        "displayName": "Título principal",
+        "purpose": "Título da mesa de chamadas."
+      },
+      "body": {
+        "displayName": "Texto operacional",
+        "purpose": "Texto corrente e controles."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "button-background",
+        "value": "background .15s",
+        "purpose": "Mudança de fundo dos botões; removida com prefers-reduced-motion."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "820px"
+      },
+      {
+        "name": "single-column",
+        "value": "680px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Controle do telefone no estado correspondente.",
+      "html": "<button class=\"ds-button-primary\">Ligar</button>",
+      "css": ".ds-button-primary{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;min-height:48px;padding:12px 20px;border:0;border-radius:8px;background:var(--green,#175d43);color:#fff;font-weight:550;cursor:pointer;transition:background .15s}.ds-button-primary:hover:not(:disabled){background:#124b36}.ds-button-primary:focus-visible{outline:2px solid var(--green,#175d43);outline-offset:4px}.ds-button-primary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-primary{transition:none}}"
+    },
+    {
+      "name": "Secondary button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Controle do telefone no estado correspondente.",
+      "html": "<button class=\"ds-button-secondary\">Silenciar microfone</button>",
+      "css": ".ds-button-secondary{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;min-height:48px;padding:12px 20px;border:0;border-radius:8px;background:var(--paper,#f4f5f1);color:var(--ink,#202f29);font-weight:550;cursor:pointer;transition:background .15s}.ds-button-secondary:focus-visible{outline:2px solid var(--green,#175d43);outline-offset:4px}.ds-button-secondary:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-secondary{transition:none}}"
+    },
+    {
+      "name": "Danger button",
+      "kind": "button",
+      "refersTo": "button-danger",
+      "description": "Controle do telefone no estado correspondente.",
+      "html": "<button class=\"ds-button-danger\">Encerrar chamada</button>",
+      "css": ".ds-button-danger{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;min-height:48px;padding:12px 20px;border:0;border-radius:8px;background:#f8e9e9;color:var(--red,#a32b35);font-weight:550;cursor:pointer;transition:background .15s}.ds-button-danger:hover:not(:disabled){background:#f0d5d6}.ds-button-danger:focus-visible{outline:2px solid var(--green,#175d43);outline-offset:4px}.ds-button-danger:disabled{opacity:.45;cursor:not-allowed}@media(prefers-reduced-motion:reduce){.ds-button-danger{transition:none}}"
+    },
+    {
+      "name": "Destination field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Campo numérico centralizado com label explícito.",
+      "html": "<label class=\"ds-label\" for=\"ds-destination\">Ramal de destino</label><input class=\"ds-destination\" id=\"ds-destination\" inputmode=\"numeric\" value=\"202\" maxlength=\"3\">",
+      "css": ".ds-label{display:block;font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;font-size:12px;font-weight:600;color:var(--ink,#202f29);margin-bottom:8px}.ds-destination{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;color:var(--ink,#202f29);background:var(--surface,#fff);border:1px solid #bcc9be;border-radius:8px;min-height:56px;padding:10px 12px;font-size:24px;text-align:center;letter-spacing:.08em;font-variant-numeric:tabular-nums}.ds-destination:focus-visible{outline:2px solid var(--green,#175d43);outline-offset:4px}"
+    },
+    {
+      "name": "Header brand",
+      "kind": "nav",
+      "description": "Link da marca no cabeçalho.",
+      "html": "<a class=\"ds-brand\" href=\"#\">central<span>.</span></a>",
+      "css": ".ds-brand{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;font-size:28px;letter-spacing:-.03em;font-weight:650;color:var(--ink,#202f29);text-decoration:none}.ds-brand span{color:var(--green,#175d43)}.ds-brand:focus-visible{outline:2px solid var(--green,#175d43);outline-offset:4px}"
+    },
+    {
+      "name": "Phone panel",
+      "kind": "card",
+      "refersTo": "phone-panel",
+      "description": "Superfície plana com cabeçalho e borda.",
+      "html": "<section class=\"ds-panel\"><h2 class=\"ds-heading\">Conectar seu ramal</h2><p class=\"ds-body\">Use as credenciais locais geradas para cada operador.</p></section>",
+      "css": ".ds-panel{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;background:var(--surface,#fff);border:1px solid var(--line,#dce2db);border-radius:var(--radius,14px);color:var(--ink,#202f29);overflow:hidden}.ds-heading{font-size:16px;font-weight:600;margin:0;padding:24px;border-bottom:1px solid var(--line,#dce2db)}.ds-body{padding:24px;margin:0;font-size:13px;color:var(--muted,#617168)}"
+    },
+    {
+      "name": "Connection status",
+      "kind": "custom",
+      "description": "Estado com ponto e texto; sem interação.",
+      "html": "<span class=\"ds-status\"><span></span>Disponível</span>",
+      "css": ".ds-status{font-family:'Avenir Next','Segoe UI',sans-serif;font-size:14px;display:inline-flex;align-items:center;gap:6px;color:var(--green,#175d43);font-size:11px}.ds-status>span{width:6px;height:6px;border-radius:50%;background:var(--green,#175d43)}"
+    },
+    {
+      "name": "Navegação de operação",
+      "kind": "nav",
+      "description": "Visões disponíveis por perfil, com botões que quebram linha e indicam a seleção.",
+      "html": "<nav class=\"ds-ops-nav\" aria-label=\"Operação\"><button class=\"ds-ops-view\" aria-pressed=\"true\">Atendimento</button><button class=\"ds-ops-view\" aria-pressed=\"false\">Supervisão</button><button class=\"ds-ops-view\" aria-pressed=\"false\">Administração</button></nav>",
+      "css": ".ds-ops-nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; } .ds-ops-view { display: flex; align-items: center; justify-content: center; min-height: 48px; padding: 12px 20px; border: 0; border-radius: 8px; background: var(--paper, #f4f5f1); color: var(--ink, #202f29); font: inherit; font-weight: 550; transition: background .15s; } .ds-ops-view[aria-pressed=\"true\"] { background: var(--soft, #e9f2e9); color: var(--green, #175d43); } .ds-ops-view:focus-visible { outline: 2px solid var(--green, #175d43); outline-offset: 4px; } @media (prefers-reduced-motion: reduce) { .ds-ops-view { transition: none; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "Mesa de operação diurna",
+    "overview": "Mesa de operação diurna: superfícies claras, texto verde escuro e divisórias leves mantêm o foco na conversa. A densidade é moderada; o telefone concentra as ações e a área lateral reúne equipe, operação de filas e histórico. A linguagem permanece direta e em português.",
+    "keyCharacteristics": [
+      "Superfícies claras e hierarquia por espaço.",
+      "Ações concentradas no telefone.",
+      "Estados explícitos e números tabulares."
+    ],
+    "rules": [
+      {
+        "name": "The Estado Legível Rule",
+        "body": "Todo estado tem texto além de cor; registro SIP, motor de telefonia e canal de eventos têm indicadores separados.",
+        "section": "colors"
+      },
+      {
+        "name": "The Telefone Primeiro Rule",
+        "body": "Em telas estreitas, preserve a ordem telefone, equipe, operação de filas e histórico.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "Do associar estado a texto legível além da cor.",
+      "Do manter o telefone antes da equipe, da operação de filas e do histórico em telas estreitas.",
+      "Do usar números tabulares para ramais, duração e registros de chamadas.",
+      "Do apresentar somente controles ligados às ações disponíveis no estado atual."
+    ],
+    "donts": [
+      "Don't transformar estados SIP, motor e eventos em um único indicador.",
+      "Don't exibir dados de equipe e histórico após sair da sessão.",
+      "Don't usar sombra, gradiente ou movimento decorativo para criar hierarquia."
+    ]
+  }
+}

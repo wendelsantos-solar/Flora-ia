@@ -1,0 +1,28 @@
+# Patched upstream candidate; validate on the lab before promotion.
+FROM debian:trixie-slim AS build
+ARG ASTERISK_VERSION=20.22.0
+ARG ASTERISK_SHA256=ca4a5cbfa0e8b4fa683ae6aa8302769244b6208f1cc466e6025f89457df418e5
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential curl ca-certificates pkg-config \
+    bzip2 libssl-dev libxml2-dev libjansson-dev libsqlite3-dev uuid-dev libsrtp2-dev libedit-dev libncurses-dev && rm -rf /var/lib/apt/lists/*
+WORKDIR /build
+RUN curl -fsSLo asterisk.tar.gz "https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-$ASTERISK_VERSION.tar.gz" && \
+    echo "$ASTERISK_SHA256  asterisk.tar.gz" | sha256sum -c - && \
+    tar -xzf asterisk.tar.gz --strip-components=1
+RUN ./configure --prefix=/usr --libdir=/usr/lib --sysconfdir=/etc --localstatedir=/var --with-pjproject-bundled && \
+    make menuselect.makeopts && \
+    menuselect/menuselect --disable-category MENUSELECT_UTILS --disable-category MENUSELECT_CORE_SOUNDS --disable-category MENUSELECT_MOH menuselect.makeopts && \
+    make -j4 && make install DESTDIR=/stage
+
+FROM debian:trixie-slim
+RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates gettext-base gosu tzdata python3 \
+    libssl3t64 libxml2 libjansson4 libsqlite3-0 libuuid1 libsrtp2-1 libedit2 libncurses6 && rm -rf /var/lib/apt/lists/* && \
+    groupadd -g 101 asterisk && useradd -u 100 -g asterisk -M -s /usr/sbin/nologin asterisk && \
+    ln -s /usr/sbin/gosu /usr/local/bin/su-exec && \
+    mkdir -p /etc/asterisk /var/log/asterisk/cel-custom /var/run/asterisk /var/lib/asterisk /var/spool/asterisk && \
+    chown -R asterisk:asterisk /var/log/asterisk /var/run/asterisk /var/lib/asterisk /var/spool/asterisk
+COPY --from=build /stage/usr/ /usr/
+COPY --from=build /stage/var/lib/asterisk/ /var/lib/asterisk/
+RUN chown -R asterisk:asterisk /var/lib/asterisk
+COPY entrypoint.sh /entrypoint.sh
+COPY ami_gate.py /ami_gate.py
+ENTRYPOINT ["/bin/sh", "/entrypoint.sh"]

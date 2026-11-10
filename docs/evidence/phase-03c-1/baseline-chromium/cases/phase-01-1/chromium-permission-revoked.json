@@ -1,0 +1,68 @@
+{
+  "at": "2026-11-09T18:12:37.099Z",
+  "result": "PASS",
+  "audio_source": "native browser-generated test microphone; human speech not tested",
+  "data": {
+    "browser": "158.0.8127.18",
+    "revoked": {
+      "session": "Established",
+      "connectionState": "connected",
+      "iceConnectionState": "connected",
+      "localTracks": [
+        {
+          "id": "147c8af9-845c-4af2-8e11-2dc11cebbbec",
+          "enabled": true,
+          "readyState": "ended",
+          "muted": false
+        }
+      ],
+      "remoteTracks": [
+        {
+          "id": "8d07ad9f-655e-4257-8c21-feebe208c95a",
+          "enabled": true,
+          "readyState": "live",
+          "muted": false
+        }
+      ],
+      "health": {
+        "sip": "registered",
+        "media": "connected",
+        "microphone": "unavailable",
+        "playbackBlocked": false,
+        "levelsAvailable": true,
+        "inputLevel": 0,
+        "outputLevel": 0
+      },
+      "outputSelectionSupported": true,
+      "outputRouted": false,
+      "lastRelease": null,
+      "lastInputReplacement": null
+    },
+    "recovered": {
+      "session": null,
+      "connectionState": null,
+      "iceConnectionState": null,
+      "localTracks": [],
+      "remoteTracks": [],
+      "health": {
+        "sip": "registered",
+        "media": "idle",
+        "microphone": "idle",
+        "playbackBlocked": false,
+        "levelsAvailable": false,
+        "inputLevel": 0,
+        "outputLevel": 0
+      },
+      "outputSelectionSupported": true,
+      "outputRouted": false,
+      "lastRelease": {
+        "tracksEnded": true,
+        "connectionClosed": true
+      },
+      "lastInputReplacement": {
+        "previousEnded": true,
+        "replacementLive": true
+      }
+    }
+  }
+}

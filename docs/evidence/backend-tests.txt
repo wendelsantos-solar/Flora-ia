@@ -1,0 +1,38 @@
+?   	flora/cmd/server	[no test files]
+=== RUN   TestPersistenceTenantIdempotencyOrderingAndRecovery
+    persistence_test.go:17: requires disposable DATABASE_URL_TEST; run scripts/test-integration.sh
+--- SKIP: TestPersistenceTenantIdempotencyOrderingAndRecovery (0.00s)
+PASS
+ok  	flora/integration	1.650s
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+=== RUN   TestAuthenticationAndValidation
+2026/11/08 18:45:04 INFO http_request method=GET route=/health/live correlation_id=0313cf73a10760a74fbfb01e duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/extensions correlation_id=c55b18c08dab67a7353072c6 duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/calls correlation_id=42bd4dee410ac34fc23f52aa duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/calls correlation_id=f213f2a1becd80011225de54 duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/calls correlation_id=b5dc0fd927c8ea29d3bb893a duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/extensions/{id} correlation_id=6b9db420eb35950662a51dc8 duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=GET route=/v1/calls/{id} correlation_id=d32831f96cd4d094da26c496 duration_ms=0
+2026/11/08 18:45:04 INFO http_request method=POST route=/v1/session correlation_id=146864d0b8baa502ced92296 duration_ms=0
+--- PASS: TestAuthenticationAndValidation (0.00s)
+PASS
+ok  	flora/internal/httpapi	1.409s
+=== RUN   TestDevelopmentIdentityBoundary
+--- PASS: TestDevelopmentIdentityBoundary (0.00s)
+PASS
+ok  	flora/internal/identity	1.348s
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/realtime	[no test files]
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+=== RUN   TestReadAMIFrame
+--- PASS: TestReadAMIFrame (0.00s)
+=== RUN   TestParseCEL
+--- PASS: TestParseCEL (0.00s)
+=== RUN   TestEpochCEL
+--- PASS: TestEpochCEL (0.00s)
+PASS
+ok  	flora/internal/telephony	1.353s
+?   	flora/internal/tenants	[no test files]

@@ -1,0 +1,45 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 677B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 669B 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/library/node:22-alpine
+#3 DONE 0.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 72B done
+#4 DONE 0.0s
+
+#5 [build 1/6] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#5 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 259.66kB 0.0s done
+#6 DONE 0.0s
+
+#7 [build 3/6] COPY package*.json ./
+#7 CACHED
+
+#8 [build 2/6] WORKDIR /app
+#8 CACHED
+
+#9 [build 4/6] RUN npm ci --cache /tmp/npm-cache && rm -rf /tmp/npm-cache
+#9 CACHED
+
+#10 [build 5/6] COPY . .
+#10 DONE 0.1s
+
+#11 [build 6/6] RUN npm run build
+#11 1.551 
+#11 1.551 > flora-phone@0.1.0 build
+#11 1.551 > next build
+#11 1.551 
+#11 2.599 ▲ Next.js 16.4.5 (Turbopack)
+#11 2.808 ✓ Running next.config.ts took 208ms
+#11 2.837 
+#11 2.888   Creating an optimized production build ...
+

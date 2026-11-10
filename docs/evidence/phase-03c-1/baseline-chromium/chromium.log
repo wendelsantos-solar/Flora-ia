@@ -1,0 +1,201 @@
+
+Running 13 tests using 1 worker
+
+Consecutive call 1 starting
+  ✘   1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (1.1m)
+  ✓   2 [chromium] › tests/homologacao.spec.ts:67:1 › revoking actual microphone permission warns, permission can be restored and input replaced (45.9s)
+  ✓   3 [chromium] › tests/homologacao.spec.ts:74:1 › microphone permission denied before dialing and answering, then granted without reload (13.9s)
+  ✓   4 [chromium] › tests/homologacao.spec.ts:82:1 › cancel while ringing and after the callee starts answering, without orphan sessions (17.8s)
+  ✓   5 [chromium] › tests/homologacao.spec.ts:89:1 › temporary real media interruption recovers after Asterisk pause and resume (19.6s)
+  ✓   6 [chromium] › tests/homologacao.spec.ts:98:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (44.6s)
+  ✘   7 [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation (2.5m)
+  ✓   8 [chromium] › tests/operations.spec.ts:179:1 › real hold, consultation rejection and cancellation, and attended REFER with media (37.8s)
+  ✓   9 [chromium] › tests/operations.spec.ts:222:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels (46.7s)
+  ✓  10 [chromium] › tests/operations.spec.ts:241:1 › department-to-department REFER, schedule and real internal contingency (1.0m)
+  ✓  11 [chromium] › tests/operations.spec.ts:318:1 › transfer edge cases: unavailable and rejecting target, ending, and origin disconnect (1.4m)
+  ✓  12 [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (51.4s)
+  ✓  13 [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation (2.4s)
+
+
+  1) [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+
+    Error: expect(received).not.toBe(expected) // Object.is equality
+
+    Expected: not "3d107dc4-4944-4744-b148-90ef312c01d0"
+
+    Call Log:
+    - Timeout 5000ms exceeded while waiting on the predicate
+
+      48 |    await caller.getByRole('button',{name:'Reativar microfone',exact:true}).click();expect((await diagnostics(caller)).localTracks[0].enabled).toBe(true);const resumedBefore=rx(await stats(callee));await caller.waitForTimeout(1300);const resumedAfter=rx(await stats(callee));const resumedEnergy=Number(resumedAfter.totalAudioEnergy)-Number(resumedBefore.totalAudioEnergy);expect(resumedEnergy).toBeGreaterThan(0.0001);
+      49 |    const original=(await diagnostics(caller)).localTracks[0].id;await caller.getByText('Dispositivo de áudio',{exact:true}).click();await caller.getByRole('button',{name:'Buscar microfones',exact:true}).click();const select=caller.getByLabel('Microfone da chamada',{exact:true});await expect(select.locator('option')).not.toHaveCount(1);const id=await select.locator('option').evaluateAll(options=>(options as HTMLOptionElement[]).find(o=>o.value)?.value||'');expect(id).not.toBe('');await select.selectOption(id);
+    > 50 |    await expect.poll(async()=>(await diagnostics(caller)).localTracks[0].id).not.toBe(original);expect((await diagnostics(caller)).lastInputReplacement).toEqual({previousEnded:true,replacementLive:true});await media(callee);
+         |                                                                                  ^
+      51 |    const outputSelect=caller.getByLabel('Saída de áudio',{exact:true});if(await outputSelect.isVisible()){const speakerId=await outputSelect.locator('option').evaluateAll(options=>(options as HTMLOptionElement[]).find(o=>o.value)?.value||'');if(speakerId){await outputSelect.selectOption(speakerId);await expect.poll(async()=>(await diagnostics(caller)).outputRouted).toBe(true);}}
+      52 |    await expect.poll(async()=>(await diagnostics(caller)).health).toMatchObject({microphone:'active',media:'connected'});
+      53 |    controls={silentEnergy,resumedEnergy,replacement:await diagnostics(caller)};
+        at /tmp/flora-regressions-d0d654433e684284bfe44f85fe7421f3/web/tests/homologacao.spec.ts:50:82
+
+    Error Context: test-results/homologacao-three-consecut-53be8-one-replacement-and-cleanup-chromium/error-context.md
+
+  2) [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+
+    Test timeout of 150000ms exceeded.
+
+    Error: browserContext.close: Test ended.
+    Browser logs:
+
+    <launching> /ms-playwright/chromium-1254/chrome-linux-arm64/chrome --disable-field-trial-config --disable-background-networking --disable-background-timer-throttling --disable-backgrounding-occluded-windows --disable-back-forward-cache --disable-breakpad --disable-component-extensions-with-background-pages --disable-component-update --no-default-browser-check --disable-default-apps --disable-dev-shm-usage --disable-edgeupdater --disable-extensions --disable-features=AvoidUnnecessaryBeforeUnloadCheckSync,DestroyProfileOnBrowserClose,HttpsUpgrades,HttpsFirstBalancedModeAutoEnable,LensOverlay,MediaRouter,PaintHolding,ThirdPartyStoragePartitioning,AvoidCorsURLLoaderRestartOnRedirect,TcpPortRandomizationWin,OptimizationHints,NetworkTimeServiceQuerying,AimEnabled,PreconnectToSearch,msForceBrowserSignIn,msEdgeUpdateLaunchServicesPreferredVersion --enable-features=CDPScreenshotNewSurface,SkipListAccountsWithoutGaiaCookies --allow-pre-commit-input --disable-hang-monitor --disable-ipc-flooding-protection --disable-popup-blocking --disable-prompt-on-repost --disable-renderer-backgrounding --disable-updater-scheduler --force-color-profile=srgb --metrics-recording-only --no-first-run --password-store=basic --use-mock-keychain --no-service-autorun --disable-search-engine-choice-screen --unsafely-disable-devtools-self-xss-warnings --enable-unsafe-swiftshader --edge-skip-compat-layer-relaunch --disable-stack-profiler --disable-infobars --disable-sync --do-not-de-elevate --headless --hide-scrollbars --mute-audio --blink-settings=primaryHoverType=2,availableHoverTypes=2,primaryPointerType=4,availablePointerTypes=4 --no-sandbox --use-fake-device-for-media-stream --autoplay-policy=no-user-gesture-required --user-data-dir=/tmp/playwright_chromiumdev_profile-BpeBiB --remote-debugging-pipe --no-startup-window
+    <launched> pid=1624
+    [pid=1624][err] [1624:1646:1109/181151.445523:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1646:1109/181151.446140:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1646:1109/181151.454035:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1646:1109/181151.454083:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1646:1109/181151.454120:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1646:1109/181151.454148:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1646:1109/181151.461193:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1651:1109/181151.469388:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1651:1109/181151.469441:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1651:1109/181151.469460:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1646:1109/181151.685437:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1624:1109/181151.758228:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1646:1109/181151.758334:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1624:1109/181151.759380:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1646:1109/181151.759482:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1624:1109/181151.768496:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1624:1109/181151.784780:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1624:1109/181151.784897:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1646:1109/181151.785048:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1646:1109/181151.785488:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1646:1109/181151.785521:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Failed to connect to socket /run/dbus/system_bus_socket: No such file or directory
+    [pid=1624][err] [1624:1624:1109/181151.787623:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1646:1109/181151.787754:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1624:1109/181151.787982:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.Properties.GetAll: object_path= /org/freedesktop/UPower/devices/DisplayDevice: unknown error type: 
+    [pid=1624][err] [1624:1624:1109/181151.794038:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] [1624:1646:1109/181151.794242:ERROR:dbus/bus.cc:405] Failed to connect to the bus: Could not parse server address: Unknown address type (examples of valid types are "tcp" and on UNIX "unix")
+    [pid=1624][err] [1624:1624:1109/181151.794516:ERROR:dbus/object_proxy.cc:572] Failed to call method: org.freedesktop.DBus.NameHasOwner: object_path= /org/freedesktop/DBus: unknown error type: 
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181223.453943:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181223.458070:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181243.854840:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181243.856851:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181258.533342:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181258.535073:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181315.887952:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181315.893676:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181334.877108:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181334.878498:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624][err] [1624:1624:1109/181446.864121:ERROR:chrome/browser/ui/views/user_education/impl/browser_user_education_interface_impl.cc:186] Attempting to show IPH IPH_ExtensionsZeroStatePromo before browser initialization complete; IPH will not be shown.
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181610.166673:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: default,No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:855:(parse_card) cannot find card '0'
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_card_inum returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:422:(snd_func_concat) error evaluating strings
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_concat returned error: No such file or directory
+    [pid=1624][err] ALSA lib confmisc.c:1342:(snd_func_refer) error evaluating name
+    [pid=1624][err] ALSA lib conf.c:5208:(_snd_config_evaluate) function snd_func_refer returned error: No such file or directory
+    [pid=1624][err] ALSA lib conf.c:5731:(snd_config_expand) Evaluate error: No such file or directory
+    [pid=1624][err] ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM default
+    [pid=1624][err] [2012:2012:1109/181610.168790:ERROR:media/audio/alsa/alsa_util.cc:204] PcmOpen: plug:default,No such file or directory
+    [pid=1624] <gracefully close start>
+
+      152 |   writeEvidence('02a-queue',{result:'PASS',strategy:'rrmemory',mediaSource:'native Chromium synthetic input via real SIP/WebRTC',measured,beforeRestart,afterRestart,activeChannels:channels()});
+      153 |  }finally{
+    > 154 |   await c1.close();await c2.close();await c3.close();
+          |                                     ^
+      155 |   await change(request,'DELETE','queues/'+n,'201');
+      156 |   await change(request,'DELETE','departments/'+key,'201');
+      157 |  }
+        at /tmp/flora-regressions-d0d654433e684284bfe44f85fe7421f3/web/tests/operations.spec.ts:154:37
+
+    Error Context: test-results/operations-real-queue-dist-4fd04--and-restart-reconciliation-chromium/error-context.md
+
+  2 failed
+    [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+    [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+  11 passed (10.9m)

@@ -1,0 +1,52 @@
+{
+  "at": "2026-11-09T03:55:53.850Z",
+  "data": {
+    "result": "PASS",
+    "media": {
+      "before": [
+        {
+          "packets": 0,
+          "energy": 0
+        },
+        {
+          "packets": 0,
+          "energy": 0
+        }
+      ],
+      "after": [
+        {
+          "packets": 42,
+          "energy": 0.07968882855715188
+        },
+        {
+          "packets": 42,
+          "energy": 0.17852347976178506
+        }
+      ]
+    },
+    "call": {
+      "tenant_id": "11111111-1111-4111-8111-111111111111",
+      "department": null,
+      "queue": null,
+      "agent": "203",
+      "wait_seconds": null,
+      "talk_seconds": 1,
+      "outcome": "answered",
+      "hangup_cause": 16,
+      "id": "0fbaccdd-f23b-4e17-8c6d-74270f43b498",
+      "source": "201",
+      "destination": "203",
+      "state": "completed",
+      "started_at": "2026-11-09T03:55:47.15971Z",
+      "answered_at": "2026-11-09T03:55:47.467412Z",
+      "ended_at": "2026-11-09T03:55:48.404928Z",
+      "asterisk_linked_id": "1794196547.44"
+    },
+    "legs": 2,
+    "uniqueAfterReplay": 1,
+    "operatorNonparticipant": 404,
+    "foreignTenant": 404,
+    "socketReconnected": true,
+    "activeChannels": 0
+  }
+}

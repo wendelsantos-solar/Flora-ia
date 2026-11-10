@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [chromium] › tests/homologacao.spec.ts:107:1 › incoming INVITE renders Atender after navigation, operational outage and SIP reconnect (27.0s)
+
+  1 passed (31.2s)

@@ -1,0 +1,35 @@
+
+Running 2 tests using 1 worker
+
+(node:74284) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [firefox] › web/tests/compatibilidade.spec.ts:8:1 › browser capabilities and trusted SIP registration; real generated audio in Firefox (23.2s)
+(node:74364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  2 [webkit-capabilities] › web/tests/compatibilidade.spec.ts:8:1 › browser capabilities and trusted SIP registration; real generated audio in Firefox (2.0s)
+
+
+  1) [firefox] › web/tests/compatibilidade.spec.ts:8:1 › browser capabilities and trusted SIP registration; real generated audio in Firefox 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 5
+    Received:   0
+
+    Call Log:
+    - Timeout 15000ms exceeded while waiting on the predicate
+
+      10 |  try{await connect(a,'201');evidence.registration='PASS';evidence.capabilities=await a.evaluate(()=>({secureContext:isSecureContext,getUserMedia:typeof navigator.mediaDevices?.getUserMedia==='function',peerConnection:typeof RTCPeerConnection==='function',deviceChange:'ondevicechange' in navigator.mediaDevices,outputSelection:'setSinkId' in HTMLMediaElement.prototype}));
+      11 |  if(browserName==='firefox'){
+    > 12 |   await connect(b,'202');await a.getByRole('button',{name:'Ligar',exact:true}).click();await expect(b.getByRole('button',{name:'Atender',exact:true})).toBeVisible({timeout:15000});await b.getByRole('button',{name:'Atender',exact:true}).click();await expect(a.getByRole('status').filter({hasText:/^Em ligação$/})).toBeVisible({timeout:15000});evidence.initial=await Promise.all([a,b].map(async p=>({stats:await stats(p),state:await p.evaluate(()=>(window as Window&{floraMediaDiagnostics?:()=>unknown}).floraMediaDiagnostics?.())})));await expect.poll(async()=>Number(rx(await stats(a)).packetsReceived||0),{timeout:15000}).toBeGreaterThan(5);
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ^
+      13 |   const before=await Promise.all([stats(a),stats(b)]);await a.waitForTimeout(2500);const after=await Promise.all([stats(a),stats(b)]);for(let i=0;i<2;i++){expect(Number(rx(after[i]).packetsReceived)-Number(rx(before[i]).packetsReceived||0)).toBeGreaterThan(20);expect(Number(rx(after[i]).totalAudioEnergy)-Number(rx(before[i]).totalAudioEnergy||0)).toBeGreaterThan(0.0001);}evidence.media={source:'Firefox native generated test input; no SIP/RTP mocks',before,after};await a.getByRole('button',{name:'Encerrar chamada',exact:true}).click();await expect(b.getByRole('status').filter({hasText:/^Disponível$/})).toBeVisible();evidence.media_result='PASS';
+      14 |  }else{evidence.media_result='NOT EXECUTED — no physical microphone requested by automation';}
+      15 |  evidence.result='PASS';
+        at /Users/wendelpaco/works/flora-ia/web/tests/compatibilidade.spec.ts:12:624
+
+    Error Context: .local/phase-01-1/compatibility-results/compatibilidade-browser-ca-5ebfa--generated-audio-in-Firefox-firefox/error-context.md
+
+  1 failed
+    [firefox] › web/tests/compatibilidade.spec.ts:8:1 › browser capabilities and trusted SIP registration; real generated audio in Firefox 
+  1 passed (31.8s)

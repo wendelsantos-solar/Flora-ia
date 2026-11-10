@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [chromium] › tests/hardening.spec.ts:144:1 › opaque session cookie revocation closes an existing authenticated event socket (4.8s)
+
+  1 passed (6.3s)

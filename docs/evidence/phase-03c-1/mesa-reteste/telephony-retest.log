@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [chromium] › tests/mesa.spec.ts:45:1 › Mesa de Operação preserves the SIP session, real media and permissions across navigation (44.8s)
+
+  1 passed (46.4s)

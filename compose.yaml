@@ -1,0 +1,141 @@
+name: flora-phase1
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_DB: flora
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?run bootstrap}
+      POSTGRES_APP_PASSWORD: ${POSTGRES_APP_PASSWORD:?run bootstrap}
+    volumes:
+      - postgres:/var/lib/postgresql/data
+      - ./infra/postgres/00-role.sh:/docker-entrypoint-initdb.d/00-role.sh:ro
+      - ./backend/db/migrations/001_initial.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/db/migrations/002_operations.sql:/docker-entrypoint-initdb.d/02-operations.sql:ro
+      - ./backend/db/migrations/003_transfer.sql:/docker-entrypoint-initdb.d/03-transfer.sql:ro
+      - ./backend/db/migrations/004_queue_journal.sql:/docker-entrypoint-initdb.d/04-queue-journal.sql:ro
+      - ./backend/db/migrations/005_schedules.sql:/docker-entrypoint-initdb.d/05-schedules.sql:ro
+      - ./backend/db/migrations/006_tenant_lab.sql:/docker-entrypoint-initdb.d/06-tenant-lab.sql:ro
+      - ./backend/db/migrations/007_sessions.sql:/docker-entrypoint-initdb.d/07-sessions.sql:ro
+      - ./backend/db/migrations/008_sip_lab.sql:/docker-entrypoint-initdb.d/08-sip-lab.sql:ro
+    healthcheck:
+      test: [CMD-SHELL, pg_isready -U postgres -d flora]
+      interval: 3s
+      timeout: 3s
+      retries: 30
+    networks: [private]
+  asterisk:
+    hostname: flora-pbx
+    build:
+      context: ./infra/asterisk
+      dockerfile: Dockerfile.patched
+    environment:
+      QUEUE_AMI_PASSWORD: ${QUEUE_AMI_PASSWORD:?run bootstrap}
+      AMI_PASSWORD: ${AMI_PASSWORD:?run bootstrap}
+      PBX_TENANT: 11111111-1111-4111-8111-111111111111
+      EXT_PREFIX: "20"
+      EXT_A: "201"
+      EXT_B: "202"
+      EXT_C: "203"
+      RTP_START: "18000"
+      RTP_END: "18020"
+      SIP_A_PASSWORD: ${SIP_201_PASSWORD:?run bootstrap}
+      SIP_C_PASSWORD: ${SIP_203_PASSWORD:?run bootstrap}
+      SIP_B_PASSWORD: ${SIP_202_PASSWORD:?run bootstrap}
+      MEDIA_ADDRESS: ${MEDIA_ADDRESS:-127.0.0.1}
+    ports:
+      - '127.0.0.1:18489:8089'
+      - '127.0.0.1:18000-18020:18000-18020/udp'
+    volumes:
+      - ./infra/asterisk/templates:/templates:ro
+      - ./.local/certs:/certs:ro
+      - cel:/var/log/asterisk
+      - queue_config:/var/spool/flora-config
+    healthcheck:
+      test: [CMD-SHELL, "asterisk -rx 'module show like chan_pjsip' | grep -q Running && asterisk -rx 'module show like cel_custom' | grep -q ' Running '"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    networks: [pbx_a]
+    restart: unless-stopped
+  asterisk-b:
+    hostname: flora-pbx-b
+    build:
+      context: ./infra/asterisk
+      dockerfile: Dockerfile.patched
+    environment:
+      QUEUE_AMI_PASSWORD: ${QUEUE_AMI_B_PASSWORD:?run bootstrap}
+      AMI_PASSWORD: ${AMI_B_PASSWORD:?run bootstrap}
+      PBX_TENANT: 33333333-3333-4333-8333-333333333333
+      EXT_PREFIX: "21"
+      EXT_A: "211"
+      EXT_B: "212"
+      EXT_C: "213"
+      RTP_START: "18100"
+      RTP_END: "18120"
+      SIP_A_PASSWORD: ${SIP_211_PASSWORD:?run bootstrap}
+      SIP_C_PASSWORD: ${SIP_213_PASSWORD:?run bootstrap}
+      SIP_B_PASSWORD: ${SIP_212_PASSWORD:?run bootstrap}
+      MEDIA_ADDRESS: ${MEDIA_ADDRESS:-127.0.0.1}
+    ports:
+      - '127.0.0.1:18490:8089'
+      - '127.0.0.1:18100-18120:18100-18120/udp'
+    volumes:
+      - ./infra/asterisk/templates:/templates:ro
+      - ./.local/certs:/certs:ro
+      - cel_b:/var/log/asterisk
+      - queue_config_b:/var/spool/flora-config
+    healthcheck:
+      test: [CMD-SHELL, "asterisk -rx 'module show like chan_pjsip' | grep -q Running && asterisk -rx 'module show like cel_custom' | grep -q ' Running '"]
+      interval: 5s
+      timeout: 3s
+      retries: 30
+    networks: [pbx_b]
+    restart: unless-stopped
+  backend:
+    build: ./backend
+    # Read-only journal mounts use the Asterisk package group in both PBXs.
+    group_add: ["101"]
+    environment:
+      DATABASE_URL: postgres://flora_app:${POSTGRES_APP_PASSWORD:?run bootstrap}@db:5432/flora?sslmode=disable
+      AMI_ADDRESS: asterisk:5038
+      AMI_B_ADDRESS: asterisk-b:5038
+      AMI_B_PASSWORD: ${AMI_B_PASSWORD:?run bootstrap}
+      QUEUE_AMI_B_PASSWORD: ${QUEUE_AMI_B_PASSWORD:?run bootstrap}
+      CEL_B_PATH: /cel-b/cel-custom/Master.csv
+      TOKEN_211: ${TOKEN_211:?run bootstrap}
+      TOKEN_212: ${TOKEN_212:?run bootstrap}
+      TOKEN_213: ${TOKEN_213:?run bootstrap}
+      QUEUE_AMI_PASSWORD: ${QUEUE_AMI_PASSWORD:?run bootstrap}
+      AMI_PASSWORD: ${AMI_PASSWORD}
+      TOKEN_201: ${TOKEN_201}
+      TOKEN_203: ${TOKEN_203:?run bootstrap}
+      TOKEN_202: ${TOKEN_202}
+      TOKEN_OTHER: ${TOKEN_OTHER}
+      WEB_ORIGIN: http://localhost:13400
+      CEL_PATH: /cel/cel-custom/Master.csv
+    depends_on:
+      db: {condition: service_healthy}
+      asterisk: {condition: service_healthy}
+      asterisk-b: {condition: service_healthy}
+    volumes: [cel:/cel:ro, queue_config:/var/spool/flora-config, cel_b:/cel-b:ro, queue_config_b:/var/spool/flora-config-b]
+    ports: ['127.0.0.1:18400:8080']
+    networks: [private, pbx_a, pbx_b]
+    restart: unless-stopped
+  web:
+    build: ./web
+    environment:
+      NEXT_TELEMETRY_DISABLED: '1'
+    ports: ['127.0.0.1:13400:3000']
+    depends_on: [backend]
+    networks: [private]
+volumes:
+  postgres:
+  cel:
+  queue_config:
+  cel_b:
+  queue_config_b:
+networks:
+  pbx_a:
+  pbx_b:
+  private:
+    driver: bridge

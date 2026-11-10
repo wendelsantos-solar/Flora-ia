@@ -1,0 +1,4 @@
+{
+  "result": "FAIL",
+  "failure": "Command '('docker', 'compose', '-p', 'flora-03a', '-f', '/Users/wendelpaco/works/flora-ia/.local/phase-03a/compose.json', 'exec', '-T', 'carrier-a', 'python3', '-c', \"import json,sys,urllib.request,urllib.error\\ntoken,method,body,route,origin=json.load(sys.stdin)\\nreq=urllib.request.Request('http://backend:8080'+route,json.dumps(body).encode() if body is not None else None,\\n {'Authorization':'Bearer '+token,'Origin':origin,'Content-Type':'application/json'},method=method)\\ntry:\\n with urllib.request.urlopen(req,timeout=4) as response:\\n  print(json.dumps([response.status,response.read().decode()]))\\nexcept urllib.error.HTTPError as e:\\n print(json.dumps([e.code,e.read().decode()]))\\n\")' returned non-zero exit status 1."
+}

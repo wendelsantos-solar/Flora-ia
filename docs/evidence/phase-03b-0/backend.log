@@ -1,0 +1,38 @@
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	(cached)
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	(cached)
+ok  	flora/internal/identity	(cached)
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+ok  	flora/internal/siptrunk	(cached)
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	(cached)
+?   	flora/internal/tenants	[no test files]
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	(cached)
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	(cached)
+ok  	flora/internal/identity	(cached)
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+ok  	flora/internal/siptrunk	(cached)
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	(cached)
+?   	flora/internal/tenants	[no test files]
+=== RUN   TestCatalogQueueJournalAndTenantBoundaries
+--- PASS: TestCatalogQueueJournalAndTenantBoundaries (1.53s)
+=== RUN   TestPersistenceTenantIdempotencyOrderingAndRecovery
+--- PASS: TestPersistenceTenantIdempotencyOrderingAndRecovery (0.28s)
+=== RUN   TestTerminalRecoveryWithoutInitialEvent
+--- PASS: TestTerminalRecoveryWithoutInitialEvent (0.07s)
+PASS
+ok  	flora/integration	1.898s

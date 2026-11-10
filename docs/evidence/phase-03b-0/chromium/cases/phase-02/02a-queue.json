@@ -1,0 +1,33 @@
+{
+  "at": "2026-11-09T17:13:12.638Z",
+  "data": {
+    "result": "PASS",
+    "strategy": "rrmemory",
+    "mediaSource": "native Chromium synthetic input via real SIP/WebRTC",
+    "measured": {
+      "before": [
+        {
+          "packets": 4,
+          "energy": 0
+        },
+        {
+          "packets": 4,
+          "energy": 0.02037530371502877
+        }
+      ],
+      "after": [
+        {
+          "packets": 49,
+          "energy": 0.09541168306455923
+        },
+        {
+          "packets": 49,
+          "energy": 0.17191233600018513
+        }
+      ]
+    },
+    "beforeRestart": "t11111111-1111-4111-8111-111111111111-301 has 0 calls (max 20) in 'rrmemory' strategy (0s holdtime, 0s talktime), W:0, C:0, A:0, SL:0.0%, SL2:0.0% within 0s\n   Members: \n      PJSIP/202 (ringinuse disabled)\u001b[1;36;40m (dynamic)\u001b[0m\u001b[0m\u001b[0m (\u001b[1;32;40mNot in use\u001b[0m) has taken no calls yet \u001b[1;33;40m(login was 217 secs ago)\u001b[0m\n   No Callers\n\nt11111111-1111-4111-8111-111111111111-376 has 0 calls (max 20) in 'rrmemory' strategy (2s holdtime, 2s talktime), W:0, C:1, A:2, SL:0.0%, SL2:0.0% within 0s\n   Members: \n      PJSIP/202 (ringinuse disabled)\u001b[1;36;40m (dynamic)\u001b[0m\u001b[0m\u001b[0m (\u001b[1;32;40mNot in use\u001b[0m) has taken 1 calls (last was 17 secs ago) \u001b[1;33;40m(login was 21 secs ago)\u001b[0m\n   No Callers\n\nt11111111-1111-4111-8111-111111111111-391 has 0 calls (max 20) in 'rrmemory' strategy (0s holdtime, 0s talktime), W:0, C:0, A:0, SL:0.0%, SL2:0.0% within 0s\n   Members: \n      PJSIP/202 (ringinuse disabled)\u001b[1;36;40m (dynamic)\u001b[0m\u001b[0m\u001b[0m (\u001b[1;32;40mNot in use\u001b[0m) has taken no calls yet \u001b[1;33;40m(login was 217 secs ago)\u001b[0m\n   No Callers\n\n",
+    "afterRestart": "t11111111-1111-4111-8111-111111111111-301 has 0 calls (max 20) in 'rrmemory' strategy (0s holdtime, 0s talktime), W:0, C:0, A:0, SL:0.0%, SL2:0.0% within 0s\n   Members: \n      PJSIP/202 (ringinuse disabled)\u001b[1;36;40m (dynamic)\u001b[0m\u001b[0m\u001b[0m (\u001b[1;31;40mUnavailable\u001b[0m) has taken no calls yet \u001b[1;33;40m(login was 1 secs ago)\u001b[0m\n   No Callers\n\nt11111111-1111-4111-8111-111111111111-376 has 0 calls (max 20) in 'rrmemory' strategy (0s holdtime, 0s talktime), W:0, C:0, A:0, SL:0.0%, SL2:0.0% within 0s\n   No Members\n   No Callers\n\nt11111111-1111-4111-8111-111111111111-391 has 0 calls (max 20) in 'rrmemory' strategy (0s holdtime, 0s talktime), W:0, C:0, A:0, SL:0.0%, SL2:0.0% within 0s\n   Members: \n      PJSIP/202 (ringinuse disabled)\u001b[1;36;40m (dynamic)\u001b[0m\u001b[0m\u001b[0m (\u001b[1;31;40mUnavailable\u001b[0m) has taken no calls yet \u001b[1;33;40m(login was 1 secs ago)\u001b[0m\n   No Callers\n\n",
+    "activeChannels": 0
+  }
+}

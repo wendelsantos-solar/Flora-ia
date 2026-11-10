@@ -1,0 +1,407 @@
+{
+  "completed": 3,
+  "signals": [
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "REGISTER",
+      "at": "2026-11-09T14:28:19.670Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "401",
+      "at": "2026-11-09T14:28:19.685Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "REGISTER",
+      "at": "2026-11-09T14:28:19.685Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:19.710Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "OPTIONS",
+      "at": "2026-11-09T14:28:19.724Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:19.725Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "REGISTER",
+      "at": "2026-11-09T14:28:20.319Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "401",
+      "at": "2026-11-09T14:28:20.338Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "REGISTER",
+      "at": "2026-11-09T14:28:20.338Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:20.352Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "OPTIONS",
+      "at": "2026-11-09T14:28:20.364Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:20.364Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:20.901Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "401",
+      "at": "2026-11-09T14:28:20.909Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:20.909Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:20.909Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "100",
+      "at": "2026-11-09T14:28:20.917Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:20.976Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "100",
+      "at": "2026-11-09T14:28:20.976Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "180",
+      "at": "2026-11-09T14:28:20.976Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "180",
+      "at": "2026-11-09T14:28:20.983Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:21.713Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:21.737Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:21.740Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:21.761Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:27.378Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:27.381Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:27.389Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:27.395Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:27.714Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "401",
+      "at": "2026-11-09T14:28:27.771Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:27.771Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:27.771Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "100",
+      "at": "2026-11-09T14:28:27.800Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:27.866Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "100",
+      "at": "2026-11-09T14:28:27.868Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "180",
+      "at": "2026-11-09T14:28:27.868Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "180",
+      "at": "2026-11-09T14:28:27.879Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:28.125Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:28.131Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:28.149Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:28.157Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "OPTIONS",
+      "at": "2026-11-09T14:28:29.712Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:29.712Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:29.765Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:29.765Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:29.770Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:29.773Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:30.074Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "401",
+      "at": "2026-11-09T14:28:30.085Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:30.085Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:30.085Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "100",
+      "at": "2026-11-09T14:28:30.091Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "INVITE",
+      "at": "2026-11-09T14:28:30.111Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "100",
+      "at": "2026-11-09T14:28:30.111Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "180",
+      "at": "2026-11-09T14:28:30.111Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "180",
+      "at": "2026-11-09T14:28:30.115Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "OPTIONS",
+      "at": "2026-11-09T14:28:30.355Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:30.355Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:30.382Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:30.386Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:30.397Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "ACK",
+      "at": "2026-11-09T14:28:30.412Z"
+    },
+    {
+      "side": "b",
+      "direction": "received",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:32.488Z"
+    },
+    {
+      "side": "b",
+      "direction": "sent",
+      "kind": "200",
+      "at": "2026-11-09T14:28:32.512Z"
+    },
+    {
+      "side": "a",
+      "direction": "sent",
+      "kind": "BYE",
+      "at": "2026-11-09T14:28:32.526Z"
+    },
+    {
+      "side": "a",
+      "direction": "received",
+      "kind": "200",
+      "at": "2026-11-09T14:28:32.526Z"
+    }
+  ]
+}

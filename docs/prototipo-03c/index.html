@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flora IA · Protótipo da central</title><link rel="stylesheet" href="style.css"><script defer src="app.js"></script>
+</head>
+<body>
+<!-- THESIS: Uma mesa de operação que preserva a chamada ao navegar.
+OWN-WORLD: Verde floresta, papel frio, superfícies planas e números tabulares.
+STORY: O atendente decide rápido, o supervisor lê a fila, o administrador entende as consequências.
+FIRST VIEWPORT: Navegação lateral, registros operacionais no centro e telefone à direita.
+FORM: Mesa de Operação, proposta para aprovação. -->
+<a class="skip" href="#content">Pular para conteúdo</a>
+<div class="shell">
+<aside class="rail">
+ <a class="brand" href="#overview"><span id="brand-icon"></span><span>Flora <b>IA</b><small>Central de telefonia</small></span></a>
+ <div class="org"><span class="avatar">FV</span><span><strong>Flora Vale</strong><small>Organização fictícia</small></span></div>
+ <nav id="navigation" aria-label="Áreas da central"></nav>
+ <footer><label for="role">Perfil de demonstração</label><select id="role"><option value="admin">Administrador</option><option value="supervisor">Supervisor</option><option value="operator">Atendente</option></select></footer>
+</aside>
+<div class="workspace">
+ <header class="top"><span id="breadcrumb">Central</span><strong class="demo">Protótipo · dados simulados</strong></header>
+ <div class="grid"><main id="content" tabindex="-1"></main><aside id="phone" aria-label="Discador persistente"></aside></div>
+</div>
+</div>
+<dialog id="detail" aria-labelledby="detail-title"><form method="dialog"><button class="quiet close" aria-label="Fechar detalhes">Fechar</button></form><div id="detail-content"></div></dialog>
+<button id="phone-jump" class="cta" type="button" data-action="show-phone">Ir ao discador</button>
+<p class="sr" role="status" id="announcement"></p>
+</body>
+</html>

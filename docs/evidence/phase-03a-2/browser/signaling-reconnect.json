@@ -1,0 +1,112 @@
+{
+  "mode": "signaling-reconnect",
+  "at": "2026-11-09T14:06:27.785Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "PASS",
+  "scenarios": {
+    "signaling": {
+      "initial": {
+        "session": "8c00ac7f-477f-4912-b0ab-8a457bb968a2",
+        "events": [
+          {
+            "at": "2026-11-09T14:06:31.713Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T14:06:31.792Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T14:06:31.844Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      },
+      "recovered": {
+        "session": "8c00ac7f-477f-4912-b0ab-8a457bb968a2",
+        "events": [
+          {
+            "at": "2026-11-09T14:06:31.713Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T14:06:31.792Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T14:06:31.844Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T14:06:43.953Z",
+            "event": "wss_disconnected",
+            "code": 1006
+          },
+          {
+            "at": "2026-11-09T14:06:46.956Z",
+            "event": "wss_reconnecting"
+          },
+          {
+            "at": "2026-11-09T14:06:46.983Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T14:06:47.065Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  },
+  "signaling": [
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "8c00ac7f-477f-4912-b0ab-8a457bb968a2",
+        "events": [
+          {
+            "at": "2026-11-09T14:06:31.713Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T14:06:31.792Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T14:06:31.844Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T14:06:43.953Z",
+            "event": "wss_disconnected",
+            "code": 1006
+          },
+          {
+            "at": "2026-11-09T14:06:46.956Z",
+            "event": "wss_reconnecting"
+          },
+          {
+            "at": "2026-11-09T14:06:46.983Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T14:06:47.065Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  ]
+}

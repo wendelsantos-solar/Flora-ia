@@ -1,0 +1,6 @@
+client1 HTTPS ready, auth enforced, SIP edge scoped, AMI/ARI and raw PBX unreachable
+client2 HTTPS ready, auth enforced, SIP edge scoped, AMI/ARI and raw PBX unreachable
+client3 HTTPS ready, auth enforced, SIP edge scoped, AMI/ARI and raw PBX unreachable
+client4 HTTPS ready, auth enforced, SIP edge scoped, AMI/ARI and raw PBX unreachable
+4 authenticated WireGuard handshakes
+zero published ports

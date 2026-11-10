@@ -1,0 +1,12 @@
+{
+  "recepcao": {
+    "status": 200,
+    "call_id": "784b9c72-fe17-4b1f-a0de-7604810c4e52",
+    "admin_catalog_department": "recepcao"
+  },
+  "homologacao-origem": {
+    "status": 404,
+    "call_id": "f4b821ab-1bd0-454d-a208-c87b13a1e3a7",
+    "admin_catalog_department": "homologacao-origem"
+  }
+}

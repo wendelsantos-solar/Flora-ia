@@ -1,0 +1,186 @@
+{
+  "browser": "156.0.8078.80",
+  "checks": [
+    {
+      "name": "overview",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "atendimento",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "recebida",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "ativa",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "consulta",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "supervisao",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "historico",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "ramais",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "departamentos",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "horarios",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "tronco",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "discagem",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "name": "overview-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "supervisao-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "historico-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "ramais-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "departamentos-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "horarios-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "tronco-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "discagem-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "recebida-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "ativa-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "consulta-mobile-390",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "name": "overview-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "supervisao-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "historico-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "ramais-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "departamentos-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "horarios-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "tronco-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "discagem-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "recebida-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "ativa-mobile-320",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "name": "consulta-mobile-320",
+      "width": 320,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "offlineRequests": true,
+  "journeys": [
+    "chamada preservada ao navegar",
+    "espera e retomada",
+    "consulta para ramal e bloqueio para fila",
+    "filtro e detalhe com Escape",
+    "confirmação de política",
+    "restrição de perfil",
+    "atalho móvel para discador"
+  ]
+}

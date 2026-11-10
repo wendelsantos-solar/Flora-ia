@@ -1,0 +1,31 @@
+
+Running 2 tests using 1 worker
+
+  ✘  1 [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (55.7s)
+  ✓  2 [chromium] › tests/telephony.spec.ts:53:1 › REST authorization, input limits, tenant boundary, WebSocket origin and event isolation (2.9s)
+
+
+  1) [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 
+
+    Error: expect(received).toBeGreaterThan(expected)
+
+    Expected: > 0
+    Received:   0
+
+    Call Log:
+    - Timeout 35000ms exceeded while waiting on the predicate
+
+      32 |  const registerCount=signals.filter(line=>line.startsWith('202 framesent REGISTER')).length;
+      33 |  execFileSync('docker',['compose','restart','asterisk'],{cwd:root,stdio:'pipe',timeout:30000});
+    > 34 |  await expect.poll(()=>signals.filter(line=>line.startsWith('202 framesent REGISTER')).length,{timeout:35000}).toBeGreaterThan(registerCount);
+         |                                                                                                                ^
+      35 |  await expect(b.getByRole('status').filter({hasText:/^Disponível$/})).toBeVisible({timeout:25000});
+      36 |  await expect.poll(async()=>{const r=await a.request.get('/api/health/ready');return r.status();},{timeout:35000}).toBe(200);
+      37 |  evidence.recovery='Asterisk restarted; new REGISTER observed on WSS and AMI/readiness recovered';
+        at /tmp/flora-regressions-b92cbd4e74074672b2d55e284bd1315b/web/tests/telephony.spec.ts:34:112
+
+    Error Context: test-results/telephony-real-WebRTC-call-3fc19-rse-direction-SIP-reconnect-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 
+  1 passed (1.0m)

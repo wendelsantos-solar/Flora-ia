@@ -1,0 +1,244 @@
+{
+  "mode": "queues-isolation",
+  "at": "2026-11-09T16:38:17.563Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "FAIL",
+  "scenarios": {},
+  "browser": "158.0.8127.18",
+  "stage": "simultaneous queues and isolation",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Chamando…",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "closed",
+        "connection": "closed",
+        "local": [
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [],
+        "capture": [
+          "ended"
+        ],
+        "codecs": [],
+        "selected": null
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "closed",
+        "connection": "closed",
+        "local": [],
+        "remote": [],
+        "capture": [],
+        "codecs": [],
+        "selected": null
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Chamando…",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "new",
+        "connection": "new",
+        "local": [
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [],
+        "capture": [
+          "live"
+        ],
+        "codecs": [],
+        "selected": null
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Chamada recebida",
+        "Motor de telefonia conectado"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "locator.click: Timeout 12000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Atender', exact: true })\n    - locator resolved to <button class=\"primary\">…</button>\n  - attempting click action",
+  "signaling": [
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "7e5e920c-3a5f-4f65-855b-0fea7289216a",
+        "events": [
+          {
+            "at": "2026-11-09T16:38:21.036Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:38:21.164Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:38:21.460Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "5e2a6dd6-b452-48b1-8ff7-5164f8cac782",
+        "events": [
+          {
+            "at": "2026-11-09T16:38:22.918Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:38:22.956Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:38:23.026Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "eea40117-f327-40c6-81a4-da25bb911282",
+        "events": [
+          {
+            "at": "2026-11-09T16:38:28.282Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:38:28.496Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:38:28.708Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "33333333-3333-4333-8333-333333333333",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "32ffb4e3-f295-431c-ace9-a908b055f888",
+        "events": [
+          {
+            "at": "2026-11-09T16:38:35.342Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:38:36.121Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:38:38.050Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "33333333-3333-4333-8333-333333333333",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  ]
+}

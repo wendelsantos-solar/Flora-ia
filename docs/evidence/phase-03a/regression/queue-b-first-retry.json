@@ -1,0 +1,117 @@
+{
+  "mode": "queue-b",
+  "at": "2026-11-09T13:33:46.275Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "FAIL",
+  "scenarios": {},
+  "stage": "call queue-b",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "closed",
+        "connection": "closed",
+        "local": [
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "ended"
+        ],
+        "codecs": [],
+        "selected": null
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "closed",
+        "connection": "closed",
+        "local": [
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "ended"
+        ],
+        "codecs": [],
+        "selected": null
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "locator.click: Timeout 6000ms exceeded.\nCall log:\n  - waiting for getByRole('button', { name: 'Encerrar chamada', exact: true })\n    - locator resolved to <button class=\"danger\">…</button>\n  - attempting click action"
+}

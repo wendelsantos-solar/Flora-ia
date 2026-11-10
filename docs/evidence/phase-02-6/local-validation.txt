@@ -1,0 +1,26 @@
+2026-11-09T08:06:05-03:00
+Backend unit tests (race detector, cache disabled); external integration environment not configured:
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	1.439s
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	1.422s
+ok  	flora/internal/identity	1.363s
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	1.605s
+?   	flora/internal/tenants	[no test files]
+
+> flora-phone@0.1.0 typecheck
+> tsc --noEmit
+
+...
+----------------------------------------------------------------------
+Ran 3 tests in 0.000s
+
+OK
+Commands finished successfully.

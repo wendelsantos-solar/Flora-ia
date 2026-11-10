@@ -1,0 +1,23 @@
+asterisk before
+0 active channels
+0 active calls
+1 call processed
+asterisk-b before
+0 active channels
+0 active calls
+0 calls processed
+STEP register three browser peers
+STEP simultaneous queues and isolation
+simultaneous queues and isolation: locator.click: Timeout 12000ms exceeded.
+Call log:
+  - waiting for getByRole('button', { name: 'Atender', exact: true })
+    - locator resolved to <button class="primary">…</button>
+  - attempting click action
+asterisk after
+0 active channels
+0 active calls
+2 calls processed
+asterisk-b after
+0 active channels
+0 active calls
+1 call processed

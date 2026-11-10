@@ -1,0 +1,15 @@
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	1.920s
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	1.425s
+ok  	flora/internal/identity	1.283s
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+ok  	flora/internal/siptrunk	1.308s
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	1.309s
+?   	flora/internal/tenants	[no test files]

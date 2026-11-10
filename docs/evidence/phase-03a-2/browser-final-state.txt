@@ -1,0 +1,11 @@
+2026-11-09T11:08:16-03:00
+asterisk
+0 active channels
+0 active calls
+0 calls processed
+asterisk-b
+0 active channels
+0 active calls
+1 call processed
+Active disposable services: 0
+Original application readiness HTTP 200

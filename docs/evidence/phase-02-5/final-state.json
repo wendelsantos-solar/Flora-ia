@@ -1,0 +1,50 @@
+{
+  "at": "2026-11-09T10:35:10.031211+00:00",
+  "services": [
+    {
+      "Service": "asterisk",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:18000-18020->18000-18020/udp, 127.0.0.1:18489->8089/tcp"
+    },
+    {
+      "Service": "asterisk-b",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "127.0.0.1:18100-18120->18100-18120/udp, 127.0.0.1:18490->8089/tcp"
+    },
+    {
+      "Service": "backend",
+      "State": "running",
+      "Health": "",
+      "Ports": "127.0.0.1:18400->8080/tcp"
+    },
+    {
+      "Service": "db",
+      "State": "running",
+      "Health": "healthy",
+      "Ports": "5432/tcp"
+    },
+    {
+      "Service": "web",
+      "State": "running",
+      "Health": "",
+      "Ports": "127.0.0.1:13400->3000/tcp"
+    }
+  ],
+  "pbxs": {
+    "asterisk": {
+      "version": "Asterisk 20.22.0 built by root @ buildkitsandbox on a aarch64 running Linux on 2026-11-09 03:44:23 UTC",
+      "channels": "0 active channels\n0 active calls\n21 calls processed",
+      "cel": "Module                         Description                              Use Count  Status      Support Level\ncel_custom.so                  Customizable Comma Separated Values CEL  0          Running              core\n1 modules loaded"
+    },
+    "asterisk-b": {
+      "version": "Asterisk 20.22.0 built by root @ buildkitsandbox on a aarch64 running Linux on 2026-11-09 03:44:23 UTC",
+      "channels": "0 active channels\n0 active calls\n2 calls processed",
+      "cel": "Module                         Description                              Use Count  Status      Support Level\ncel_custom.so                  Customizable Comma Separated Values CEL  0          Running              core\n1 modules loaded"
+    }
+  },
+  "readiness": {
+    "status": "ready"
+  }
+}

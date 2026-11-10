@@ -1,0 +1,26 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation (204ms)
+
+
+  1) [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: false
+    Received: true
+
+      46 |  const key='homologacao-02a',n='391';
+      47 |  const initial=await ops(request);
+    > 48 |  expect(initial.catalog.departments.some((d:{code:string})=>d.code===key)).toBe(false);
+         |                                                                            ^
+      49 |  expect(initial.catalog.queues.some((q:{number:string})=>q.number===n)).toBe(false);
+      50 |  expect(channels()).toBe(0);
+      51 |  const c1=await browser.newContext({permissions:['microphone']});
+        at /tmp/flora-regressions-a927caaab06c4c3a8f8cc5da61ec602c/web/tests/operations.spec.ts:48:76
+
+    Error Context: test-results/operations-real-queue-dist-4fd04--and-restart-reconciliation-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/operations.spec.ts:45:1 › real queue distribution, authorization, pause, timeout, and restart reconciliation 

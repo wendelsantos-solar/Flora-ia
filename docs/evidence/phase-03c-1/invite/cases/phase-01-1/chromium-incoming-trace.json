@@ -1,0 +1,843 @@
+{
+  "samples": [
+    {
+      "stage": "login",
+      "trace": {
+        "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+        "events": [
+          {
+            "at": "2026-11-09T18:26:22.794Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T18:26:23.160Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.386Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:24.882Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.900Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:24.907Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:27.609Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.610Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.622Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "stage": "navigation_and_second_tab",
+      "trace": {
+        "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+        "events": [
+          {
+            "at": "2026-11-09T18:26:22.794Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T18:26:23.160Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.386Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:24.882Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.900Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:24.907Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:27.609Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.610Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.622Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:28.179Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:28.185Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.425Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "stage": "operational_websocket_unavailable",
+      "trace": {
+        "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+        "events": [
+          {
+            "at": "2026-11-09T18:26:22.794Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T18:26:23.160Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.386Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:24.882Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.900Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:24.907Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:27.609Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.610Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.622Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:28.179Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:28.185Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.425Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:31.348Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:31.354Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:32.995Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.279Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_disconnected/answer_rendered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": null
+      }
+    },
+    {
+      "stage": "operational_websocket_recovered",
+      "trace": {
+        "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+        "events": [
+          {
+            "at": "2026-11-09T18:26:22.794Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T18:26:23.160Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.386Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:24.882Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.900Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:24.907Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:27.609Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.610Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.622Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:28.179Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:28.185Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.425Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:31.348Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:31.354Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:32.995Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.279Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_disconnected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:36.401Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:36.408Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:44.166Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:45.023Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+          },
+          {
+            "at": "2026-11-09T18:26:45.023Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+          },
+          {
+            "at": "2026-11-09T18:26:45.038Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "stage": "sip_reconnected",
+      "trace": {
+        "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+        "events": [
+          {
+            "at": "2026-11-09T18:26:22.794Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T18:26:23.160Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.386Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:24.882Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:24.900Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:24.907Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:27.609Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.610Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:27.622Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:28.179Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+          },
+          {
+            "at": "2026-11-09T18:26:28.185Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.423Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:29.425Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:31.348Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+          },
+          {
+            "at": "2026-11-09T18:26:31.354Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:32.995Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.262Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:34.279Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_disconnected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:36.401Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+          },
+          {
+            "at": "2026-11-09T18:26:36.408Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:44.166Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:45.023Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+          },
+          {
+            "at": "2026-11-09T18:26:45.023Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+          },
+          {
+            "at": "2026-11-09T18:26:45.038Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T18:26:45.155Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+          },
+          {
+            "at": "2026-11-09T18:26:45.162Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:47.421Z",
+            "event": "wss_disconnected",
+            "code": 1006
+          },
+          {
+            "at": "2026-11-09T18:26:47.423Z",
+            "event": "ui_state",
+            "detail": "reconnecting/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:50.424Z",
+            "event": "wss_reconnecting"
+          },
+          {
+            "at": "2026-11-09T18:26:50.486Z",
+            "event": "reconnect_failed"
+          },
+          {
+            "at": "2026-11-09T18:26:53.489Z",
+            "event": "wss_reconnecting"
+          },
+          {
+            "at": "2026-11-09T18:26:53.730Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T18:26:54.105Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T18:26:54.174Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T18:26:55.204Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "5bd70452f7af67b138ea0c9162bfa8e7b929099e702593e6f2bc4708fd47230f"
+          },
+          {
+            "at": "2026-11-09T18:26:55.204Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "5bd70452f7af67b138ea0c9162bfa8e7b929099e702593e6f2bc4708fd47230f"
+          },
+          {
+            "at": "2026-11-09T18:26:55.245Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  ],
+  "finalTrace": {
+    "session": "838ad46e-1e85-4918-b06f-2f5fefa5caff",
+    "events": [
+      {
+        "at": "2026-11-09T18:26:22.794Z",
+        "event": "wss_connecting"
+      },
+      {
+        "at": "2026-11-09T18:26:23.160Z",
+        "event": "ui_state",
+        "detail": "connecting/visible/events_disconnected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:24.386Z",
+        "event": "wss_connected"
+      },
+      {
+        "at": "2026-11-09T18:26:24.882Z",
+        "event": "ui_state",
+        "detail": "connecting/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:24.900Z",
+        "event": "sip_registered"
+      },
+      {
+        "at": "2026-11-09T18:26:24.907Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:27.609Z",
+        "event": "invite_received",
+        "detail": "Initial",
+        "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+      },
+      {
+        "at": "2026-11-09T18:26:27.610Z",
+        "event": "invite_bound",
+        "detail": "Initial",
+        "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+      },
+      {
+        "at": "2026-11-09T18:26:27.622Z",
+        "event": "ui_state",
+        "detail": "incoming/visible/events_connected/answer_rendered"
+      },
+      {
+        "at": "2026-11-09T18:26:28.179Z",
+        "event": "invite_session_state",
+        "detail": "Terminated",
+        "callRef": "d56fb08c7919ae46d54273abc7405a82d55e38d4a003c575d9f3ebda564b4611"
+      },
+      {
+        "at": "2026-11-09T18:26:28.185Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:29.423Z",
+        "event": "invite_received",
+        "detail": "Initial",
+        "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+      },
+      {
+        "at": "2026-11-09T18:26:29.423Z",
+        "event": "invite_bound",
+        "detail": "Initial",
+        "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+      },
+      {
+        "at": "2026-11-09T18:26:29.425Z",
+        "event": "ui_state",
+        "detail": "incoming/visible/events_connected/answer_rendered"
+      },
+      {
+        "at": "2026-11-09T18:26:31.348Z",
+        "event": "invite_session_state",
+        "detail": "Terminated",
+        "callRef": "0b2aa775462a700a5122d6ab1db4f9b92f42202ab62065d293e0c5d32c9491e5"
+      },
+      {
+        "at": "2026-11-09T18:26:31.354Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:32.995Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_disconnected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:34.262Z",
+        "event": "invite_received",
+        "detail": "Initial",
+        "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+      },
+      {
+        "at": "2026-11-09T18:26:34.262Z",
+        "event": "invite_bound",
+        "detail": "Initial",
+        "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+      },
+      {
+        "at": "2026-11-09T18:26:34.279Z",
+        "event": "ui_state",
+        "detail": "incoming/visible/events_disconnected/answer_rendered"
+      },
+      {
+        "at": "2026-11-09T18:26:36.401Z",
+        "event": "invite_session_state",
+        "detail": "Terminated",
+        "callRef": "36bae653b81cc489257633615338638597703b0cfcc1282af43dc7632a482dca"
+      },
+      {
+        "at": "2026-11-09T18:26:36.408Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_disconnected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:44.166Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:45.023Z",
+        "event": "invite_received",
+        "detail": "Initial",
+        "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+      },
+      {
+        "at": "2026-11-09T18:26:45.023Z",
+        "event": "invite_bound",
+        "detail": "Initial",
+        "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+      },
+      {
+        "at": "2026-11-09T18:26:45.038Z",
+        "event": "ui_state",
+        "detail": "incoming/visible/events_connected/answer_rendered"
+      },
+      {
+        "at": "2026-11-09T18:26:45.155Z",
+        "event": "invite_session_state",
+        "detail": "Terminated",
+        "callRef": "cb4b59be46af04371d8a71b71239adbe35a7029f2949bdbdda6b1fd1533b82f6"
+      },
+      {
+        "at": "2026-11-09T18:26:45.162Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:47.421Z",
+        "event": "wss_disconnected",
+        "code": 1006
+      },
+      {
+        "at": "2026-11-09T18:26:47.423Z",
+        "event": "ui_state",
+        "detail": "reconnecting/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:50.424Z",
+        "event": "wss_reconnecting"
+      },
+      {
+        "at": "2026-11-09T18:26:50.486Z",
+        "event": "reconnect_failed"
+      },
+      {
+        "at": "2026-11-09T18:26:53.489Z",
+        "event": "wss_reconnecting"
+      },
+      {
+        "at": "2026-11-09T18:26:53.730Z",
+        "event": "wss_connected"
+      },
+      {
+        "at": "2026-11-09T18:26:54.105Z",
+        "event": "sip_registered"
+      },
+      {
+        "at": "2026-11-09T18:26:54.174Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      },
+      {
+        "at": "2026-11-09T18:26:55.204Z",
+        "event": "invite_received",
+        "detail": "Initial",
+        "callRef": "5bd70452f7af67b138ea0c9162bfa8e7b929099e702593e6f2bc4708fd47230f"
+      },
+      {
+        "at": "2026-11-09T18:26:55.204Z",
+        "event": "invite_bound",
+        "detail": "Initial",
+        "callRef": "5bd70452f7af67b138ea0c9162bfa8e7b929099e702593e6f2bc4708fd47230f"
+      },
+      {
+        "at": "2026-11-09T18:26:55.245Z",
+        "event": "ui_state",
+        "detail": "incoming/visible/events_connected/answer_rendered"
+      },
+      {
+        "at": "2026-11-09T18:26:55.411Z",
+        "event": "invite_session_state",
+        "detail": "Terminated",
+        "callRef": "5bd70452f7af67b138ea0c9162bfa8e7b929099e702593e6f2bc4708fd47230f"
+      },
+      {
+        "at": "2026-11-09T18:26:55.413Z",
+        "event": "ui_state",
+        "detail": "ready/visible/events_connected/answer_absent"
+      }
+    ],
+    "tenant": "11111111-1111-4111-8111-111111111111",
+    "engine": {
+      "connected": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "operator_nonparticipant_candidate": true,
+  "before": {
+    "operator_read_nonparticipant_detail": 200,
+    "empty_tenant_queues": 0
+  }
+}

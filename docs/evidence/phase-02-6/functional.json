@@ -1,0 +1,53 @@
+{
+  "mode": "functional",
+  "at": "2026-11-09T10:53:26.356Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "scenarios": {},
+  "result": "FAIL",
+  "stage": "register three browser peers",
+  "diagnostics": [
+    {
+      "alert": [],
+      "status": [
+        "Desconectado",
+        "Aguardando conexão com a central"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [],
+      "status": [
+        "Desconectado",
+        "Aguardando conexão com a central"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [],
+      "status": [
+        "Desconectado",
+        "Aguardando conexão com a central"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "page.goto: Timeout 15000ms exceeded.\nCall log:\n  - navigating to \"https://lab.flora.test/\", waiting until \"load\"\n"
+}

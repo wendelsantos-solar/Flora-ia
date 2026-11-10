@@ -1,0 +1,80 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.07kB done
+#1 DONE 0.0s
+
+#2 [asterisk internal] load build definition from Dockerfile.patched
+#2 transferring dockerfile: 2.03kB done
+#2 DONE 0.0s
+
+#3 [asterisk-b internal] load metadata for docker.io/library/debian:trixie-slim
+#3 DONE 0.6s
+
+#4 [asterisk internal] load .dockerignore
+#4 transferring context: 2B done
+#4 DONE 0.0s
+
+#5 [asterisk-b internal] load build context
+#5 transferring context: 1.78kB done
+#5 DONE 0.0s
+
+#6 [asterisk-b build 1/5] FROM docker.io/library/debian:trixie-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2
+#6 resolve docker.io/library/debian:trixie-slim@sha256:a72b4433de1cf7d6bae0c4cee74d0547f58601a643b3375f070c51600d63b6b2 0.0s done
+#6 DONE 0.0s
+
+#7 [asterisk-b build 2/5] RUN apt-get update && apt-get install -y --no-install-recommends build-essential curl ca-certificates pkg-config     bzip2 libssl-dev libxml2-dev libjansson-dev libsqlite3-dev uuid-dev libsrtp2-dev libedit-dev libncurses-dev && rm -rf /var/lib/apt/lists/*
+#7 CACHED
+
+#8 [asterisk-b stage-1 2/7] RUN apt-get update && apt-get install -y --no-install-recommends ca-certificates gettext-base gosu tzdata python3     libssl3t64 libxml2 libjansson4 libsqlite3-0 libuuid1 libsrtp2-1 libedit2 libncurses6 && rm -rf /var/lib/apt/lists/* &&     groupadd -g 101 asterisk && useradd -u 100 -g asterisk -M -s /usr/sbin/nologin asterisk &&     ln -s /usr/sbin/gosu /usr/local/bin/su-exec &&     mkdir -p /etc/asterisk /var/log/asterisk/cel-custom /var/run/asterisk /var/lib/asterisk /var/spool/asterisk &&     chown -R asterisk:asterisk /var/log/asterisk /var/run/asterisk /var/lib/asterisk /var/spool/asterisk
+#8 CACHED
+
+#9 [asterisk-b build 4/5] RUN curl -fsSLo asterisk.tar.gz "https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-20.22.0.tar.gz" &&     echo "ca4a5cbfa0e8b4fa683ae6aa8302769244b6208f1cc466e6025f89457df418e5  asterisk.tar.gz" | sha256sum -c - &&     tar -xzf asterisk.tar.gz --strip-components=1
+#9 CACHED
+
+#10 [asterisk-b stage-1 3/7] COPY --from=build /stage/usr/ /usr/
+#10 CACHED
+
+#11 [asterisk-b stage-1 4/7] COPY --from=build /stage/var/lib/asterisk/ /var/lib/asterisk/
+#11 CACHED
+
+#12 [asterisk-b build 5/5] RUN ./configure --prefix=/usr --libdir=/usr/lib --sysconfdir=/etc --localstatedir=/var --with-pjproject-bundled &&     make menuselect.makeopts &&     menuselect/menuselect --disable-category MENUSELECT_UTILS --disable-category MENUSELECT_CORE_SOUNDS --disable-category MENUSELECT_MOH menuselect.makeopts &&     make -j4 && make install DESTDIR=/stage
+#12 CACHED
+
+#13 [asterisk-b build 3/5] WORKDIR /build
+#13 CACHED
+
+#14 [asterisk-b stage-1 5/7] RUN chown -R asterisk:asterisk /var/lib/asterisk
+#14 CACHED
+
+#15 [asterisk-b stage-1 6/7] COPY entrypoint.sh /entrypoint.sh
+#15 DONE 0.0s
+
+#16 [asterisk stage-1 7/7] COPY ami_gate.py /ami_gate.py
+#16 DONE 0.0s
+
+#17 [asterisk-b] exporting to image
+#17 exporting layers 0.0s done
+#17 exporting manifest sha256:253bd32040048b8f486d0caed1ec4258a25b2d125fb4de98ca6c1329e1e5e570 done
+#17 exporting config sha256:30285ce18dd264cb53810d4d370c24f6253a280e6d7c2e3e12009e7b23b0ade9 0.0s done
+#17 exporting attestation manifest sha256:703eac4e94f210674f309e476a4b05ce4548b6d83b8f7153682747c214ff776b 0.0s done
+#17 exporting manifest list sha256:c343d2214dc8be091bc936c3d2bf866bc6823cdc25fcd91397736a4e1adcd33e done
+#17 naming to docker.io/library/flora-phase1-asterisk-b:latest done
+#17 unpacking to docker.io/library/flora-phase1-asterisk-b:latest 0.0s done
+#17 DONE 0.2s
+
+#18 [asterisk] exporting to image
+#18 exporting layers 0.0s done
+#18 exporting manifest sha256:fb5821b7793e88b495475033e9b6c4160d81c9a637d967c622d4ff2693096f77 done
+#18 exporting config sha256:40188653fca8d8a2f269059356a19ae88c0c4538d42c386f75961844b11fd539 0.0s done
+#18 exporting attestation manifest sha256:294759464db75ffa88e0695e907d081f1a5a9a462cba9ce28c54168b5aa2fdd2 0.0s done
+#18 exporting manifest list sha256:20ecc99da1bd86ea2aaacbf66bba9ebb85a551736490ca2748f09f79a5da2ab0 done
+#18 naming to docker.io/library/flora-phase1-asterisk:latest done
+#18 unpacking to docker.io/library/flora-phase1-asterisk:latest 0.0s done
+#18 DONE 0.2s
+
+#19 [asterisk-b] resolving provenance for metadata file
+#19 DONE 0.0s
+
+#20 [asterisk] resolving provenance for metadata file
+#20 DONE 0.0s
+ flora-phase1-asterisk  Built
+ flora-phase1-asterisk-b  Built

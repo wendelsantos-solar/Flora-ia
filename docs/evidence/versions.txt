@@ -1,0 +1,9 @@
+Darwin arm64
+ProductName:		macOS
+ProductVersion:		27.0.1
+BuildVersion:		26A434
+28.3.3 arm64
+Docker Compose version v2.39.2-desktop.1
+Asterisk 20.15.2 built by buildozer @ build-3-23-aarch64 on a aarch64 running Linux on 2025-12-01 21:28:17 UTC
+v22.23.4
+PostgreSQL 17.10 on aarch64-unknown-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit

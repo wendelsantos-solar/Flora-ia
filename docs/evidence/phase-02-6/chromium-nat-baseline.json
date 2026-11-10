@@ -1,0 +1,143 @@
+{
+  "mode": "functional",
+  "at": "2026-11-09T10:50:27.509Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "scenarios": {},
+  "browser": "158.0.8127.18",
+  "result": "FAIL",
+  "stage": "direct and hold",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Em ligação",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "connected",
+        "connection": "connected",
+        "local": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "live"
+        ],
+        "codecs": [
+          "audio/PCMU"
+        ],
+        "selected": {
+          "rtt": 0.002
+        }
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Em ligação",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "connected",
+        "connection": "connecting",
+        "local": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "live"
+        ],
+        "codecs": [
+          "audio/PCMU"
+        ],
+        "selected": {
+          "rtt": 0.001
+        }
+      },
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        "Não foi possível consultar a central. Tente atualizar.Fechar",
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "Timed out: direct and hold (false)"
+}

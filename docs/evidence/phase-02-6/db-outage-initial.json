@@ -1,0 +1,44 @@
+{
+  "mode": "db-outage",
+  "at": "2026-11-09T10:59:37.496Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "scenarios": {},
+  "result": "FAIL",
+  "stage": "register peers before outage",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Desconectado",
+        "Aguardando conexão com a central"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        "O token pertence a outro ramal. Selecione o ramal correspondente.Fechar",
+        ""
+      ],
+      "status": [
+        "Desconectado",
+        "Aguardando conexão com a central"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for getByRole('status').filter({ hasText: /^Disponível$/ }) to be visible\n"
+}

@@ -1,0 +1,33 @@
+
+Running 6 tests using 1 worker
+
+Consecutive call 1 starting
+  ✘  1 [chrome] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (21.1s)
+  ✓  2 [chrome] › tests/homologacao.spec.ts:67:1 › revoking actual microphone permission warns, permission can be restored and input replaced (20.5s)
+  ✓  3 [chrome] › tests/homologacao.spec.ts:74:1 › microphone permission denied before dialing and answering, then granted without reload (9.4s)
+  ✓  4 [chrome] › tests/homologacao.spec.ts:82:1 › cancel while ringing and after the callee starts answering, without orphan sessions (5.7s)
+  ✓  5 [chrome] › tests/homologacao.spec.ts:89:1 › temporary real media interruption recovers after Asterisk pause and resume (11.9s)
+  ✓  6 [chrome] › tests/homologacao.spec.ts:98:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (39.1s)
+
+
+  1) [chrome] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+
+    Error: expect(received).toBeLessThan(expected)
+
+    Expected: < 0.001
+    Received:   0.0033077979334983354
+
+      45 |   let controls:unknown=null;
+      46 |   if(i===0){
+    > 47 |    await caller.getByRole('button',{name:'Silenciar microfone',exact:true}).click();expect((await diagnostics(caller)).localTracks[0].enabled).toBe(false);await caller.waitForTimeout(500);const mutedBefore=rx(await stats(callee));await caller.waitForTimeout(1300);const mutedAfter=rx(await stats(callee));const silentEnergy=Number(mutedAfter.totalAudioEnergy)-Number(mutedBefore.totalAudioEnergy);expect(silentEnergy).toBeLessThan(0.001);
+         |                                                                                                                                                                                                                                                                                                                                                                                                                                   ^
+      48 |    await caller.getByRole('button',{name:'Reativar microfone',exact:true}).click();expect((await diagnostics(caller)).localTracks[0].enabled).toBe(true);const resumedBefore=rx(await stats(callee));await caller.waitForTimeout(1300);const resumedAfter=rx(await stats(callee));const resumedEnergy=Number(resumedAfter.totalAudioEnergy)-Number(resumedBefore.totalAudioEnergy);expect(resumedEnergy).toBeGreaterThan(0.0001);
+      49 |    const original=(await diagnostics(caller)).localTracks[0].id;await caller.getByText('Dispositivo de áudio',{exact:true}).click();await caller.getByRole('button',{name:'Buscar microfones',exact:true}).click();const select=caller.getByLabel('Microfone da chamada',{exact:true});await expect(select.locator('option')).not.toHaveCount(1);const id=await select.locator('option').evaluateAll(options=>(options as HTMLOptionElement[]).find(o=>o.value)?.value||'');expect(id).not.toBe('');await select.selectOption(id);
+      50 |    await expect.poll(async()=>(await diagnostics(caller)).localTracks[0].id).not.toBe(original);expect((await diagnostics(caller)).lastInputReplacement).toEqual({previousEnded:true,replacementLive:true});await media(callee);
+        at /tmp/flora-regressions-15e23541297a453ea009a59bfb16a01a/web/tests/homologacao.spec.ts:47:419
+
+    Error Context: test-results/homologacao-three-consecut-53be8-one-replacement-and-cleanup-chrome/error-context.md
+
+  1 failed
+    [chrome] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+  5 passed (2.2m)

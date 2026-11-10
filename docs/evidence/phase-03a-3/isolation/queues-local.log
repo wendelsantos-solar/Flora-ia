@@ -1,0 +1,24 @@
+ Container flora-026-client4-1  Stopping
+ Container flora-026-client4-1  Stopped
+asterisk before
+0 active channels
+0 active calls
+2 calls processed
+asterisk-b before
+0 active channels
+0 active calls
+1 call processed
+STEP register three browser peers
+STEP simultaneous queues and isolation
+simultaneous queues and isolation: locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+  - waiting for getByRole('status').filter({ hasText: /^Disponível$/ }) to be visible
+
+asterisk after
+0 active channels
+0 active calls
+2 calls processed
+asterisk-b after
+0 active channels
+0 active calls
+1 call processed

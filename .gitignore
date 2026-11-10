@@ -1,0 +1,8 @@
+.local/
+.env
+infra/asterisk/generated/
+web/node_modules/
+web/.next/
+web/tsconfig.tsbuildinfo
+.impeccable/review/
+test-results/

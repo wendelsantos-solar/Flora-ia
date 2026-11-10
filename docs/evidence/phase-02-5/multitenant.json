@@ -1,0 +1,105 @@
+{
+  "at": "2026-11-09T03:55:40.900Z",
+  "data": {
+    "result": "PASS",
+    "media": [
+      {
+        "before": [
+          {
+            "packets": 3,
+            "energy": 0
+          },
+          {
+            "packets": 4,
+            "energy": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 46,
+            "energy": 0.07968965003380092
+          },
+          {
+            "packets": 47,
+            "energy": 0.17156528055729464
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "packets": 0,
+            "energy": 0
+          },
+          {
+            "packets": 0,
+            "energy": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 42,
+            "energy": 0.07968893124173301
+          },
+          {
+            "packets": 42,
+            "energy": 0.16416885388627606
+          }
+        ]
+      }
+    ],
+    "callA": {
+      "tenant_id": "11111111-1111-4111-8111-111111111111",
+      "department": "recepcao",
+      "queue": "301",
+      "agent": "202",
+      "wait_seconds": 0,
+      "talk_seconds": 2,
+      "outcome": "answered",
+      "hangup_cause": 16,
+      "id": "851dd4ba-cbe0-47bc-90db-203ef6efa11b",
+      "source": "201",
+      "destination": "301",
+      "state": "completed",
+      "started_at": "2026-11-09T03:55:37.173803Z",
+      "answered_at": "2026-11-09T03:55:37.405439Z",
+      "ended_at": "2026-11-09T03:55:39.271872Z",
+      "asterisk_linked_id": "1794196537.42"
+    },
+    "callB": {
+      "tenant_id": "33333333-3333-4333-8333-333333333333",
+      "department": "recepcao",
+      "queue": "301",
+      "agent": "212",
+      "wait_seconds": 0,
+      "talk_seconds": 2,
+      "outcome": "answered",
+      "hangup_cause": 16,
+      "id": "2c13fe73-20c0-4790-843d-d91b72b8e315",
+      "source": "211",
+      "destination": "301",
+      "state": "completed",
+      "started_at": "2026-11-09T03:55:37.185429Z",
+      "answered_at": "2026-11-09T03:55:37.484464Z",
+      "ended_at": "2026-11-09T03:55:39.244732Z",
+      "asterisk_linked_id": "1794196537.2"
+    },
+    "wireStatuses": [
+      "SIP/2.0 401 Unauthorized",
+      "SIP/2.0 404 Not Found"
+    ],
+    "modifiedRequests": 3,
+    "negative": {
+      "extensions": 404,
+      "calls": 404,
+      "foreignMember": 409,
+      "operatorMetrics": 403,
+      "unassignedDepartment": "denied before and after grant",
+      "crossTenantEvent": false
+    },
+    "channels": [
+      0,
+      0
+    ]
+  }
+}

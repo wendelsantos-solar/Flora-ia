@@ -1,0 +1,35 @@
+{
+  "at": "2026-11-08T22:34:36.927Z",
+  "result": "PASS",
+  "audio_source": "native browser-generated test microphone; human speech not tested",
+  "data": {
+    "browser": "156.0.8078.80",
+    "detail": {
+      "call": {
+        "id": "81bbd151-a198-4e96-9067-36569da611ee",
+        "source": "201",
+        "destination": "202",
+        "state": "completed",
+        "started_at": "2026-11-08T22:34:04.529867Z",
+        "answered_at": "2026-11-08T22:34:04.931175Z",
+        "ended_at": "2026-11-08T22:34:35.955591Z",
+        "asterisk_linked_id": "1794177244.316"
+      },
+      "legs": [
+        {
+          "asterisk_unique_id": "1794177244.316",
+          "channel": "PJSIP/201-00000028",
+          "started_at": "2026-11-08T22:34:04.529867Z",
+          "ended_at": "2026-11-08T22:34:35.955591Z"
+        },
+        {
+          "asterisk_unique_id": "1794177244.319",
+          "channel": "PJSIP/202-00000029",
+          "started_at": "2026-11-08T22:34:04.566214Z",
+          "ended_at": "2026-11-08T22:34:35.946621Z"
+        }
+      ]
+    },
+    "active_channels": 0
+  }
+}

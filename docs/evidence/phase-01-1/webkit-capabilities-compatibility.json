@@ -1,0 +1,17 @@
+{
+  "at": "2026-11-08T22:35:09.519Z",
+  "engine": "webkit",
+  "version": "27.2",
+  "human_audio": "PENDING",
+  "native_safari": "NOT TESTED — Playwright WebKit is not native Safari",
+  "registration": "PASS",
+  "capabilities": {
+    "secureContext": true,
+    "getUserMedia": true,
+    "peerConnection": true,
+    "deviceChange": true,
+    "outputSelection": true
+  },
+  "media_result": "NOT EXECUTED — no physical microphone requested by automation",
+  "result": "PASS"
+}

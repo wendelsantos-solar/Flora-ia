@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [chromium] › tests/operations.spec.ts:221:1 › real blind REFER from 201 to 202 preserves the caller and closes all channels (24.7s)
+
+  1 passed (26.3s)

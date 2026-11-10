@@ -1,0 +1,59 @@
+
+> flora-phone@0.1.0 typecheck
+> tsc --noEmit
+
+
+> flora-phone@0.1.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.ts took 1415ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 5.7s
+  Running TypeScript ...
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	0.682s
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	0.324s
+ok  	flora/internal/identity	0.276s
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+ok  	flora/internal/siptrunk	0.277s
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	0.282s
+?   	flora/internal/tenants	[no test files]
+  Finished TypeScript in 6.7s ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/3) ...
+✓ Generating static pages using 4 workers (3/3) in 456ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+?   	flora/cmd/server	[no test files]
+ok  	flora/integration	1.356s
+?   	flora/internal/audit	[no test files]
+?   	flora/internal/calls	[no test files]
+?   	flora/internal/extensions	[no test files]
+ok  	flora/internal/httpapi	1.312s
+ok  	flora/internal/identity	1.246s
+?   	flora/internal/integrations	[no test files]
+?   	flora/internal/operations	[no test files]
+?   	flora/internal/realtime	[no test files]
+ok  	flora/internal/siptrunk	1.268s
+?   	flora/internal/store	[no test files]
+?   	flora/internal/store/dbgen	[no test files]
+ok  	flora/internal/telephony	1.271s
+?   	flora/internal/tenants	[no test files]
+Go checks exit=0
+Web checks exit=0

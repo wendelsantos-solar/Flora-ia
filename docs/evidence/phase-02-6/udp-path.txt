@@ -1,0 +1,8 @@
+Lab routed variant, 2026-11-09. UDP metadata only; two observations per forwarded packet.
+WireGuard ingress peer → Asterisk A: 250
+PBX bridge egress peer → Asterisk A: 250
+PBX bridge ingress Asterisk A → peer: 0
+WireGuard egress Asterisk A → peer: 0
+The observation point is the router. It does not establish where the reverse path failed.
+Independent UDP echo in the routed variant: the PBX socket bound to a test port in the permitted range and timed out waiting for a datagram; the peer also timed out. No audio payload was captured.
+Independent UDP echo with an on-link address reserved for the WireGuard peer and proxy ARP in the router: PBX received the probe and the peer received its response.

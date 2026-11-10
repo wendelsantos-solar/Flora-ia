@@ -1,0 +1,39 @@
+
+> flora-phone@0.1.0 test:e2e
+> playwright test
+
+
+Running 1 test using 1 worker
+
+(node:61364) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 tests/telephony.spec.ts:11:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (55.9s)
+
+
+  1) tests/telephony.spec.ts:11:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('status').filter({ hasText: 'Disponível' })
+    Expected: visible
+    Timeout: 25000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('status').filter({ hasText: 'Disponível' }) with timeout 25000ms
+      - waiting for getByRole('status').filter({ hasText: 'Disponível' })
+
+
+      32 |  execFileSync('docker',['compose','restart','asterisk'],{cwd:root,stdio:'pipe'});
+      33 |  await expect.poll(()=>signals.filter(line=>line.startsWith('202 framesent REGISTER')).length,{timeout:35000}).toBeGreaterThan(registerCount);
+    > 34 |  await expect(b.getByRole('status').filter({hasText:'Disponível'})).toBeVisible({timeout:25000});
+         |                                                                     ^
+      35 |  await expect.poll(async()=>{const r=await a.request.get('/api/health/ready');return r.status();},{timeout:35000}).toBe(200);
+      36 |  evidence.recovery='Asterisk restarted; new REGISTER observed on WSS and AMI/readiness recovered';
+      37 |  // Stop the observer while a genuine SIP call runs. The motor and media remain independent.
+        at /Users/wendelpaco/Documents/ChatGPT/flora-ia/web/tests/telephony.spec.ts:34:69
+
+    Error Context: test-results/telephony-real-WebRTC-call-3fc19-rse-direction-SIP-reconnect/error-context.md
+
+  1 failed
+    tests/telephony.spec.ts:11:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect 

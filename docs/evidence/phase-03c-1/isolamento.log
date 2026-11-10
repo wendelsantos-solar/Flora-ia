@@ -1,0 +1,29 @@
+ Container flora-026-asterisk-1  Running
+ Container flora-026-db-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-router-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-control-1  Starting
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-control-1  Started
+ Container flora-026-db-1  Healthy
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-client4-1  Starting
+ Container flora-026-client4-1  Started
+STEP register three browser peers
+STEP simultaneous queues and isolation
+simultaneous queues and isolation: Expected values to be strictly equal:
+
+null !== '202'
+
+0 active channels
+0 active calls
+11 calls processed
+0 active channels
+0 active calls
+1 call processed

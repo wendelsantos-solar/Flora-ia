@@ -1,0 +1,16 @@
+
+Running 1 test using 1 worker
+
+Consecutive call 1 starting
+Consecutive call 2 starting
+Consecutive call 3 starting
+Consecutive call 4 starting
+Consecutive call 5 starting
+Consecutive call 6 starting
+Consecutive call 7 starting
+Consecutive call 8 starting
+Consecutive call 9 starting
+Consecutive call 10 starting
+  ✓  1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (40.9s)
+
+  1 passed (44.4s)

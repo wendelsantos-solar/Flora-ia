@@ -1,0 +1,92 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 696B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile.web
+#2 transferring dockerfile:
+#2 transferring dockerfile: 697B 0.0s done
+#2 DONE 0.2s
+
+#3 [internal] load metadata for docker.io/library/node:22-alpine
+#3 DONE 0.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 72B 0.0s done
+#4 DONE 0.1s
+
+#5 [build 1/6] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#5 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+#5 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 260.40kB 0.1s done
+#6 DONE 0.1s
+
+#7 [build 2/6] WORKDIR /app
+#7 CACHED
+
+#8 [build 3/6] COPY package*.json ./
+#8 CACHED
+
+#9 [build 4/6] RUN npm ci --cache /tmp/npm-cache && rm -rf /tmp/npm-cache
+#9 CACHED
+
+#10 [build 5/6] COPY . .
+#10 DONE 0.1s
+
+#11 [build 6/6] RUN npm run build
+#11 2.079 
+#11 2.079 > flora-phone@0.1.0 build
+#11 2.079 > next build
+#11 2.079 
+#11 2.891 ▲ Next.js 16.4.5 (Turbopack)
+#11 3.155 ✓ Running next.config.ts took 251ms
+#11 3.248 
+#11 3.317   Creating an optimized production build ...
+#11 79.69 ✓ Compiled successfully in 76s
+#11 79.85   Running TypeScript ...
+#11 114.7   Finished TypeScript in 34.7s ...
+#11 114.8   Collecting page data using 4 workers ...
+#11 116.2   Generating static pages using 4 workers (0/3) ...
+#11 117.3 ✓ Generating static pages using 4 workers (3/3) in 1101ms
+#11 117.3   Finalizing page optimization ...
+#11 117.7 
+#11 117.7 Route (app)
+#11 117.7 ┌ ○ /
+#11 117.7 └ ○ /_not-found
+#11 117.7 
+#11 117.7 
+#11 117.7 ○  (Static)  prerendered as static content
+#11 117.7 
+#11 118.5 npm notice
+#11 118.5 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#11 118.5 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#11 118.5 npm notice To update run: npm install -g npm@12.2.2
+#11 118.5 npm notice
+#11 DONE 118.8s
+
+#7 [build 2/6] WORKDIR /app
+#7 CACHED
+
+#12 [stage-1 3/4] COPY --from=build --chown=node:node /app/.next/standalone ./
+#12 DONE 0.5s
+
+#13 [stage-1 4/4] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#13 DONE 0.4s
+
+#14 exporting to image
+#14 exporting layers
+#14 exporting layers 2.8s done
+#14 exporting manifest sha256:79d750d39092cd9fafa2dcddf4477c8e1ccd451971f1b3ba771e268d881960b2 0.1s done
+#14 exporting config sha256:618199327cc536a6984b9b59046522778fc7466ba228be2a33f3eae8e122dce3
+#14 exporting config sha256:618199327cc536a6984b9b59046522778fc7466ba228be2a33f3eae8e122dce3 done
+#14 exporting attestation manifest sha256:2ddc11d3b48795f5daeb6bf7deee7b1c11fac1a3345e5e3273bca811d337a0d0 0.0s done
+#14 exporting manifest list sha256:150cb5c6e984b170941fa4274b7896d7b86ad7c04e547b1f6473957da779766f done
+#14 naming to docker.io/library/flora-03c-1-web:latest done
+#14 unpacking to docker.io/library/flora-03c-1-web:latest
+#14 unpacking to docker.io/library/flora-03c-1-web:latest 0.7s done
+#14 DONE 3.9s
+
+#15 resolving provenance for metadata file
+#15 DONE 0.1s
+ flora-03c-1-web  Built

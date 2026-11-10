@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-09T14:32:03.214Z",
+  "data": {
+    "result": "PASS",
+    "baseline": {
+      "answered": 4,
+      "abandoned": 0,
+      "average_wait_seconds": 1.5
+    },
+    "beforeRestart": {
+      "answered": 5,
+      "abandoned": 1,
+      "average_wait_seconds": 1.6
+    },
+    "afterRestart": {
+      "answered": 5,
+      "abandoned": 1,
+      "average_wait_seconds": 1.6
+    },
+    "answerHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-388",
+        "queue": "388",
+        "agent": "202",
+        "wait_seconds": 2,
+        "talk_seconds": 1,
+        "outcome": "answered",
+        "hangup_cause": 16,
+        "id": "025eb613-c979-4c03-b755-09c3d580a9f9",
+        "source": "201",
+        "destination": "388",
+        "state": "completed",
+        "started_at": "2026-11-09T14:31:28.98Z",
+        "answered_at": "2026-11-09T14:31:30.311189Z",
+        "ended_at": "2026-11-09T14:31:31.887645Z",
+        "asterisk_linked_id": "1794234688.101"
+      }
+    ],
+    "timeoutHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-388",
+        "queue": "388",
+        "agent": null,
+        "wait_seconds": 7,
+        "talk_seconds": null,
+        "outcome": "timeout",
+        "hangup_cause": 16,
+        "id": "17143f7b-e140-4ff9-ba31-037d08197ef0",
+        "source": "201",
+        "destination": "388",
+        "state": "failed",
+        "started_at": "2026-11-09T14:31:40.771376Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T14:31:47.978407Z",
+        "asterisk_linked_id": "1794234700.104"
+      }
+    ],
+    "abandonHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-388",
+        "queue": "388",
+        "agent": null,
+        "wait_seconds": 2,
+        "talk_seconds": null,
+        "outcome": "abandoned",
+        "hangup_cause": 127,
+        "id": "83a2a20e-a902-4ff4-b239-d472db9e90c3",
+        "source": "201",
+        "destination": "388",
+        "state": "failed",
+        "started_at": "2026-11-09T14:31:49.9451Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T14:31:51.887961Z",
+        "asterisk_linked_id": "1794234709.107"
+      }
+    ]
+  }
+}

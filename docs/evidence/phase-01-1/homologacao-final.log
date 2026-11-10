@@ -1,0 +1,21 @@
+
+Running 12 tests using 1 worker
+
+(node:73660) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [chromium] › web/tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (22.7s)
+  ✓   2 [chromium] › web/tests/homologacao.spec.ts:52:1 › revoking actual microphone permission warns, permission can be restored and input replaced (5.3s)
+  ✓   3 [chromium] › web/tests/homologacao.spec.ts:59:1 › microphone permission denied before dialing and answering, then granted without reload (5.7s)
+  ✓   4 [chromium] › web/tests/homologacao.spec.ts:67:1 › cancel while ringing and after the callee starts answering, without orphan sessions (3.7s)
+  ✓   5 [chromium] › web/tests/homologacao.spec.ts:74:1 › temporary real media interruption recovers after Asterisk pause and resume (8.5s)
+  ✓   6 [chromium] › web/tests/homologacao.spec.ts:83:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (36.2s)
+(node:73950) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   7 [chrome] › web/tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (16.2s)
+  ✓   8 [chrome] › web/tests/homologacao.spec.ts:52:1 › revoking actual microphone permission warns, permission can be restored and input replaced (3.1s)
+  ✓   9 [chrome] › web/tests/homologacao.spec.ts:59:1 › microphone permission denied before dialing and answering, then granted without reload (3.1s)
+  ✓  10 [chrome] › web/tests/homologacao.spec.ts:67:1 › cancel while ringing and after the callee starts answering, without orphan sessions (2.1s)
+  ✓  11 [chrome] › web/tests/homologacao.spec.ts:74:1 › temporary real media interruption recovers after Asterisk pause and resume (8.8s)
+  ✓  12 [chrome] › web/tests/homologacao.spec.ts:83:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (35.6s)
+
+  12 passed (2.7m)

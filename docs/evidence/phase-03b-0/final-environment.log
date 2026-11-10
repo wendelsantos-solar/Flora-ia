@@ -1,0 +1,46 @@
+asterisk
+0 active channels
+0 active calls
+24 calls processed
+asterisk-b
+0 active channels
+0 active calls
+2 calls processed
+Open PostgreSQL sessions: 0
+ Container flora-026-client4-1  Stopping
+ Container flora-026-control-1  Stopping
+ Container flora-026-client2-1  Stopping
+ Container flora-026-client1-1  Stopping
+ Container flora-026-client3-1  Stopping
+ Container flora-026-client3-1  Stopped
+ Container flora-026-client4-1  Stopped
+ Container flora-026-control-1  Stopped
+ Container flora-026-client2-1  Stopped
+ Container flora-026-client1-1  Stopped
+ Container flora-026-edge-1  Stopping
+ Container flora-026-router-1  Stopping
+ Container flora-026-edge-1  Stopped
+ Container flora-026-web-1  Stopping
+ Container flora-026-web-1  Stopped
+ Container flora-026-backend-1  Stopping
+ Container flora-026-backend-1  Stopped
+ Container flora-026-asterisk-1  Stopping
+ Container flora-026-asterisk-b-1  Stopping
+ Container flora-026-db-1  Stopping
+ Container flora-026-db-1  Stopped
+ Container flora-026-asterisk-1  Stopped
+ Container flora-026-asterisk-b-1  Stopped
+ Container flora-026-router-1  Stopped
+
+flora-026
+
+flora-03a
+
+flora-phase1
+flora-phase1-web-1
+flora-phase1-backend-1
+flora-phase1-asterisk-b-1
+flora-phase1-asterisk-1
+flora-phase1-db-1
+
+Flora local readiness HTTP 200

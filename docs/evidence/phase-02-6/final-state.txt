@@ -1,0 +1,16 @@
+2026-11-09T08:08:01-03:00
+asterisk
+0 active channels
+0 active calls
+11 calls processed
+asterisk-b
+0 active channels
+0 active calls
+2 calls processed
+Original application readiness HTTP 200
+flora-phase1-web-1 Up 7 hours
+flora-phase1-backend-1 Up 7 hours
+flora-phase1-asterisk-b-1 Up 7 hours (healthy)
+flora-phase1-asterisk-1 Up 7 hours (healthy)
+flora-phase1-db-1 Up 7 hours (healthy)
+Running disposable services after stop: 0

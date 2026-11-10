@@ -1,0 +1,6 @@
+
+Running 1 test using 1 worker
+
+  ✓  1 [chromium] › tests/telephony.spec.ts:12:1 › real WebRTC calls, bidirectional decoded test audio, hangup, reverse direction, SIP reconnect (36.7s)
+
+  1 passed (39.9s)

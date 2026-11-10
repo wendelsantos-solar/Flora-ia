@@ -1,0 +1,58 @@
+{
+  "at": "2026-11-09T17:11:37.543Z",
+  "result": "PASS",
+  "audio_source": "native browser-generated test microphone; human speech not tested",
+  "data": {
+    "browser": "158.0.8127.18",
+    "outgoing": "denied then recovered",
+    "incoming": "denied then recovered",
+    "release": [
+      {
+        "session": null,
+        "connectionState": null,
+        "iceConnectionState": null,
+        "localTracks": [],
+        "remoteTracks": [],
+        "health": {
+          "sip": "registered",
+          "media": "idle",
+          "microphone": "idle",
+          "playbackBlocked": false,
+          "levelsAvailable": false,
+          "inputLevel": 0,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": {
+          "tracksEnded": true,
+          "connectionClosed": true
+        },
+        "lastInputReplacement": null
+      },
+      {
+        "session": null,
+        "connectionState": null,
+        "iceConnectionState": null,
+        "localTracks": [],
+        "remoteTracks": [],
+        "health": {
+          "sip": "registered",
+          "media": "idle",
+          "microphone": "idle",
+          "playbackBlocked": false,
+          "levelsAvailable": false,
+          "inputLevel": 0,
+          "outputLevel": 0
+        },
+        "outputSelectionSupported": true,
+        "outputRouted": false,
+        "lastRelease": {
+          "tracksEnded": true,
+          "connectionClosed": true
+        },
+        "lastInputReplacement": null
+      }
+    ]
+  }
+}

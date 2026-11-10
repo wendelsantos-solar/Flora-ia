@@ -1,0 +1,46 @@
+
+Running 1 test using 1 worker
+
+Consecutive call 1 starting
+Consecutive call 2 starting
+Consecutive call 3 starting
+Consecutive call 4 starting
+Consecutive call 5 starting
+Consecutive call 6 starting
+Consecutive call 7 starting
+Consecutive call 8 starting
+Consecutive call 9 starting
+  ✘  1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (3.5m)
+
+
+  1) [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+
+    Test timeout of 150000ms exceeded.
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('status').filter({ hasText: /^Disponível$/ })
+    Expected: visible
+    Error: Target crashed 
+
+    Call log:
+      - Expect "toBeVisible" getByRole('status').filter({ hasText: /^Disponível$/ }) with timeout 20000ms
+      - waiting for getByRole('status').filter({ hasText: /^Disponível$/ })
+      - Target crashed
+
+
+      10 | function record(info:TestInfo,name:string,data:unknown){fs.mkdirSync(output,{recursive:true});fs.writeFileSync(path.join(output,`${info.project.name}-${name}.json`),JSON.stringify({at:new Date().toISOString(),result:'PASS',audio_source:'native browser-generated test microphone; human speech not tested',data},null,2));}
+      11 | async function login(page:Page,number:string){await page.goto('/');await page.getByLabel('Ramal',{exact:true}).selectOption(number);await page.getByLabel('Token de acesso').fill(env[`TOKEN_${number}`]);await page.getByLabel('Senha SIP').fill(env[`SIP_${number}_PASSWORD`]);await page.getByRole('button',{name:'Conectar ramal',exact:true}).click();await ready(page);}
+    > 12 | async function ready(page:Page){await expect(page.getByRole('status').filter({hasText:/^Disponível$/})).toBeVisible({timeout:20000});}
+         |                                                                                                         ^
+      13 | async function permission(page:Page,value:'granted'|'denied'){
+      14 |  if(value==='granted'){await page.context().grantPermissions(['microphone'],{origin:'https://lab.flora.test'});await expect.poll(()=>page.evaluate(async()=>(await navigator.permissions.query({name:'microphone' as PermissionName})).state)).toBe('granted');return;}
+      15 |  const cdp=await page.context().newCDPSession(page);try{const {targetInfo}=await cdp.send('Target.getTargetInfo');await cdp.send('Browser.setPermission',{permission:{name:'microphone'},setting:value,origin:'https://lab.flora.test',browserContextId:targetInfo.browserContextId});}finally{await cdp.detach();}
+        at ready (/tmp/flora-regressions-23805d001f4e40ba9df47502c69eb32f/web/tests/homologacao.spec.ts:12:105)
+        at finish (/tmp/flora-regressions-23805d001f4e40ba9df47502c69eb32f/web/tests/homologacao.spec.ts:23:130)
+        at /tmp/flora-regressions-23805d001f4e40ba9df47502c69eb32f/web/tests/homologacao.spec.ts:56:3
+
+    Error Context: test-results/homologacao-three-consecut-53be8-one-replacement-and-cleanup-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 

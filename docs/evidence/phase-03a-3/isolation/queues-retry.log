@@ -1,0 +1,34 @@
+ Container flora-026-router-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-db-1  Running
+ Container flora-026-asterisk-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-db-1  Healthy
+ Container flora-026-client4-1  Starting
+ Container flora-026-client4-1  Started
+asterisk before
+0 active channels
+0 active calls
+2 calls processed
+asterisk-b before
+0 active channels
+0 active calls
+1 call processed
+STEP register browser peers per tenant
+STEP simultaneous queues and isolation
+STEP pause and resume queue member
+asterisk after
+0 active channels
+0 active calls
+4 calls processed
+asterisk-b after
+0 active channels
+0 active calls
+2 calls processed

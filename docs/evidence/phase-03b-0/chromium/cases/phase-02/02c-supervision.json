@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-09T17:13:11.518Z",
+  "data": {
+    "result": "PASS",
+    "baseline": {
+      "answered": 5,
+      "abandoned": 0,
+      "average_wait_seconds": 1.2
+    },
+    "beforeRestart": {
+      "answered": 6,
+      "abandoned": 1,
+      "average_wait_seconds": 1.3333333333333333
+    },
+    "afterRestart": {
+      "answered": 6,
+      "abandoned": 1,
+      "average_wait_seconds": 1.3333333333333333
+    },
+    "answerHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-376",
+        "queue": "376",
+        "agent": "202",
+        "wait_seconds": 2,
+        "talk_seconds": 2,
+        "outcome": "answered",
+        "hangup_cause": 16,
+        "id": "ed7fbef8-d320-432c-815b-538dfc2a2b4f",
+        "source": "201",
+        "destination": "376",
+        "state": "completed",
+        "started_at": "2026-11-09T17:12:46.504909Z",
+        "answered_at": "2026-11-09T17:12:48.805967Z",
+        "ended_at": "2026-11-09T17:12:50.43466Z",
+        "asterisk_linked_id": "1794244366.38"
+      }
+    ],
+    "timeoutHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-376",
+        "queue": "376",
+        "agent": null,
+        "wait_seconds": 7,
+        "talk_seconds": null,
+        "outcome": "timeout",
+        "hangup_cause": 16,
+        "id": "7f5125b9-1627-4a8c-b987-f59543935c54",
+        "source": "201",
+        "destination": "376",
+        "state": "failed",
+        "started_at": "2026-11-09T17:12:54.840069Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T17:13:01.879428Z",
+        "asterisk_linked_id": "1794244374.41"
+      }
+    ],
+    "abandonHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-376",
+        "queue": "376",
+        "agent": null,
+        "wait_seconds": 1,
+        "talk_seconds": null,
+        "outcome": "abandoned",
+        "hangup_cause": 127,
+        "id": "fb13acda-e305-419c-bb5a-f6f992257242",
+        "source": "201",
+        "destination": "376",
+        "state": "failed",
+        "started_at": "2026-11-09T17:13:03.804737Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T17:13:04.593528Z",
+        "asterisk_linked_id": "1794244383.44"
+      }
+    ]
+  }
+}

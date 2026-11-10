@@ -1,0 +1,75 @@
+ Container flora-026-control-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-router-1  Running
+ Container flora-026-db-1  Running
+ Container flora-026-asterisk-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-db-1  Healthy
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-client3-1  Starting
+ Container flora-026-client4-1  Starting
+ Container flora-026-client2-1  Starting
+ Container flora-026-client4-1  Started
+ Container flora-026-client2-1  Started
+ Container flora-026-client3-1  Started
+STEP register three browser peers
+STEP direct and hold
+STEP simultaneous queues and isolation
+STEP pause and resume queue member
+STEP blind transfer
+STEP attended rejection and completion
+STEP unavailable recipient
+STEP abrupt disconnect during consultation
+ Container flora-026-client3-1  Stopping
+ Container flora-026-client2-1  Stopping
+ Container flora-026-client3-1  Stopped
+ Container flora-026-client2-1  Stopped
+STEP register three browser peers
+STEP simultaneous queues and isolation
+STEP pause and resume queue member
+ Container flora-026-client4-1  Stopping
+ Container flora-026-client4-1  Stopped
+ Container flora-026-db-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-router-1  Running
+ Container flora-026-asterisk-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-db-1  Healthy
+ Container flora-026-client2-1  Starting
+ Container flora-026-client2-1  Started
+STEP firefox trusted registration and real media
+firefox trusted registration and real media: page.goto: SEC_ERROR_UNKNOWN_ISSUER
+Call log:
+  - navigating to "https://lab.flora.test/", waiting until "load"
+
+asterisk
+0 active channels
+0 active calls
+13 calls processed
+asterisk-b
+0 active channels
+0 active calls
+2 calls processed
+asterisk []
+asterisk-b []
+backend []
+client1 []
+client2 []
+control []
+db []
+edge []
+router []
+web []

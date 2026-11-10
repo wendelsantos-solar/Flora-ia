@@ -1,0 +1,690 @@
+{
+  "mode": "queues-isolation",
+  "at": "2026-11-09T17:18:59.852Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "PASS",
+  "scenarios": {
+    "queues": {
+      "simultaneous": [
+        {
+          "verified": true,
+          "before": [
+            {
+              "packets": 4,
+              "energy": 0,
+              "jitter": 0.003,
+              "lost": 0
+            },
+            {
+              "packets": 4,
+              "energy": 0,
+              "jitter": 0.003,
+              "lost": 0
+            }
+          ],
+          "after": [
+            {
+              "packets": 40,
+              "energy": 0.07953782800730176,
+              "jitter": 0.001,
+              "lost": 0
+            },
+            {
+              "packets": 40,
+              "energy": 0.2378879795025445,
+              "jitter": 0.001,
+              "lost": 0
+            }
+          ],
+          "ice": [
+            {
+              "ice": "connected",
+              "connection": "connected",
+              "local": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "remote": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "capture": [
+                "live"
+              ],
+              "codecs": [
+                "audio/PCMU",
+                "audio/PCMU"
+              ],
+              "selected": {
+                "rtt": 0.001
+              }
+            },
+            {
+              "ice": "connected",
+              "connection": "connected",
+              "local": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "remote": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "capture": [
+                "live"
+              ],
+              "codecs": [
+                "audio/PCMU",
+                "audio/PCMU"
+              ],
+              "selected": {
+                "rtt": 0.007
+              }
+            }
+          ]
+        },
+        {
+          "verified": true,
+          "before": [
+            {
+              "packets": 0,
+              "energy": 0,
+              "jitter": null,
+              "lost": null
+            },
+            {
+              "packets": 1,
+              "energy": 0,
+              "jitter": 0,
+              "lost": 0
+            }
+          ],
+          "after": [
+            {
+              "packets": 37,
+              "energy": 0.07967531421381704,
+              "jitter": 0.001,
+              "lost": 0
+            },
+            {
+              "packets": 37,
+              "energy": 0.18938625320615612,
+              "jitter": 0.001,
+              "lost": 0
+            }
+          ],
+          "ice": [
+            {
+              "ice": "connected",
+              "connection": "connected",
+              "local": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "remote": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "capture": [
+                "live"
+              ],
+              "codecs": [
+                "audio/PCMU",
+                "audio/PCMU"
+              ],
+              "selected": {
+                "rtt": 0.001
+              }
+            },
+            {
+              "ice": "connected",
+              "connection": "connected",
+              "local": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-wireguard"
+                },
+                {
+                  "transport": "tcp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "remote": [
+                {
+                  "transport": "udp",
+                  "type": "host",
+                  "addressClass": "lab-underlay"
+                }
+              ],
+              "capture": [
+                "live"
+              ],
+              "codecs": [
+                "audio/PCMU",
+                "audio/PCMU"
+              ],
+              "selected": {
+                "rtt": 0.006
+              }
+            }
+          ]
+        }
+      ],
+      "histA": {
+        "call": {
+          "tenant_id": "11111111-1111-4111-8111-111111111111",
+          "department": "recepcao",
+          "queue": "301",
+          "agent": "202",
+          "wait_seconds": 0,
+          "talk_seconds": 1,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "c498820e-1804-417b-952f-6dc688d4fe46",
+          "source": "201",
+          "destination": "301",
+          "state": "completed",
+          "started_at": "2026-11-09T17:19:08.154231Z",
+          "answered_at": "2026-11-09T17:19:08.647536Z",
+          "ended_at": "2026-11-09T17:19:09.55086Z",
+          "asterisk_linked_id": "1794244748.22"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/201-00000016",
+            "ended_at": "2026-11-09T17:19:09.550814Z"
+          },
+          {
+            "channel": "PJSIP/202-00000017",
+            "ended_at": "2026-11-09T17:19:09.55086Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "call.answered",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.completed"
+        ],
+        "queue_events": [
+          "CONNECT",
+          "ENTERQUEUE"
+        ]
+      },
+      "histB": {
+        "call": {
+          "tenant_id": "33333333-3333-4333-8333-333333333333",
+          "department": "recepcao",
+          "queue": "301",
+          "agent": "212",
+          "wait_seconds": 0,
+          "talk_seconds": 1,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "2c1a041c-1404-4297-ae0c-e888015a472a",
+          "source": "211",
+          "destination": "301",
+          "state": "completed",
+          "started_at": "2026-11-09T17:19:08.155347Z",
+          "answered_at": "2026-11-09T17:19:08.652597Z",
+          "ended_at": "2026-11-09T17:19:09.553585Z",
+          "asterisk_linked_id": "1794244748.2"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/211-00000002",
+            "ended_at": "2026-11-09T17:19:09.546241Z"
+          },
+          {
+            "channel": "PJSIP/212-00000003",
+            "ended_at": "2026-11-09T17:19:09.553585Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "call.answered",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.completed"
+        ],
+        "queue_events": [
+          "ENTERQUEUE",
+          "CONNECT"
+        ]
+      },
+      "events": [
+        {
+          "ownCount": 10,
+          "foreignCount": 0
+        },
+        {
+          "ownCount": 10,
+          "foreignCount": 0
+        }
+      ],
+      "foreignDetail": 404
+    },
+    "pause": {
+      "pausedHistory": {
+        "call": {
+          "tenant_id": "11111111-1111-4111-8111-111111111111",
+          "department": "recepcao",
+          "queue": "301",
+          "agent": null,
+          "wait_seconds": null,
+          "talk_seconds": null,
+          "outcome": "unavailable",
+          "hangup_cause": 16,
+          "id": "35b8f822-ca0f-449b-a15f-76681a3744d2",
+          "source": "201",
+          "destination": "301",
+          "state": "failed",
+          "started_at": "2026-11-09T17:19:15.900265Z",
+          "answered_at": null,
+          "ended_at": "2026-11-09T17:19:15.903689Z",
+          "asterisk_linked_id": "1794244755.24"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/201-00000018",
+            "ended_at": "2026-11-09T17:19:15.903689Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.failed"
+        ],
+        "queue_events": [
+          "FLORA_CONTINGENCY"
+        ]
+      },
+      "member": "available after resume"
+    }
+  },
+  "browser": "158.0.8127.18",
+  "signaling": [
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "0a75e882-b675-465c-bc6d-5e10bca5c961",
+        "events": [
+          {
+            "at": "2026-11-09T17:19:00.866Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T17:19:00.902Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:00.906Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T17:19:00.942Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T17:19:00.949Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:01.032Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:07.591Z",
+            "event": "ui_state",
+            "detail": "calling/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.698Z",
+            "event": "ui_state",
+            "detail": "connected/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:09.555Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:15.607Z",
+            "event": "ui_state",
+            "detail": "calling/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:15.930Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "8bb4e3a9-8136-4a8e-89ec-a271eedb854d",
+        "events": [
+          {
+            "at": "2026-11-09T17:19:01.436Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T17:19:01.451Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:01.456Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T17:19:01.479Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T17:19:01.487Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:01.540Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.192Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "b3ae4d3e85a20f2da14b55182766d3f3a01a752f5aebca66783c99e44af89835"
+          },
+          {
+            "at": "2026-11-09T17:19:08.192Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "b3ae4d3e85a20f2da14b55182766d3f3a01a752f5aebca66783c99e44af89835"
+          },
+          {
+            "at": "2026-11-09T17:19:08.203Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T17:19:08.491Z",
+            "event": "invite_session_state",
+            "detail": "Establishing",
+            "callRef": "b3ae4d3e85a20f2da14b55182766d3f3a01a752f5aebca66783c99e44af89835"
+          },
+          {
+            "at": "2026-11-09T17:19:08.500Z",
+            "event": "ui_state",
+            "detail": "answering/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.644Z",
+            "event": "invite_session_state",
+            "detail": "Established",
+            "callRef": "b3ae4d3e85a20f2da14b55182766d3f3a01a752f5aebca66783c99e44af89835"
+          },
+          {
+            "at": "2026-11-09T17:19:08.696Z",
+            "event": "ui_state",
+            "detail": "connected/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:09.556Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "b3ae4d3e85a20f2da14b55182766d3f3a01a752f5aebca66783c99e44af89835"
+          },
+          {
+            "at": "2026-11-09T17:19:09.567Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "f590bc8c-6855-485d-9cd3-77eb0b787dd9",
+        "events": [
+          {
+            "at": "2026-11-09T17:19:04.686Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T17:19:04.720Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:04.730Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T17:19:04.822Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T17:19:04.847Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:04.855Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:07.590Z",
+            "event": "ui_state",
+            "detail": "calling/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.709Z",
+            "event": "ui_state",
+            "detail": "connected/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:09.551Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          }
+        ],
+        "tenant": "33333333-3333-4333-8333-333333333333",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "ad0bd22d-5f4d-48ca-be0e-aa0c23712582",
+        "events": [
+          {
+            "at": "2026-11-09T17:19:05.798Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T17:19:05.837Z",
+            "event": "ui_state",
+            "detail": "connecting/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:05.899Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T17:19:06.099Z",
+            "event": "sip_registered"
+          },
+          {
+            "at": "2026-11-09T17:19:06.109Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_disconnected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:06.407Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.175Z",
+            "event": "invite_received",
+            "detail": "Initial",
+            "callRef": "0d97145fd4867eb3a5ee073ef3540c1abf458e8f090b53d1fe2654653e9dfa13"
+          },
+          {
+            "at": "2026-11-09T17:19:08.175Z",
+            "event": "invite_bound",
+            "detail": "Initial",
+            "callRef": "0d97145fd4867eb3a5ee073ef3540c1abf458e8f090b53d1fe2654653e9dfa13"
+          },
+          {
+            "at": "2026-11-09T17:19:08.186Z",
+            "event": "ui_state",
+            "detail": "incoming/visible/events_connected/answer_rendered"
+          },
+          {
+            "at": "2026-11-09T17:19:08.491Z",
+            "event": "invite_session_state",
+            "detail": "Establishing",
+            "callRef": "0d97145fd4867eb3a5ee073ef3540c1abf458e8f090b53d1fe2654653e9dfa13"
+          },
+          {
+            "at": "2026-11-09T17:19:08.500Z",
+            "event": "ui_state",
+            "detail": "answering/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:08.644Z",
+            "event": "invite_session_state",
+            "detail": "Established",
+            "callRef": "0d97145fd4867eb3a5ee073ef3540c1abf458e8f090b53d1fe2654653e9dfa13"
+          },
+          {
+            "at": "2026-11-09T17:19:08.708Z",
+            "event": "ui_state",
+            "detail": "connected/visible/events_connected/answer_absent"
+          },
+          {
+            "at": "2026-11-09T17:19:09.558Z",
+            "event": "invite_session_state",
+            "detail": "Terminated",
+            "callRef": "0d97145fd4867eb3a5ee073ef3540c1abf458e8f090b53d1fe2654653e9dfa13"
+          },
+          {
+            "at": "2026-11-09T17:19:09.572Z",
+            "event": "ui_state",
+            "detail": "ready/visible/events_connected/answer_absent"
+          }
+        ],
+        "tenant": "33333333-3333-4333-8333-333333333333",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  ]
+}

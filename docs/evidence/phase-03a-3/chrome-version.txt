@@ -1,0 +1,9 @@
+Google Chrome 157.0.8103.38 
+Linux aarch64
+"Ubuntu 24.04.5 LTS"
+/ms-playwright/chromium-1254/chrome-linux-arm64/chrome
+/opt/google/chrome/chrome
+Pacote: google-chrome-stable 157.0.8103.38-1 arm64
+SHA-256 do pacote e do índice: ea1b98eda5ff948be07e52237e07bbcc8f7dedc3460b693f6bf29e62e89c3bd6
+Índice: https://dl.google.com/linux/chrome/deb/dists/stable/main/binary-arm64/Packages.gz
+Playwright: projeto chrome, executablePath /opt/google/chrome/chrome, headless

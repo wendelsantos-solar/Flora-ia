@@ -1,0 +1,390 @@
+[
+  {
+    "stage": "login",
+    "browser_at": "2026-11-09T17:09:10.395Z",
+    "sip_call_ref": "c1f70692a43e7fc4b14b9ce9d04301e79af1e70b9a860cf882b04553a3f5956e",
+    "match": "callee channel and nearest timestamp within 3 seconds",
+    "candidates": 2,
+    "linked_id": "1794244150.18",
+    "callee_channel_id": "1794244150.19",
+    "cel_delta_seconds": 0.101,
+    "cel_event_types": [
+      "CHAN_START",
+      "APP_START",
+      "CHAN_START",
+      "APP_END",
+      "HANGUP",
+      "CHAN_END",
+      "HANGUP",
+      "CHAN_END",
+      "LINKEDID_END"
+    ],
+    "postgres_events": [
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "call.ringing",
+        "sequence": "1985"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "call.created",
+        "sequence": "1986"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "call.created",
+        "sequence": "1987"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "telephony.HANGUP",
+        "sequence": "1988"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "1989"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "telephony.HANGUP",
+        "sequence": "1990"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "1991"
+      },
+      {
+        "asterisk_linked_id": "1794244150.18",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:10.784405+00",
+        "type": "call.failed",
+        "sequence": "1992"
+      }
+    ]
+  },
+  {
+    "stage": "navigation_and_second_tab",
+    "browser_at": "2026-11-09T17:09:12.383Z",
+    "sip_call_ref": "329ae5a12ec2088d5471478731d747d4b7353a1bc998e65cf4aa85ba129f7428",
+    "match": "callee channel and nearest timestamp within 3 seconds",
+    "candidates": 2,
+    "linked_id": "1794244152.20",
+    "callee_channel_id": "1794244152.21",
+    "cel_delta_seconds": 0.006,
+    "cel_event_types": [
+      "CHAN_START",
+      "APP_START",
+      "CHAN_START",
+      "APP_END",
+      "HANGUP",
+      "CHAN_END",
+      "HANGUP",
+      "CHAN_END",
+      "LINKEDID_END"
+    ],
+    "postgres_events": [
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "call.ringing",
+        "sequence": "1993"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "call.created",
+        "sequence": "1994"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "call.created",
+        "sequence": "1995"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "telephony.HANGUP",
+        "sequence": "1996"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "1997"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "telephony.HANGUP",
+        "sequence": "1998"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "1999"
+      },
+      {
+        "asterisk_linked_id": "1794244152.20",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:12.518877+00",
+        "type": "call.failed",
+        "sequence": "2000"
+      }
+    ]
+  },
+  {
+    "stage": "operational_websocket_unavailable",
+    "browser_at": "2026-11-09T17:09:16.839Z",
+    "sip_call_ref": "d60ea9c69d41732d7469527bfd075a7e053e5bff8fe6c745f5ed0d8c53fb54b1",
+    "match": "callee channel and nearest timestamp within 3 seconds",
+    "candidates": 1,
+    "linked_id": "1794244156.22",
+    "callee_channel_id": "1794244156.23",
+    "cel_delta_seconds": 0.011,
+    "cel_event_types": [
+      "CHAN_START",
+      "APP_START",
+      "CHAN_START",
+      "APP_END",
+      "HANGUP",
+      "CHAN_END",
+      "HANGUP",
+      "CHAN_END",
+      "LINKEDID_END"
+    ],
+    "postgres_events": [
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "call.created",
+        "sequence": "2001"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "call.created",
+        "sequence": "2002"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2003"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2004"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2005"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2006"
+      },
+      {
+        "asterisk_linked_id": "1794244156.22",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:19.007028+00",
+        "type": "call.failed",
+        "sequence": "2007"
+      }
+    ]
+  },
+  {
+    "stage": "operational_websocket_recovered",
+    "browser_at": "2026-11-09T17:09:25.612Z",
+    "sip_call_ref": "b49c707827b64a71082bd9435bec0913076c552bd040a25bad775500efc8bbac",
+    "match": "callee channel and nearest timestamp within 3 seconds",
+    "candidates": 1,
+    "linked_id": "1794244165.24",
+    "callee_channel_id": "1794244165.25",
+    "cel_delta_seconds": 0.009,
+    "cel_event_types": [
+      "CHAN_START",
+      "APP_START",
+      "CHAN_START",
+      "APP_END",
+      "HANGUP",
+      "CHAN_END",
+      "HANGUP",
+      "CHAN_END",
+      "LINKEDID_END"
+    ],
+    "postgres_events": [
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "call.ringing",
+        "sequence": "2008"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "call.created",
+        "sequence": "2009"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "call.created",
+        "sequence": "2010"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2011"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2012"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2013"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2014"
+      },
+      {
+        "asterisk_linked_id": "1794244165.24",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:25.755278+00",
+        "type": "call.failed",
+        "sequence": "2015"
+      }
+    ]
+  },
+  {
+    "stage": "sip_reconnected",
+    "browser_at": "2026-11-09T17:09:31.468Z",
+    "sip_call_ref": "bb5b50ba6428235b5e65f47f98ac367117bed027b9ae71a799dbdd030376ca69",
+    "match": "callee channel and nearest timestamp within 3 seconds",
+    "candidates": 1,
+    "linked_id": "1794244171.0",
+    "callee_channel_id": "1794244171.1",
+    "cel_delta_seconds": 0.012,
+    "cel_event_types": [
+      "CHAN_START",
+      "APP_START",
+      "CHAN_START",
+      "APP_END",
+      "HANGUP",
+      "CHAN_END",
+      "HANGUP",
+      "CHAN_END",
+      "LINKEDID_END"
+    ],
+    "postgres_events": [
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "call.ringing",
+        "sequence": "2020"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "call.created",
+        "sequence": "2021"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "call.created",
+        "sequence": "2022"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2023"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2024"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "telephony.HANGUP",
+        "sequence": "2025"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "telephony.CHAN_END",
+        "sequence": "2026"
+      },
+      {
+        "asterisk_linked_id": "1794244171.0",
+        "state": "failed",
+        "ended_at": "2026-11-09 17:09:31.680747+00",
+        "type": "call.failed",
+        "sequence": "2027"
+      }
+    ]
+  }
+]

@@ -1,0 +1,8 @@
+=== RUN   TestCatalogQueueJournalAndTenantBoundaries
+--- PASS: TestCatalogQueueJournalAndTenantBoundaries (0.20s)
+=== RUN   TestPersistenceTenantIdempotencyOrderingAndRecovery
+--- PASS: TestPersistenceTenantIdempotencyOrderingAndRecovery (0.17s)
+=== RUN   TestTerminalRecoveryWithoutInitialEvent
+--- PASS: TestTerminalRecoveryWithoutInitialEvent (0.11s)
+PASS
+ok  	flora/integration	0.484s

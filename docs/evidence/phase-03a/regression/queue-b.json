@@ -1,0 +1,176 @@
+{
+  "mode": "queue-b",
+  "at": "2026-11-09T13:36:21.304Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "PASS",
+  "scenarios": {
+    "queue": {
+      "audio": {
+        "verified": true,
+        "before": [
+          {
+            "packets": 2,
+            "energy": 0,
+            "jitter": 0.001,
+            "lost": 0
+          },
+          {
+            "packets": 2,
+            "energy": 0,
+            "jitter": 0.001,
+            "lost": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 38,
+            "energy": 0.0943802782069262,
+            "jitter": 0.003,
+            "lost": 0
+          },
+          {
+            "packets": 39,
+            "energy": 0.11121120556849698,
+            "jitter": 0.002,
+            "lost": 0
+          }
+        ],
+        "ice": [
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.001
+            }
+          },
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.001
+            }
+          }
+        ]
+      },
+      "history": {
+        "call": {
+          "tenant_id": "33333333-3333-4333-8333-333333333333",
+          "department": "recepcao",
+          "queue": "301",
+          "agent": "212",
+          "wait_seconds": 0,
+          "talk_seconds": 1,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "eace1815-2f4a-4b44-9824-b1cfbbc1c09d",
+          "source": "211",
+          "destination": "301",
+          "state": "completed",
+          "started_at": "2026-11-09T13:36:24.137133Z",
+          "answered_at": "2026-11-09T13:36:24.403319Z",
+          "ended_at": "2026-11-09T13:36:25.319315Z",
+          "asterisk_linked_id": "1794231384.2"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/211-00000002",
+            "ended_at": "2026-11-09T13:36:25.318507Z"
+          },
+          {
+            "channel": "PJSIP/212-00000003",
+            "ended_at": "2026-11-09T13:36:25.319315Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "call.answered",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.completed"
+        ],
+        "queue_events": [
+          "CONNECT",
+          "ENTERQUEUE",
+          "COMPLETECALLER"
+        ]
+      }
+    }
+  }
+}

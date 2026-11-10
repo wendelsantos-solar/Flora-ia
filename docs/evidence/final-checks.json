@@ -1,0 +1,9 @@
+{
+  "credential_scan": "PASS",
+  "source_whitespace": "PASS",
+  "raw_transcripts": "preserved unmodified",
+  "browser_tests": "2 passed (35.8s)",
+  "readiness": "200 ready",
+  "commit": "not created",
+  "push": "not performed"
+}

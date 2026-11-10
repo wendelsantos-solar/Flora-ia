@@ -1,0 +1,131 @@
+{
+  "mode": "queues-isolation",
+  "at": "2026-11-09T16:39:53.678Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "FAIL",
+  "scenarios": {},
+  "browser": "158.0.8127.18",
+  "stage": "simultaneous queues and isolation",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Disponível",
+        "Motor de telefonia conectado"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    },
+    {
+      "alert": [
+        "WebSocket closed wss://lab.flora.test:8444/ws (code: 1006)Fechar",
+        ""
+      ],
+      "status": [
+        "Desconectado",
+        "Motor de telefonia conectado"
+      ],
+      "pc": null,
+      "rx": {
+        "packets": 0,
+        "energy": 0,
+        "jitter": null,
+        "lost": null
+      }
+    }
+  ],
+  "failure": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for getByRole('status').filter({ hasText: /^Disponível$/ }) to be visible\n",
+  "signaling": [
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "a03da0cf-2970-46af-b141-c29b37d63572",
+        "events": [
+          {
+            "at": "2026-11-09T16:39:56.045Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:39:56.086Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:39:56.224Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "9a264f4b-cfa7-4f74-af89-f2f9eb310b5a",
+        "events": [
+          {
+            "at": "2026-11-09T16:39:57.222Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:39:57.241Z",
+            "event": "wss_connected"
+          },
+          {
+            "at": "2026-11-09T16:39:57.279Z",
+            "event": "sip_registered"
+          }
+        ],
+        "tenant": "11111111-1111-4111-8111-111111111111",
+        "engine": {
+          "connected": true
+        }
+      }
+    },
+    {
+      "tlsErrors": [],
+      "trace": {
+        "session": "43ce95a1-2258-443b-b346-13e97d040af4",
+        "events": [
+          {
+            "at": "2026-11-09T16:39:59.393Z",
+            "event": "wss_connecting"
+          },
+          {
+            "at": "2026-11-09T16:40:04.399Z",
+            "event": "initial_connection_failed"
+          }
+        ],
+        "tenant": "33333333-3333-4333-8333-333333333333",
+        "engine": {
+          "connected": true
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "engines": {
+    "asterisk": {
+      "active": 0,
+      "registered_contacts": 0
+    },
+    "asterisk-b": {
+      "active": 0,
+      "registered_contacts": 0
+    }
+  },
+  "ready": true,
+  "open_sessions": 0,
+  "active_reservations": null
+}

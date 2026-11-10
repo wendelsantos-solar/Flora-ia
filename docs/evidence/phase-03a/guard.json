@@ -1,0 +1,44 @@
+{
+  "redirect": {
+    "tenant_id": "11111111-1111-4111-8111-111111111111",
+    "call_id": "1794224153.32",
+    "direction": "out",
+    "origin": "201",
+    "destination": "8800000004",
+    "category": "simulator",
+    "decision": "allowed",
+    "result": "BUSY",
+    "talk_seconds": null,
+    "created_at": "2026-11-09T11:35:54.035616+00:00",
+    "ended_at": "2026-11-09T11:35:54.267703+00:00"
+  },
+  "refer_call": {
+    "tenant_id": "11111111-1111-4111-8111-111111111111",
+    "call_id": "1794224155.34",
+    "direction": "out",
+    "origin": "201",
+    "destination": "8800000005",
+    "category": "simulator",
+    "decision": "allowed",
+    "result": "ANSWER",
+    "talk_seconds": 1,
+    "created_at": "2026-11-09T11:35:55.796941+00:00",
+    "ended_at": "2026-11-09T11:35:57.486355+00:00"
+  },
+  "refer_response": 603,
+  "authorization_outage": "no new reservation or call to the simulator",
+  "after_reconnect": {
+    "tenant_id": "11111111-1111-4111-8111-111111111111",
+    "call_id": "1794224168.37",
+    "direction": "out",
+    "origin": "201",
+    "destination": "8800000005",
+    "category": "simulator",
+    "decision": "allowed",
+    "result": "ANSWER",
+    "talk_seconds": 1,
+    "created_at": "2026-11-09T11:36:08.92059+00:00",
+    "ended_at": "2026-11-09T11:36:11.251358+00:00"
+  },
+  "result": "PASS"
+}

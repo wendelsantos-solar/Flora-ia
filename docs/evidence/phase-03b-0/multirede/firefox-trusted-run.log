@@ -1,0 +1,19 @@
+ Container flora-026-router-1  Running
+ Container flora-026-asterisk-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-db-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-db-1  Healthy
+ Container flora-026-client2-1  Starting
+ Container flora-026-client2-1  Started
+STEP firefox trusted registration and real media
+firefox trusted registration and real media: Timed out: firefox trusted registration and real media (false)
+Disposable browser ready on port 3004
+Disposable browser ready on port 3004

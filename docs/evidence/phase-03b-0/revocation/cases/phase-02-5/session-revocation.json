@@ -1,0 +1,11 @@
+{
+  "at": "2026-11-09T17:09:47.001Z",
+  "data": {
+    "result": "PASS",
+    "opaque": true,
+    "httpOnly": true,
+    "sameSite": "Strict",
+    "replay": 401,
+    "socketClose": 1008
+  }
+}

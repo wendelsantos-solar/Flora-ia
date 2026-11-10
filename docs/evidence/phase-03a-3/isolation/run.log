@@ -1,0 +1,34 @@
+ Container flora-026-control-1  Running
+ Container flora-026-router-1  Running
+ Container flora-026-asterisk-b-1  Running
+ Container flora-026-db-1  Running
+ Container flora-026-asterisk-1  Running
+ Container flora-026-backend-1  Running
+ Container flora-026-web-1  Running
+ Container flora-026-edge-1  Running
+ Container flora-026-asterisk-1  Waiting
+ Container flora-026-asterisk-b-1  Waiting
+ Container flora-026-db-1  Waiting
+ Container flora-026-asterisk-1  Healthy
+ Container flora-026-asterisk-b-1  Healthy
+ Container flora-026-db-1  Healthy
+ Container flora-026-client2-1  Starting
+ Container flora-026-client4-1  Starting
+ Container flora-026-client3-1  Starting
+ Container flora-026-client3-1  Started
+ Container flora-026-client2-1  Started
+ Container flora-026-client4-1  Started
+STEP register three browser peers
+STEP direct and hold
+direct and hold: locator.waitFor: Timeout 20000ms exceeded.
+Call log:
+  - waiting for getByRole('status').filter({ hasText: /^Em ligação$/ }) to be visible
+
+asterisk
+2 active channels
+1 active call
+1 call processed
+asterisk-b
+0 active channels
+0 active calls
+0 calls processed

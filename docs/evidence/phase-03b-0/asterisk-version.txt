@@ -1,0 +1,2 @@
+Asterisk 20.22.0 built by root @ buildkitsandbox on a aarch64 running Linux on 2026-11-09 03:44:23 UTC
+Asterisk 20.22.0 built by root @ buildkitsandbox on a aarch64 running Linux on 2026-11-09 03:44:23 UTC

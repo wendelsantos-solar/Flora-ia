@@ -1,0 +1,34 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (1.4m)
+
+
+  1) [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('button', { name: 'Atender', exact: true })
+    Expected: visible
+    Timeout: 15000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('button', { name: 'Atender', exact: true }) with timeout 15000ms
+      - waiting for getByRole('button', { name: 'Atender', exact: true })
+
+
+      19 | function rx(rows:Stats){return rows?.find(row=>row.type==='inbound-rtp'&&row.kind==='audio')||{};}
+      20 | async function media(page:Page){await expect.poll(async()=>Number(rx(await stats(page)).packetsReceived||0),{timeout:15000}).toBeGreaterThan(5);await expect.poll(async()=>(await diagnostics(page)).health.media).toBe('connected');}
+    > 21 | async function start(a:Page,b:Page){await a.getByRole('button',{name:'Ligar',exact:true}).click();await expect(b.getByRole('button',{name:'Atender',exact:true})).toBeVisible({timeout:15000});await b.getByRole('button',{name:'Atender',exact:true}).click();await expect(a.getByRole('status').filter({hasText:/^Em ligação$/})).toBeVisible({timeout:15000});await expect(b.getByRole('status').filter({hasText:/^Em ligação$/})).toBeVisible();await Promise.all([media(a),media(b)]);}
+         |                                                                                                                                                                   ^
+      22 | async function released(page:Page){await expect.poll(async()=>(await diagnostics(page)).session).toBe(null);await expect.poll(async()=>(await diagnostics(page)).lastRelease).toEqual({tracksEnded:true,connectionClosed:true});}
+      23 | async function finish(a:Page,b:Page){await a.getByRole('button',{name:'Encerrar chamada',exact:true}).click();await Promise.all([ready(a),ready(b)]);await Promise.all([released(a),released(b)]);}
+      24 | async function cleanup(contexts:BrowserContext[]){for(const context of contexts){for(const page of context.pages()){try{const end=page.getByRole('button',{name:'Encerrar chamada',exact:true});if(await end.isVisible()){await end.click({timeout:2000});await ready(page);}}catch{/* Preserve diagnostics; closing context is followed by native RTP timeout if needed. */}}}await Promise.all(contexts.map(c=>c.close()));}
+        at start (/tmp/flora-regressions-edd5db0aaa4040b9bf50b7df8cc1904b/web/tests/homologacao.spec.ts:21:163)
+        at /tmp/flora-regressions-edd5db0aaa4040b9bf50b7df8cc1904b/web/tests/homologacao.spec.ts:33:41
+
+    Error Context: test-results/homologacao-three-consecut-53be8-one-replacement-and-cleanup-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup 

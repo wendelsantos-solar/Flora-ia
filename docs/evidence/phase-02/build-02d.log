@@ -1,0 +1,259 @@
+#1 [internal] load local bake definitions
+#1 reading from stdin 1.46kB done
+#1 DONE 0.0s
+
+#2 [backend internal] load build definition from Dockerfile
+#2 transferring dockerfile: 367B done
+#2 DONE 0.0s
+
+#3 [web internal] load build definition from Dockerfile
+#3 transferring dockerfile: 511B done
+#3 DONE 0.0s
+
+#4 [asterisk internal] load build definition from Dockerfile
+#4 transferring dockerfile: 374B done
+#4 DONE 0.0s
+
+#5 [backend internal] load metadata for docker.io/library/golang:1.26.10-alpine
+#5 DONE 0.1s
+
+#6 [backend internal] load metadata for docker.io/library/alpine:3.23
+#6 DONE 0.1s
+
+#7 [asterisk internal] load .dockerignore
+#7 transferring context:
+#7 transferring context: 2B done
+#7 DONE 0.0s
+
+#8 [backend internal] load .dockerignore
+#8 transferring context: 2B done
+#8 DONE 0.0s
+
+#9 [asterisk internal] load build context
+#9 transferring context: 35B done
+#9 DONE 0.0s
+
+#10 [backend build 1/6] FROM docker.io/library/golang:1.26.10-alpine@sha256:87c65a688975c0b1d4585d204874c45ca78354670e3a5f11368c5a492303d696
+#10 resolve docker.io/library/golang:1.26.10-alpine@sha256:87c65a688975c0b1d4585d204874c45ca78354670e3a5f11368c5a492303d696 0.0s done
+#10 DONE 0.0s
+
+#11 [backend 1/3] FROM docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2
+#11 resolve docker.io/library/alpine:3.23@sha256:469c9ea410b9215eaee7976ba6c0639039b444be8e5d638f7abbada189971eb2 0.0s done
+#11 CACHED
+
+#12 [backend internal] load build context
+#12 transferring context: 50.43kB 0.0s done
+#12 DONE 0.0s
+
+#13 [backend build 2/6] WORKDIR /src
+#13 CACHED
+
+#14 [backend build 3/6] COPY go.mod go.sum ./
+#14 CACHED
+
+#15 [backend build 4/6] RUN go mod download
+#15 CACHED
+
+#16 [backend build 5/6] COPY . .
+#16 DONE 0.0s
+
+#17 [asterisk 2/3] RUN apk add --no-cache asterisk=20.15.2-r1 asterisk-srtp=20.15.2-r1 gettext-envsubst su-exec tzdata && mkdir -p /var/log/asterisk/cel-custom /var/run/asterisk && chown -R asterisk:asterisk /var/log/asterisk /var/run/asterisk /var/lib/asterisk
+#17 ...
+
+#18 [web internal] load metadata for docker.io/library/node:22-alpine
+#18 DONE 0.7s
+
+#19 [web internal] load .dockerignore
+#19 transferring context: 72B 0.0s done
+#19 DONE 0.1s
+
+#20 [web internal] load build context
+#20 DONE 0.0s
+
+#21 [web build 1/6] FROM docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202
+#21 resolve docker.io/library/node:22-alpine@sha256:0e1754758c2df4cfa3e68d59e2e1b7374bb7fd9ea6328eaaacf15cc934af8202 0.0s done
+#21 DONE 0.0s
+
+#22 [backend build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#22 ...
+
+#20 [web internal] load build context
+#20 transferring context: 192.01kB 0.0s done
+#20 DONE 0.0s
+
+#23 [web build 2/6] WORKDIR /app
+#23 CACHED
+
+#24 [web build 3/6] COPY package*.json ./
+#24 CACHED
+
+#25 [web build 4/6] RUN npm ci --cache /tmp/npm-cache && rm -rf /tmp/npm-cache
+#25 CACHED
+
+#26 [web build 5/6] COPY . .
+#26 DONE 0.1s
+
+#27 [web build 6/6] RUN npm run build
+#27 0.945 
+#27 0.945 > flora-phone@0.1.0 build
+#27 0.945 > next build
+#27 0.945 
+#27 1.520 ▲ Next.js 16.4.5 (Turbopack)
+#27 1.700 ✓ Running next.config.ts took 180ms
+#27 1.715 
+#27 1.749   Creating an optimized production build ...
+#27 ...
+
+#17 [asterisk 2/3] RUN apk add --no-cache asterisk=20.15.2-r1 asterisk-srtp=20.15.2-r1 gettext-envsubst su-exec tzdata && mkdir -p /var/log/asterisk/cel-custom /var/run/asterisk && chown -R asterisk:asterisk /var/log/asterisk /var/run/asterisk /var/lib/asterisk
+#17 1.380 ( 1/42) Installing c-client (2007f-r16)
+#17 1.463 ( 2/42) Installing libcap2 (2.78-r0)
+#17 1.473 ( 3/42) Installing brotli-libs (1.2.1-r0)
+#17 1.554 ( 4/42) Installing c-ares (1.34.9-r0)
+#17 1.574 ( 5/42) Installing libunistring (1.4.1-r0)
+#17 1.722 ( 6/42) Installing libidn2 (2.3.8-r0)
+#17 1.805 ( 7/42) Installing nghttp2-libs (1.69.0-r0)
+#17 1.956 ( 8/42) Installing libpsl (0.21.5-r3)
+#17 2.042 ( 9/42) Installing zstd-libs (1.5.7-r2)
+#17 2.295 (10/42) Installing libcurl (8.23.0-r0)
+#17 2.527 (11/42) Installing ncurses-terminfo-base (6.5_p20251123-r0)
+#17 2.704 (12/42) Installing libncursesw (6.5_p20251123-r0)
+#17 2.754 (13/42) Installing libedit (20251016.3.1-r0)
+#17 2.806 (14/42) Installing libgcc (15.2.0-r2)
+#17 2.881 (15/42) Installing jansson (2.14.1-r0)
+#17 2.976 (16/42) Installing lua5.1-libs (5.1.5-r13)
+#17 3.044 (17/42) Installing gsm (1.0.23-r0)
+#17 3.063 (18/42) Installing opus (1.5.2-r1)
+#17 3.217 (19/42) Installing alsa-lib (1.2.14-r2)
+#17 3.717 (20/42) Installing dbus-libs (1.16.2-r1)
+#17 3.800 (21/42) Installing libsamplerate (0.2.2-r3)
+#17 4.217 (22/42) Installing libstdc++ (15.2.0-r2)
+#17 4.368 (23/42) Installing jack (1.9.22-r4)
+#17 4.452 (24/42) Installing portaudio (19.7.0-r2)
+#17 4.475 (25/42) Installing speex (1.2.1-r2)
+#17 4.489 (26/42) Installing speexdsp (1.2.1-r2)
+#17 4.509 (27/42) Installing libsrtp (2.7.0-r0)
+#17 4.522 (28/42) Installing pjproject (2.16-r0)
+#17 4.683 (29/42) Installing sqlite-libs (3.53.4-r0)
+#17 4.815 (30/42) Installing libevent (2.1.13-r0)
+#17 4.877 (31/42) Installing hiredis (1.3.0-r0)
+#17 4.895 (32/42) Installing protobuf-c (1.5.2-r2)
+#17 4.905 (33/42) Installing unbound-libs (1.25.2-r1)
+#17 4.969 (34/42) Installing libuuid (2.41.6-r1)
+#17 4.980 (35/42) Installing xz-libs (5.8.4-r0)
+#17 5.025 (36/42) Installing libxml2 (2.13.9-r1)
+#17 5.111 (37/42) Installing asterisk (20.15.2-r1)
+#17 5.140   Executing asterisk-20.15.2-r1.pre-install
+#17 6.280 (38/42) Installing asterisk-srtp (20.15.2-r1)
+#17 6.337 (39/42) Installing libintl (0.24.1-r1)
+#17 6.418 (40/42) Installing gettext-envsubst (0.24.1-r1)
+#17 6.629 (41/42) Installing su-exec (0.3-r0)
+#17 6.920 (42/42) Installing tzdata (2026f-r0)
+#17 7.125 Executing busybox-1.37.0-r30.trigger
+#17 7.196 OK: 59.7 MiB in 58 packages
+#17 DONE 9.6s
+
+#27 [web build 6/6] RUN npm run build
+#27 8.889 ✓ Compiled successfully in 7.1s
+#27 9.177   Running TypeScript ...
+#27 ...
+
+#28 [asterisk 3/3] COPY entrypoint.sh /entrypoint.sh
+#28 DONE 0.6s
+
+#29 [asterisk] exporting to image
+#29 exporting layers
+#29 ...
+
+#22 [backend build 6/6] RUN CGO_ENABLED=0 go build -trimpath -o /server ./cmd/server
+#22 DONE 12.6s
+
+#27 [web build 6/6] RUN npm run build
+#27 ...
+
+#29 [asterisk] exporting to image
+#29 exporting layers 2.6s done
+#29 exporting manifest sha256:ff2b2fe24c144b5f555a9acb512dd37dbb46d0a8728e652a27cf5fac825ead8a done
+#29 exporting config sha256:d4b2bdbaa162237ca903fbe7df427e774b7a2bba678f63078fd31da70cb7f530 done
+#29 exporting attestation manifest sha256:fc62dac9c9a034f89155c33abbc99c2c2223db1231786a89197ac43f82ac6c41 0.0s done
+#29 exporting manifest list sha256:61c22d151987c21b4aa30f17ae86f20d4b8c8491fa5d85204d49667ebbb5ed94 done
+#29 naming to docker.io/library/flora-phase1-asterisk:latest done
+#29 unpacking to docker.io/library/flora-phase1-asterisk:latest 0.4s done
+#29 DONE 3.1s
+
+#30 [asterisk] resolving provenance for metadata file
+#30 DONE 0.1s
+
+#27 [web build 6/6] RUN npm run build
+#27 ...
+
+#31 [backend stage-1 2/3] RUN apk add --no-cache ca-certificates tzdata && adduser -D -u 1000 app
+#31 CACHED
+
+#32 [backend stage-1 3/3] COPY --from=build /server /server
+#32 DONE 0.2s
+
+#27 [web build 6/6] RUN npm run build
+#27 ...
+
+#33 [backend] exporting to image
+#33 exporting layers 0.6s done
+#33 exporting manifest sha256:de2c5b9a1d0151572b66059118f315ce304e3750f59cc397807a0d31e0ba5db6 0.0s done
+#33 exporting config sha256:0424550afeb37fd1b5c33be9eb38934605583c6be0ac11c6ca73acf8546117aa 0.0s done
+#33 exporting attestation manifest sha256:5ca525a01a8db9feddaabde3558e1f314ba3da94496921573322ee9dec77b483 0.0s done
+#33 exporting manifest list sha256:34dacb715da908f89105ed4f7ca0a964aa5175254683a6c90a8fbd05be809fcb 0.0s done
+#33 naming to docker.io/library/flora-phase1-backend:latest done
+#33 unpacking to docker.io/library/flora-phase1-backend:latest 0.1s done
+#33 DONE 1.0s
+
+#27 [web build 6/6] RUN npm run build
+#27 ...
+
+#34 [backend] resolving provenance for metadata file
+#34 DONE 0.0s
+
+#27 [web build 6/6] RUN npm run build
+#27 15.49   Finished TypeScript in 6.3s ...
+#27 15.50   Collecting page data using 4 workers ...
+#27 16.16   Generating static pages using 4 workers (0/3) ...
+#27 16.58 ✓ Generating static pages using 4 workers (3/3) in 422ms
+#27 16.58   Finalizing page optimization ...
+#27 16.80 
+#27 16.81 Route (app)
+#27 16.81 ┌ ○ /
+#27 16.81 └ ○ /_not-found
+#27 16.81 
+#27 16.81 
+#27 16.81 ○  (Static)  prerendered as static content
+#27 16.81 
+#27 16.90 npm notice
+#27 16.90 npm notice New major version of npm available! 10.9.9 -> 12.2.2
+#27 16.90 npm notice Changelog: https://github.com/npm/cli/releases/tag/v12.2.2
+#27 16.90 npm notice To update run: npm install -g npm@12.2.2
+#27 16.90 npm notice
+#27 DONE 17.2s
+
+#23 [web build 2/6] WORKDIR /app
+#23 CACHED
+
+#35 [web stage-1 3/4] COPY --from=build --chown=node:node /app/.next/standalone ./
+#35 DONE 0.4s
+
+#36 [web stage-1 4/4] COPY --from=build --chown=node:node /app/.next/static ./.next/static
+#36 DONE 0.0s
+
+#37 [web] exporting to image
+#37 exporting layers 1.8s done
+#37 exporting manifest sha256:93d4018f1530d7dbecf33117d9cd58269ef552bdc1337baafc0dd30e2fa01fc8 done
+#37 exporting config sha256:78e0a63c9eefd34135680830d0e1afcb5cafd612256aa028cc5bff170b3fb5dc done
+#37 exporting attestation manifest sha256:70776d1e3af434b947cc594ce968c2bc79e15a45685a70aa9d5319f757971066 0.0s done
+#37 exporting manifest list sha256:921c1757c4570f1b5b57d909cd97e1fd9363203d3ebaed848d0f290aa5cf5b38 done
+#37 naming to docker.io/library/flora-phase1-web:latest done
+#37 unpacking to docker.io/library/flora-phase1-web:latest
+#37 unpacking to docker.io/library/flora-phase1-web:latest 0.4s done
+#37 DONE 2.2s
+
+#38 [web] resolving provenance for metadata file
+#38 DONE 0.0s
+ flora-phase1-asterisk  Built
+ flora-phase1-backend  Built
+ flora-phase1-web  Built

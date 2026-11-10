@@ -1,0 +1,34 @@
+
+Running 1 test using 1 worker
+
+  ✘  1 [chromium] › tests/mesa.spec.ts:39:1 › Mesa de Operação preserves the SIP session, real media and permissions across navigation (33.4s)
+
+
+  1) [chromium] › tests/mesa.spec.ts:39:1 › Mesa de Operação preserves the SIP session, real media and permissions across navigation 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('status').filter({ hasText: /^Disponível$/ })
+    Expected: visible
+    Timeout: 25000ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('status').filter({ hasText: /^Disponível$/ }) with timeout 25000ms
+      - waiting for getByRole('status').filter({ hasText: /^Disponível$/ })
+
+
+      23 |  await page.getByLabel('Senha SIP').fill(env['SIP_'+number+'_PASSWORD']);
+      24 |  await button(page,'Conectar ramal').click();
+    > 25 |  await expect(status(page,'Disponível')).toBeVisible({timeout:25000});
+         |                                          ^
+      26 | }
+      27 | async function shot(page:Page,name:string){
+      28 |  await page.screenshot({path:path.join(output,name+'.png')});
+        at login (/tmp/flora-regressions-572a462a619e474688dfe0b40ae66bf8/web/tests/mesa.spec.ts:25:42)
+        at /tmp/flora-regressions-572a462a619e474688dfe0b40ae66bf8/web/tests/mesa.spec.ts:53:24
+
+    Error Context: test-results/mesa-Mesa-de-Operação-pres-30c02-rmissions-across-navigation-chromium/error-context.md
+
+  1 failed
+    [chromium] › tests/mesa.spec.ts:39:1 › Mesa de Operação preserves the SIP session, real media and permissions across navigation 

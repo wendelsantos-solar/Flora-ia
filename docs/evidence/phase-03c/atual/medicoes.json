@@ -1,0 +1,1024 @@
+{
+  "date": "2026-11-09T17:45:27.224Z",
+  "browser": "156.0.8078.80",
+  "records": [
+    {
+      "profile": "admin",
+      "role": "admin",
+      "sipPolicy": 404,
+      "views": [
+        {
+          "name": "admin",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Recepção · 301",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "departamentos",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "filas",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "horarios",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "historico",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "historico-detalhe",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas",
+            "Detalhes da chamada"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "admin-mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 201",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas",
+            "Detalhes da chamada"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Horários de atendimento",
+              "height": 21
+            },
+            {
+              "label": "Departamentos",
+              "height": 21
+            },
+            {
+              "label": "Editar Administrativo",
+              "height": 33
+            },
+            {
+              "label": "Editar Coordenação",
+              "height": 33
+            },
+            {
+              "label": "Editar Enfermagem",
+              "height": 33
+            },
+            {
+              "label": "Editar Recepção",
+              "height": 33
+            },
+            {
+              "label": "Filas e integrantes",
+              "height": 21
+            },
+            {
+              "label": "Editar fila 301",
+              "height": 33
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        }
+      ],
+      "width320": {
+        "width": 320,
+        "documentWidth": 320
+      }
+    },
+    {
+      "profile": "atendente",
+      "role": "operator",
+      "sipPolicy": 404,
+      "views": [
+        {
+          "name": "atendente",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 202",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Recepção · 301",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "atendente-audio",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 202",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Recepção · 301",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "atendente-mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 202",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Recepção · 301",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        }
+      ],
+      "width320": {
+        "width": 320,
+        "documentWidth": 320
+      }
+    },
+    {
+      "profile": "supervisor",
+      "role": "supervisor",
+      "sipPolicy": 404,
+      "views": [
+        {
+          "name": "supervisor",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 203",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Recepção · 301",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "supervisao",
+          "width": 1440,
+          "documentWidth": 1440,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 203",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        },
+        {
+          "name": "supervisor-mobile",
+          "width": 390,
+          "documentWidth": 390,
+          "headings": [
+            "Sua mesa de chamadas.",
+            "Ramal 203",
+            "Pronto para conversar",
+            "Na sua central",
+            "Operação de filas",
+            "Últimas 24 horas",
+            "Atendentes",
+            "Chamadas em andamento",
+            "Últimas chamadas"
+          ],
+          "smallTargets": [
+            {
+              "label": "Sair",
+              "height": 33
+            },
+            {
+              "label": "Dispositivo de áudio",
+              "height": 18
+            },
+            {
+              "label": "Buscar microfones",
+              "height": 30
+            },
+            {
+              "label": "",
+              "height": 28
+            },
+            {
+              "label": "Filtros do histórico",
+              "height": 21
+            },
+            {
+              "label": "Limpar filtros",
+              "height": 33
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            },
+            {
+              "label": "Ver",
+              "height": 30
+            }
+          ]
+        }
+      ],
+      "width320": {
+        "width": 320,
+        "documentWidth": 320
+      }
+    }
+  ]
+}

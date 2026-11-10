@@ -1,0 +1,5 @@
+edge-1  | sip_wss port=8443 status=101 upstream=101 tls=TLSv1.3 elapsed=0.845
+edge-1  | sip_wss port=8443 status=101 upstream=101 tls=TLSv1.3 elapsed=17.681
+edge-1  | sip_wss port=8443 status=101 upstream=101 tls=TLSv1.3 elapsed=18.440
+edge-1  | sip_wss port=8443 status=101 upstream=101 tls=TLSv1.3 elapsed=32.186
+edge-1  | sip_wss port=8443 status=101 upstream=101 tls=TLSv1.3 elapsed=32.490

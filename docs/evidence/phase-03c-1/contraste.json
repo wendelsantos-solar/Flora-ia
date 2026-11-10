@@ -1,0 +1,32 @@
+{
+  "texto/superficie": {
+    "foreground": "#172820",
+    "background": "#ffffff",
+    "ratio": 15.43
+  },
+  "apoio/papel": {
+    "foreground": "#495e53",
+    "background": "#f3f6f2",
+    "ratio": 6.41
+  },
+  "acao/rotulo": {
+    "foreground": "#ffffff",
+    "background": "#175d43",
+    "ratio": 7.83
+  },
+  "alerta/texto": {
+    "foreground": "#78520b",
+    "background": "#fff2d6",
+    "ratio": 6.29
+  },
+  "borda-controle/superficie": {
+    "foreground": "#74877b",
+    "background": "#ffffff",
+    "ratio": 3.82
+  },
+  "apoio/chamada-recebida": {
+    "foreground": "#495e53",
+    "background": "#d7ebdf",
+    "ratio": 5.6
+  }
+}

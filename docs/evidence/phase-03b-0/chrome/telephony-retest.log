@@ -1,0 +1,14 @@
+
+Running 6 tests using 1 worker
+
+Consecutive call 1 starting
+Consecutive call 2 starting
+Consecutive call 3 starting
+  ✓  1 [chrome] › tests/homologacao.spec.ts:28:1 › three consecutive real calls, bidirectional media, mute, microphone replacement and cleanup (16.9s)
+  ✓  2 [chrome] › tests/homologacao.spec.ts:67:1 › revoking actual microphone permission warns, permission can be restored and input replaced (1.9s)
+  ✓  3 [chrome] › tests/homologacao.spec.ts:74:1 › microphone permission denied before dialing and answering, then granted without reload (3.6s)
+  ✓  4 [chrome] › tests/homologacao.spec.ts:82:1 › cancel while ringing and after the callee starts answering, without orphan sessions (3.9s)
+  ✓  5 [chrome] › tests/homologacao.spec.ts:89:1 › temporary real media interruption recovers after Asterisk pause and resume (11.2s)
+  ✓  6 [chrome] › tests/homologacao.spec.ts:98:1 › abrupt browser closure is cleared by real RTP timeout and history remains consistent (35.0s)
+
+  6 passed (1.2m)

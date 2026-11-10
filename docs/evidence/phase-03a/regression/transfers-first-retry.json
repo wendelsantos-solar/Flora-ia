@@ -1,0 +1,699 @@
+{
+  "mode": "transfers",
+  "at": "2026-11-09T13:31:55.649Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "result": "FAIL",
+  "scenarios": {
+    "blind": {
+      "media": {
+        "verified": true,
+        "before": [
+          {
+            "packets": 817,
+            "energy": 3.164828794575285,
+            "jitter": 0.002,
+            "lost": 0
+          },
+          {
+            "packets": 735,
+            "energy": 3.122091994768778,
+            "jitter": 0.002,
+            "lost": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 861,
+            "energy": 3.29132341320609,
+            "jitter": 0.001,
+            "lost": 0
+          },
+          {
+            "packets": 778,
+            "energy": 3.273639484097745,
+            "jitter": 0.001,
+            "lost": 0
+          }
+        ],
+        "ice": [
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.001
+            }
+          },
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.007
+            }
+          }
+        ]
+      },
+      "history": {
+        "call": {
+          "tenant_id": "11111111-1111-4111-8111-111111111111",
+          "department": null,
+          "queue": null,
+          "agent": "201",
+          "wait_seconds": null,
+          "talk_seconds": 18,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "f9b15a26-1d5a-4ab5-8237-90c8d6b3a426",
+          "source": "203",
+          "destination": "201",
+          "state": "completed",
+          "started_at": "2026-11-09T13:32:08.882588Z",
+          "answered_at": "2026-11-09T13:32:09.682015Z",
+          "ended_at": "2026-11-09T13:32:28.06059Z",
+          "asterisk_linked_id": "1794231128.2"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/203-00000002",
+            "ended_at": "2026-11-09T13:32:28.06059Z"
+          },
+          {
+            "channel": "PJSIP/201-00000003",
+            "ended_at": "2026-11-09T13:32:10.276867Z"
+          },
+          {
+            "channel": "PJSIP/202-00000004",
+            "ended_at": "2026-11-09T13:32:28.060263Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "call.answered",
+          "call.transfer.blind",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.completed",
+          "call.interrupted"
+        ],
+        "queue_events": []
+      }
+    },
+    "attended": {
+      "rejected": {
+        "verified": true,
+        "before": [
+          {
+            "packets": 34,
+            "energy": 0.07968972308188901,
+            "jitter": 0.067,
+            "lost": 0
+          },
+          {
+            "packets": 35,
+            "energy": 0.06791767905009591,
+            "jitter": 0.004,
+            "lost": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 76,
+            "energy": 0.17192526933040989,
+            "jitter": 0.01,
+            "lost": 0
+          },
+          {
+            "packets": 76,
+            "energy": 0.1916090503513018,
+            "jitter": 0.006,
+            "lost": 0
+          }
+        ],
+        "ice": [
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.002
+            }
+          },
+          {
+            "ice": "closed",
+            "connection": "closed",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [],
+            "capture": [
+              "ended"
+            ],
+            "codecs": [],
+            "selected": null
+          }
+        ]
+      },
+      "consult": {
+        "verified": true,
+        "before": [
+          {
+            "packets": 15,
+            "energy": 0.06201226405214952,
+            "jitter": 0.003,
+            "lost": 0
+          },
+          {
+            "packets": 14,
+            "energy": 8.522121698824251e-9,
+            "jitter": 0.002,
+            "lost": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 55,
+            "energy": 0.16268495575392175,
+            "jitter": 0.002,
+            "lost": 0
+          },
+          {
+            "packets": 55,
+            "energy": 0.2513923326567939,
+            "jitter": 0.001,
+            "lost": 0
+          }
+        ],
+        "ice": [
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.001
+            }
+          },
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.005
+            }
+          }
+        ]
+      },
+      "transferred": {
+        "verified": true,
+        "before": [
+          {
+            "packets": 173,
+            "energy": 0.42439146896351015,
+            "jitter": 0.005,
+            "lost": 0
+          },
+          {
+            "packets": 130,
+            "energy": 0.5273374272401391,
+            "jitter": 0.006,
+            "lost": 0
+          }
+        ],
+        "after": [
+          {
+            "packets": 277,
+            "energy": 1.0404413532690038,
+            "jitter": 0.016,
+            "lost": 0
+          },
+          {
+            "packets": 241,
+            "energy": 0.9814645842290765,
+            "jitter": 0.011,
+            "lost": 0
+          }
+        ],
+        "ice": [
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.008
+            }
+          },
+          {
+            "ice": "connected",
+            "connection": "connected",
+            "local": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-wireguard"
+              },
+              {
+                "transport": "tcp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "remote": [
+              {
+                "transport": "udp",
+                "type": "host",
+                "addressClass": "lab-underlay"
+              }
+            ],
+            "capture": [
+              "live"
+            ],
+            "codecs": [
+              "audio/PCMU",
+              "audio/PCMU"
+            ],
+            "selected": {
+              "rtt": 0.013
+            }
+          }
+        ]
+      },
+      "history": {
+        "call": {
+          "tenant_id": "11111111-1111-4111-8111-111111111111",
+          "department": null,
+          "queue": null,
+          "agent": "201",
+          "wait_seconds": null,
+          "talk_seconds": 12,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "4ca341b5-12b4-405d-b539-08dd13f059df",
+          "source": "203",
+          "destination": "201",
+          "state": "completed",
+          "started_at": "2026-11-09T13:32:29.739134Z",
+          "answered_at": "2026-11-09T13:32:30.132774Z",
+          "ended_at": "2026-11-09T13:32:42.123247Z",
+          "asterisk_linked_id": "1794231149.5"
+        },
+        "legs": [
+          {
+            "channel": "PJSIP/203-00000005",
+            "ended_at": "2026-11-09T13:32:42.123673Z"
+          },
+          {
+            "channel": "PJSIP/201-00000006",
+            "ended_at": "2026-11-09T13:32:37.103065Z"
+          }
+        ],
+        "events": [
+          "call.created",
+          "call.created",
+          "call.ringing",
+          "call.answered",
+          "call.answered",
+          "call.transfer.attended",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "telephony.HANGUP",
+          "telephony.CHAN_END",
+          "call.completed",
+          "telephony.HANGUP",
+          "telephony.CHAN_END"
+        ],
+        "queue_events": []
+      }
+    }
+  },
+  "browser": "158.0.8127.18",
+  "stage": "unavailable recipient",
+  "diagnostics": [
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Em ligação",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "connected",
+        "connection": "connected",
+        "local": [
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "live"
+        ],
+        "codecs": [
+          "audio/PCMU",
+          "audio/PCMU"
+        ],
+        "selected": {
+          "rtt": 0.008
+        }
+      },
+      "rx": {
+        "packets": 498,
+        "energy": 2.27190907685212,
+        "jitter": 0.011,
+        "lost": 0
+      }
+    },
+    null,
+    {
+      "alert": [
+        ""
+      ],
+      "status": [
+        "Em ligação",
+        "Motor de telefonia conectado"
+      ],
+      "pc": {
+        "ice": "connected",
+        "connection": "connected",
+        "local": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-wireguard"
+          },
+          {
+            "transport": "tcp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "remote": [
+          {
+            "transport": "udp",
+            "type": "host",
+            "addressClass": "lab-underlay"
+          }
+        ],
+        "capture": [
+          "live"
+        ],
+        "codecs": [
+          "audio/PCMU",
+          "audio/PCMU"
+        ],
+        "selected": {
+          "rtt": 0.013
+        }
+      },
+      "rx": {
+        "packets": 428,
+        "energy": 1.8384470502263193,
+        "jitter": 0.014,
+        "lost": 0
+      }
+    }
+  ],
+  "failure": "locator.waitFor: Timeout 20000ms exceeded.\nCall log:\n  - waiting for getByRole('status').filter({ hasText: /^Em ligação$/ }) to be visible\n"
+}

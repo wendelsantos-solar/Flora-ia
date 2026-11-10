@@ -1,0 +1,53 @@
+{
+  "at": "2026-11-09T03:56:01.612Z",
+  "data": {
+    "result": "PASS",
+    "first": {
+      "before": [
+        {
+          "packets": 0,
+          "energy": 0
+        },
+        {
+          "packets": 0,
+          "energy": 0
+        }
+      ],
+      "after": [
+        {
+          "packets": 42,
+          "energy": 0.07968893124173301
+        },
+        {
+          "packets": 43,
+          "energy": 0.16861739936402753
+        }
+      ]
+    },
+    "second": {
+      "before": [
+        {
+          "packets": 0,
+          "energy": 0
+        },
+        {
+          "packets": 0,
+          "energy": 0
+        }
+      ],
+      "after": [
+        {
+          "packets": 42,
+          "energy": 0.07968893124173301
+        },
+        {
+          "packets": 42,
+          "energy": 0.1811632111492032
+        }
+      ]
+    },
+    "concurrentChannels": 3,
+    "queueWaitedUntilAvailable": true,
+    "activeChannels": 0
+  }
+}

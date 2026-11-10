@@ -1,0 +1,13 @@
+{
+  "mode": "firefox",
+  "at": "2026-11-09T10:57:22.472Z",
+  "source": "synthetic native browser input; human voice not tested",
+  "scenarios": {},
+  "result": "FAIL",
+  "stage": "firefox trusted registration and real media",
+  "diagnostics": [
+    null,
+    null
+  ],
+  "failure": "page.goto: SEC_ERROR_UNKNOWN_ISSUER\nCall log:\n  - navigating to \"https://lab.flora.test/\", waiting until \"domcontentloaded\"\n"
+}

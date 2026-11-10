@@ -1,0 +1,9 @@
+# Fase 03A — Troncos e roteamento SIP
+
+O adaptador desta fase é a configuração PJSIP renderizada por `scripts/sip-lab.py`. A implantação normal não inclui esse contexto. O simulador usa UDP/5060, PCMU, autenticação Digest bilateral e mídia ancorada. Cada instância tem DNS interno e credenciais efêmeras diferentes para prestadora, PBX, ramais de teste e AGI. A configuração de host é fixa para evitar SSRF e abuso de provisionamento. As credenciais ficam em artefatos privados do laboratório, com acesso ao diretório restrito. Respostas, auditoria e evidência não incluem credenciais.
+
+Entrada exige endpoint SIP autenticado, DID sintético correspondente à política e destino do próprio tenant. O destino pode ser ramal ou fila existente na configuração. Departamento usa sua fila e regras existentes. Saída parte do ramal SIP de laboratório, passa por política e reserva e escolhe o tronco fixo. O discador WebRTC mantém os destinos internos existentes.
+
+Para reproduzir, gerar `.local/phase-03a/compose.json` com `python3 scripts/sip-lab.py`, subir o Compose privado `flora-03a` com `up -d --build` e executar `python3 scripts/test-sip-lab.py`. A rotina usa as imagens locais do Asterisk 20.22.0 e um banco descartável. O comando `stop` no mesmo Compose preserva o histórico da execução. A migração 008 é aplicada na inicialização de um banco novo. Bancos existentes precisam de migração explícita antes de habilitar o recurso.
+
+O simulador usa AOR estática. Registro com prestadora, saúde operacional contínua, mTLS, SRTP, disponibilidade de códigos de serviço, reconciliação CDR e cobrança continuam sujeitos à configuração e à homologação do piloto. [Relações PJSIP](https://docs.asterisk.org/Configuration/Channel-Drivers/SIP/Configuring-res_pjsip/PJSIP-Configuration-Sections-and-Relationships/), [registros PJSIP](https://docs.asterisk.org/Configuration/Channel-Drivers/SIP/Configuring-res_pjsip/Configuring-Outbound-Registrations/).

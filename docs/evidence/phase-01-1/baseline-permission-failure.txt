@@ -1,0 +1,37 @@
+
+Running 1 test using 1 worker
+
+(node:68868) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [chromium] › web/tests/homologacao.spec.ts:12:1 › revoking the actual browser microphone permission warns during a real call (11.9s)
+
+
+  1) [chromium] › web/tests/homologacao.spec.ts:12:1 › revoking the actual browser microphone permission warns during a real call 
+
+    Error: expect(locator).toContainText(expected) failed
+
+    Locator: getByRole('alert')
+    Expected pattern: /microfone|permissão/i
+    Received string:  ""
+    Timeout: 8000ms
+
+    Call log:
+      - Expect "toContainText" getByRole('alert') with timeout 8000ms
+      - waiting for getByRole('alert')
+        20 × locator resolved to <div role="alert" aria-live="assertive" id="__next-route-announcer__"></div>
+           - unexpected value ""
+
+
+      13 |  const ca=await browser.newContext({permissions:['microphone']});const cb=await browser.newContext({permissions:['microphone']});const a=await ca.newPage();const b=await cb.newPage();
+      14 |  const errors:string[]=[];for(const page of [a,b]){page.on('pageerror',e=>errors.push(e.message));page.on('console',m=>{if(m.type()==='error')errors.push(m.text().split('\n')[0]);});}
+    > 15 |  try{await login(a,'201');await login(b,'202');await start(a,b);await permission(a,'denied');await expect(a.getByRole('alert')).toContainText(/microfone|permissão/i,{timeout:8000});await a.getByRole('button',{name:'Encerrar chamada',exact:true}).click();await expect(b.getByRole('status').filter({hasText:'Disponível'})).toBeVisible();}
+         |                                                                                                                                 ^
+      16 |  finally{fs.writeFileSync(path.join(root,'.local/phase-01-1/permission-diagnostic.json'),JSON.stringify({errors,a:await a.getByRole('alert').allTextContents(),b:await b.getByRole('alert').allTextContents()},null,2));await ca.close();await cb.close();}
+      17 | });
+      18 |
+        at /Users/wendelpaco/works/flora-ia/web/tests/homologacao.spec.ts:15:129
+
+    Error Context: .local/phase-01-1/results/homologacao-revoking-the-a-9b46b-on-warns-during-a-real-call-chromium/error-context.md
+
+  1 failed
+    [chromium] › web/tests/homologacao.spec.ts:12:1 › revoking the actual browser microphone permission warns during a real call 

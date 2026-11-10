@@ -1,0 +1,81 @@
+{
+  "at": "2026-11-09T18:38:33.652Z",
+  "data": {
+    "result": "PASS",
+    "baseline": {
+      "answered": 9,
+      "abandoned": 0,
+      "average_wait_seconds": 1.4444444444444444
+    },
+    "beforeRestart": {
+      "answered": 10,
+      "abandoned": 1,
+      "average_wait_seconds": 1.6
+    },
+    "afterRestart": {
+      "answered": 10,
+      "abandoned": 1,
+      "average_wait_seconds": 1.6
+    },
+    "answerHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-367",
+        "queue": "367",
+        "agent": "202",
+        "wait_seconds": 3,
+        "talk_seconds": 2,
+        "outcome": "answered",
+        "hangup_cause": 16,
+        "id": "d97e764d-8bcd-4cff-8475-d5430dd16b28",
+        "source": "201",
+        "destination": "367",
+        "state": "completed",
+        "started_at": "2026-11-09T18:37:50.735875Z",
+        "answered_at": "2026-11-09T18:37:53.346165Z",
+        "ended_at": "2026-11-09T18:37:55.527676Z",
+        "asterisk_linked_id": "1794249470.22"
+      }
+    ],
+    "timeoutHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-367",
+        "queue": "367",
+        "agent": null,
+        "wait_seconds": 7,
+        "talk_seconds": null,
+        "outcome": "timeout",
+        "hangup_cause": 16,
+        "id": "273fe52e-9bd3-4658-ae1b-59c07971275c",
+        "source": "201",
+        "destination": "367",
+        "state": "failed",
+        "started_at": "2026-11-09T18:38:04.415735Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T18:38:11.581999Z",
+        "asterisk_linked_id": "1794249484.25"
+      }
+    ],
+    "abandonHistory": [
+      {
+        "tenant_id": "11111111-1111-4111-8111-111111111111",
+        "department": "homologacao-02a-367",
+        "queue": "367",
+        "agent": null,
+        "wait_seconds": 1,
+        "talk_seconds": null,
+        "outcome": "abandoned",
+        "hangup_cause": 127,
+        "id": "eb1954cb-25f0-4b60-af25-8700d163578c",
+        "source": "201",
+        "destination": "367",
+        "state": "failed",
+        "started_at": "2026-11-09T18:38:16.940671Z",
+        "answered_at": null,
+        "ended_at": "2026-11-09T18:38:17.229222Z",
+        "asterisk_linked_id": "1794249496.28"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "db_outage_before_reservation": "no call reached the carrier or reserved capacity",
+  "cel": {
+    "tenant_id": "11111111-1111-4111-8111-111111111111",
+    "call_id": "1794232869.1",
+    "direction": "out",
+    "origin": "201",
+    "destination": "8800000001",
+    "category": "simulator",
+    "decision": "allowed",
+    "result": "UNKNOWN",
+    "talk_seconds": null,
+    "created_at": "2026-11-09T14:01:10.533503+00:00",
+    "ended_at": "2026-11-09T14:01:22.936182+00:00"
+  },
+  "initial_events": 0,
+  "terminal_recovery_events": 1,
+  "capacity_released": true,
+  "next_call": {
+    "tenant_id": "11111111-1111-4111-8111-111111111111",
+    "call_id": "1794232889.3",
+    "direction": "out",
+    "origin": "201",
+    "destination": "8800000001",
+    "category": "simulator",
+    "decision": "allowed",
+    "result": "ANSWER",
+    "talk_seconds": 12,
+    "created_at": "2026-11-09T14:01:30.052547+00:00",
+    "ended_at": "2026-11-09T14:01:42.99513+00:00"
+  },
+  "result": "PASS"
+}

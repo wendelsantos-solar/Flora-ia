@@ -1,0 +1,4 @@
+[Master.csv]
+format=dsv
+quoting_method=all
+fields=EventType,EventTime,Num,DNID,Exten,UniqueID,LinkedID,AccountCode,ChanName,EventExtra

@@ -1,0 +1,29 @@
+{
+  "result": "PASS",
+  "widths": [
+    1440,
+    1280,
+    768,
+    390,
+    375,
+    320,
+    720
+  ],
+  "areasPerWidth": 5,
+  "zoomReflowEquivalent": 720,
+  "visualScale": 2,
+  "keyboard": "mobile return and answer",
+  "sameSipSession": true,
+  "registerFramesBefore": 2,
+  "registerFramesAfter": 4,
+  "mediaPacketsBefore": [
+    42,
+    43
+  ],
+  "roles": [
+    "admin",
+    "operator",
+    "supervisor"
+  ],
+  "mediaSource": "synthetic browser microphone"
+}

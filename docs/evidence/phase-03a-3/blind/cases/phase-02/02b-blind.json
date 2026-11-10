@@ -1,0 +1,301 @@
+{
+  "at": "2026-11-09T14:24:06.300Z",
+  "data": {
+    "result": "PASS",
+    "transferred": {
+      "before": [
+        {
+          "packets": 818,
+          "energy": 3.3496021812119365
+        },
+        {
+          "packets": 753,
+          "energy": 3.1689845224661886
+        }
+      ],
+      "after": [
+        {
+          "packets": 863,
+          "energy": 3.5220309977804956
+        },
+        {
+          "packets": 797,
+          "energy": 3.329870255856908
+        }
+      ]
+    },
+    "history": [
+      {
+        "call": {
+          "tenant_id": "11111111-1111-4111-8111-111111111111",
+          "department": null,
+          "queue": null,
+          "agent": "201",
+          "wait_seconds": null,
+          "talk_seconds": 18,
+          "outcome": "answered",
+          "hangup_cause": 16,
+          "id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+          "source": "203",
+          "destination": "201",
+          "state": "completed",
+          "started_at": "2026-11-09T14:23:45.839129Z",
+          "answered_at": "2026-11-09T14:23:46.627057Z",
+          "ended_at": "2026-11-09T14:24:04.277518Z",
+          "asterisk_linked_id": "1794234225.12"
+        },
+        "events": [
+          {
+            "sequence": 944,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.created",
+            "occurred_at": "2026-11-09T14:23:45.839129Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.12",
+              "destination": "201",
+              "journal_type": "CHAN_START",
+              "source": "203"
+            }
+          },
+          {
+            "sequence": 945,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.created",
+            "occurred_at": "2026-11-09T14:23:45.844147Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "",
+              "journal_type": "CHAN_START",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 943,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.ringing",
+            "occurred_at": "2026-11-09T14:23:45.864529Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "201",
+              "journal_type": "RINGING",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 946,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.answered",
+            "occurred_at": "2026-11-09T14:23:46.627057Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "201",
+              "journal_type": "ANSWER",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 947,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.answered",
+            "occurred_at": "2026-11-09T14:23:46.627207Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.12",
+              "destination": "201",
+              "journal_type": "ANSWER",
+              "source": "203"
+            }
+          },
+          {
+            "sequence": 949,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.transfer.blind",
+            "occurred_at": "2026-11-09T14:23:47.770189Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "",
+              "details": {
+                "bridge_id": "b5252ea3-f92d-4576-97d2-86b7852e7224",
+                "context": "internal-only",
+                "extension": "202",
+                "transferee_channel_name": "PJSIP/203-0000000c",
+                "transferee_channel_uniqueid": "1794234225.12"
+              },
+              "journal_type": "BLINDTRANSFER",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 950,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.HANGUP",
+            "occurred_at": "2026-11-09T14:23:47.773714Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "",
+              "details": {
+                "dialstatus": "",
+                "hangupcause": 16
+              },
+              "journal_type": "HANGUP",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 951,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.CHAN_END",
+            "occurred_at": "2026-11-09T14:23:47.773714Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.13",
+              "destination": "",
+              "journal_type": "CHAN_END",
+              "source": "201"
+            }
+          },
+          {
+            "sequence": 952,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.created",
+            "occurred_at": "2026-11-09T14:23:47.786187Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234227.14",
+              "destination": "",
+              "journal_type": "CHAN_START",
+              "source": "202"
+            }
+          },
+          {
+            "sequence": 948,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.ringing",
+            "occurred_at": "2026-11-09T14:23:47.871569Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234227.14",
+              "destination": "202",
+              "journal_type": "RINGING",
+              "source": "202"
+            }
+          },
+          {
+            "sequence": 953,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.answered",
+            "occurred_at": "2026-11-09T14:23:48.218772Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234227.14",
+              "destination": "202",
+              "journal_type": "ANSWER",
+              "source": "202"
+            }
+          },
+          {
+            "sequence": 954,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.HANGUP",
+            "occurred_at": "2026-11-09T14:24:04.27134Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234227.14",
+              "destination": "",
+              "details": {
+                "dialstatus": "",
+                "hangupcause": 16
+              },
+              "journal_type": "HANGUP",
+              "source": "202"
+            }
+          },
+          {
+            "sequence": 955,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.CHAN_END",
+            "occurred_at": "2026-11-09T14:24:04.27134Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234227.14",
+              "destination": "",
+              "journal_type": "CHAN_END",
+              "source": "202"
+            }
+          },
+          {
+            "sequence": 956,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.HANGUP",
+            "occurred_at": "2026-11-09T14:24:04.277518Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.12",
+              "destination": "202",
+              "details": {
+                "dialstatus": "ANSWER",
+                "hangupcause": 16
+              },
+              "journal_type": "HANGUP",
+              "source": "203"
+            }
+          },
+          {
+            "sequence": 957,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "telephony.CHAN_END",
+            "occurred_at": "2026-11-09T14:24:04.277518Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.12",
+              "destination": "202",
+              "journal_type": "CHAN_END",
+              "source": "203"
+            }
+          },
+          {
+            "sequence": 958,
+            "call_id": "4014694e-024b-4418-90c5-4ea57c7e7e6b",
+            "type": "call.completed",
+            "occurred_at": "2026-11-09T14:24:04.277518Z",
+            "data": {
+              "asterisk_linked_id": "1794234225.12",
+              "asterisk_unique_id": "1794234225.12",
+              "destination": "202",
+              "journal_type": "LINKEDID_END",
+              "source": "203"
+            }
+          }
+        ],
+        "legs": [
+          {
+            "asterisk_unique_id": "1794234225.12",
+            "channel": "PJSIP/203-0000000c",
+            "started_at": "2026-11-09T14:23:45.839129Z",
+            "ended_at": "2026-11-09T14:24:04.277518Z"
+          },
+          {
+            "asterisk_unique_id": "1794234225.13",
+            "channel": "PJSIP/201-0000000d",
+            "started_at": "2026-11-09T14:23:45.844147Z",
+            "ended_at": "2026-11-09T14:23:47.773714Z"
+          },
+          {
+            "asterisk_unique_id": "1794234227.14",
+            "channel": "PJSIP/202-0000000e",
+            "started_at": "2026-11-09T14:23:47.786187Z",
+            "ended_at": "2026-11-09T14:24:04.27134Z"
+          }
+        ],
+        "queue_events": []
+      }
+    ],
+    "activeChannels": 0
+  }
+}

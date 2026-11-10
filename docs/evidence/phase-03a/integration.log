@@ -1,0 +1,5 @@
+=== RUN   TestCatalogQueueJournalAndTenantBoundaries
+--- PASS: TestCatalogQueueJournalAndTenantBoundaries (2.19s)
+=== RUN   TestPersistenceTenantIdempotencyOrderingAndRecovery
+--- PASS: TestPersistenceTenantIdempotencyOrderingAndRecovery (1.36s)
+PASS

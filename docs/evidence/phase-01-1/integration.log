@@ -1,0 +1,4 @@
+=== RUN   TestPersistenceTenantIdempotencyOrderingAndRecovery
+--- PASS: TestPersistenceTenantIdempotencyOrderingAndRecovery (0.18s)
+PASS
+ok  	flora/integration	0.189s
